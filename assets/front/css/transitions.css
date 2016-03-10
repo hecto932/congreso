@@ -1,0 +1,12 @@
+.tabs input:hover + label,
+.tabs input + label,
+.tabs label:hover,
+.tabs label
+a,
+a:hover{	
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+}

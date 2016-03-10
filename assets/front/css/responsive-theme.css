@@ -1,0 +1,314 @@
+
+/* ---------------------------------------------------------------------- */
+/*	1024 Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 1024px) {
+	.home-welcome h3{
+		width: 100%;
+	}
+	.nav > li > a{
+		padding: 10px 15px 0px 15px;
+	}
+	.items-register i{
+		float: none;
+		margin: 0;
+	}
+	.items-register,
+	.items-contact{
+		text-align: center;
+	}
+	.form-register .form-group{
+		padding: 20px 20px 0 20px;
+	}
+	.form-group{
+		margin: 0;
+	}
+	.titles-main{
+		text-align: center !important;
+	}
+	.overlay-info .data-name{
+		transform: translate3d(0,67px,0);
+		-webkit-transform: translate3d(0,67px,0);
+	}
+	.testimonials{
+		width: auto;
+	}
+	.date-month i{
+		font-size: 90px;
+	}
+	.date-month .date-day{
+		left: 16px;
+		top: 28px;
+	}
+	.date-month span{
+		font-size: 28px;
+		line-height: 38px;
+	}
+	.dates-schedule h2{
+		font-size: 28px;
+		line-height: 33px;
+	}
+	.counter span{
+		font-size: 30px;
+	}
+	.avatar-testimonial img{
+		width: 130px;
+	}
+	.text-testimonials{
+		margin-top: 8px;
+	}
+	.general-schedule{
+		padding: 100px 13px 100px 33px;
+	}
+	.dates-schedule {
+		padding: 30px 23px 35px 23px;
+	}
+	.download-schedule-link.top-mini{
+		margin-top: 70px;
+	}
+	.live-banner p{
+		padding: 0;
+	}
+	.body-pricing:hover .hover-info-pricing{
+		-webkit-transform: translate3d(0,-571px,0);
+		transform: translate3d(0,-571px,0);
+		transition: opacity 1s, transform 1s;
+	}
+	.thumbs li{
+		width: 68px;
+	}
+	.phone,
+	.newsletter{
+		margin-top: 70px;
+	}
+	.contact .container{
+		width: auto;
+	}
+	.twitter-section i{
+		font-size: 90px;
+		line-height: 100px;
+	}
+	.twitter ul li .tweet_text, .twitter ul li .tweet_time{
+		font-size: 24px;
+		line-height: 34px;
+	}
+	.items-contact .text-overflow{
+		display: block;
+	}
+	.items-contact i{
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	#map{
+		position: relative;
+	  	height: 1407px;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 980px){
+	.register{
+		margin-bottom: 30px;
+	}
+	.testimonials,
+	.contact-info{
+		text-align: center;
+	}
+	.text-testimonials{
+		border-left: none;
+	}
+	.pricing li{
+		max-width: 440px !important;
+		margin: 0 auto;
+		display: block !important;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.pricing li .body-pricing{
+		border: 1px solid #ccc;
+	}
+	.twitter-section{
+		text-align: center;
+	}
+	.vevent{
+		margin-bottom: 20px;
+	}
+	.body-pricing:hover .hover-info-pricing {
+		-webkit-transform: translate3d(0,-500px,0);
+		transform: translate3d(0,-500px,0);
+		transition: opacity 1s, transform 1s;
+	}
+	#map{
+		height: 300px;
+		position: relative;
+	}
+	.contact-info .contact-form{
+		text-align: left;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	768px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 768px){
+	.register,
+	.items-about-register{
+		text-align: center;
+	}
+	.form-register {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+	.image-gallery .social li i{
+		font-size: 23px;
+	}
+	.home-welcome h1{
+		font-size: 120px;
+		line-height: 130px;
+		margin-bottom: 40px;
+	}
+	.navbar .social{
+		margin-top: 20px;
+		float: right;
+	}
+	.navbar-fixed-top .navbar-collapse{
+		float: right;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	767px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 767px){
+	.navbar-fixed-top .navbar-collapse,
+	.navbar .social{
+		float: none;
+	}
+}
+/* ---------------------------------------------------------------------- */
+/*	720px Version
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 720px) {
+	.dates-schedule h2 {
+		font-size: 26px;
+	}
+	.contact .contact-form {
+		max-width: 640px;
+		margin: 0 auto;
+	}
+	.contact .contact-info hr{
+		display: none;
+	}
+	.contact-info .contact-form{
+		margin-top: 30px;
+	}
+	#theme-options{
+		top: 141px;
+	}
+	.live-banner video{
+		min-width: 400%;
+	}
+	.name-testimonial,
+	.avatar-testimonial img{
+		display: none;
+	}
+	.text-testimonials{
+		padding: 0;
+	}
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*	568px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 568px) {
+	.general-schedule {
+		padding: 100px 10px 100px 10px;
+	}
+	.contact .contact-form {
+		max-width: 411px;
+	}
+	.phone i{
+		left: 0;
+	}
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*	480px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 480px) {
+	.home-welcome h1 {
+		font-size: 90px;
+		line-height: 100px;
+	}
+	.home-welcome hr{
+		display: none;
+	}
+	.menu-base li i {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.menu-base li {
+		margin-right: 20px;
+	}
+	.live-banner h2 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	.contact .contact-form {
+		max-width: 340px;
+	}
+	.pricing li {
+		max-width: 340px;
+	}
+	.body-pricing:hover .hover-info-pricing{
+		-webkit-transform: translate3d(0,-546px,0);
+		transform: translate3d(0,-546px,0);
+	}
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*	384px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 384px) {
+	.home-welcome h3{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.place-home time i {
+		margin-left: 8px;
+	}
+	.place-home{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.live-banner a {
+		font-size: 15px;
+	}
+}
+
+/* ---------------------------------------------------------------------- */
+/*	320px Version
+/* ---------------------------------------------------------------------- */
+@media handheld, only screen and (max-width: 320px) {
+	.menu-base li p {
+		font-size: 13px;
+	}
+	.menu-base li i {
+		font-size: 35px;
+		line-height: 40px;
+	}
+	.form-register {
+		max-width: 250px;
+	}
+	.form-register .btn {
+		font-size: 13px;
+	}
+}

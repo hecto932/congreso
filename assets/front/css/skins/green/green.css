@@ -1,0 +1,41 @@
+a:hover,.color,
+.hover-info-pricing i,
+.tabs .active-tabs h4,
+a,
+.navbar .main-navigation .current a ,
+.vevent .ticketAggregate .offercount,
+.live-banner span,
+ .navbar .main-navigation .current a
+{
+	color: #FFD740;
+}
+.header-pricing,
+.color-bg,
+.tabs input:checked + label,
+.tabs input:hover + label,
+#theme-options .title,
+.opacity-bg-color
+{
+	background-color: #00BCD4;
+}
+.live-banner .follow-youtube{
+	background-color: rgba(131, 176, 56, 0.6);
+}
+.triangle-corner{
+	border-right: 73px solid #83b038;
+}
+.tabs input:checked + label:after{
+	border-top: 10px solid #83b038;
+}
+.diary{
+	border-top: 2px solid #83b038;
+}
+.contact_us .btn-default,
+.btn-primary, .btn-primary:hover{	
+	background-image: linear-gradient(to bottom, #83b038 0%, #83b038 100%);
+}
+.btn-primary, .btn-primary:hover,
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, 
+.pagination > .active > a:focus, .pagination > .active > span:focus{
+	border-color: #83b038;
+}

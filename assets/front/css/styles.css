@@ -1,0 +1,49 @@
+body, p{
+  font-size: 18px;
+}
+
+
+.navbar {
+  padding: 3px 0;
+  background: #3F51B5;
+  color: white;
+}
+
+.navbar .main-navigation li a {
+  line-height: 12px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  font-style: italic;
+}
+
+.area-icon
+{
+  font-size: 5em;
+  color:#3F51B5;
+}
+
+.paddings {
+  padding: 15px 0;
+  position: relative;
+  background-color: #fff;
+}
+
+a:hover,.color,
+.hover-info-pricing i,
+.tabs .active-tabs h4,
+a,
+.navbar .main-navigation .current a ,
+.vevent .ticketAggregate .offercount,
+.live-banner span,
+ .navbar .main-navigation .current a
+{
+  color: #FFC107;
+}
+
+
+h3{
+    color: #3F51B5;
+}

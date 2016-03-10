@@ -1,0 +1,25 @@
+.thumbs { 
+	margin: 0; 
+	overflow: hidden; 
+}
+.thumbs li {
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+	transition: 0.5s all ease;
+ 	width: 100px; 
+ 	list-style: none; 
+ 	display: inline-block; 
+ 	margin: 0; 
+ 	padding: 0; 
+ }
+.thumbs.flickr-gallery li{
+	width: 110px;
+}
+.thumbs li img { 
+	width: 100%; 
+}
+.thumbs li a img{ 
+	border: none;
+}
