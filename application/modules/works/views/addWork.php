@@ -8,7 +8,7 @@
                             <h5>Nuevo trabajo</h5>
                         </div>
                         <div class="ibox-content">
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" action="participantes/agregando-trabajo" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <p>Todos los campos son absolutamente obligatorios.</p>
                                 <p>Solo se permitira cargar maximo tres(3) archivos por trabajo.</p>

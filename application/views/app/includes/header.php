@@ -43,7 +43,7 @@
                             <li class="dropdown">
                                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Trabajos <span class="caret"></span></a>
                                 <ul role="menu" class="dropdown-menu">
-                                    <li><a href="/works/toAddWork">Nuevo</a></li>
+                                    <li><a href="participantes/agregar-trabajo">Nuevo</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">

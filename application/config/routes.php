@@ -65,3 +65,4 @@ $route['participantes/cerrar-sesion'] = 'users/logout';
 
 // WORKS
 $route['participantes/agregar-trabajo'] = "works/toAddWork";
+$route['participantes/agregando-trabajo'] = "works/addWork";

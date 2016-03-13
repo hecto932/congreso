@@ -33,8 +33,6 @@ class Users extends MX_Controller {
 		return $this->session->userdata('user_id');
 	}
 
-	
-
 	public function toRegister()
 	{
 		if($this->isLoged())

@@ -13,6 +13,11 @@ class Works_model extends CI_Model
 		return $query->result_array();
 	}
 
+	function addWork($work)
+	{
+		$this->db->insert("works", $work);
+	}
+
 }  
 
 ?>

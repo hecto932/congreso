@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 10-03-2016 a las 22:20:08
+-- Tiempo de generación: 13-03-2016 a las 03:10:49
 -- Versión del servidor: 5.5.47-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.14
 
@@ -82,12 +82,38 @@ CREATE TABLE IF NOT EXISTS `backusers` (
 
 CREATE TABLE IF NOT EXISTS `payments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `frontuser_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `bank` varchar(255) NOT NULL,
   `numberReference` varchar(255) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roles`
+--
+
+CREATE TABLE IF NOT EXISTS `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(140) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`) VALUES
+(1, 'Administrador'),
+(2, 'Arbitro - Bárbula'),
+(3, 'Arbitro - La Morita'),
+(4, 'Participante'),
+(5, 'Fundaprofaces'),
+(6, 'Simposios - Bárbula'),
+(7, 'Simposios - La Morita');
 
 -- --------------------------------------------------------
 
@@ -118,6 +144,38 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `image`, `lastName`, `name`, `ci`, `phone`, `email`, `university`, `school`, `password`, `rememberToken`, `createdAt`, `updatedAt`) VALUES
 (1, NULL, 'Flores Colmenarez', 'Hector Jose', '20162504', '04127762882', 'hecto932@gmail.com', NULL, NULL, '786bd9a52ee9af08db5c139b86cc60533ca1c7b6', NULL, '2016-03-10 22:18:50', '2016-03-11 02:48:50');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `works`
+--
+
+CREATE TABLE IF NOT EXISTS `works` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `campus` varchar(140) NOT NULL,
+  `area_id` int(11) NOT NULL,
+  `modality` varchar(140) NOT NULL,
+  `title` varchar(140) NOT NULL,
+  `status` enum('En proceso de arbitraje','Aprobado','Rechazado') NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `area_id` (`area_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `works`
+--
+ALTER TABLE `works`
+  ADD CONSTRAINT `works_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `works_ibfk_1` FOREIGN KEY (`area_id`) REFERENCES `areas` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
