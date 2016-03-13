@@ -35,11 +35,12 @@
             <div class="col-md-6">
                 <div class="ibox-content">
                     <form class="m-t" role="form" action="participantes/iniciar" method="POST">
+                        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email" required="">
+                            <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required="">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Contraseña" required="">
+                            <input type="password" name="password" class="form-control" placeholder="Contraseña" required="">
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">Iniciar</button>
 

@@ -13,6 +13,31 @@ class Users_model extends CI_Model
 		$this->db->insert('users', $user); 
 	}
 
+	//VERIFICA SI UN EMAIL EXISTE
+	function existEmail($email)
+	{
+		$query = $this->db->get_where('users', array('email' => $email));
+		return $query->num_rows() == 1;
+	}
+
+	//VERIFICA SI EXISTE ESA SESION
+	function verifySession($data)
+	{
+		$query = $this->db->get_where('users',$data);
+		return $query->num_rows() == 1;
+	}
+
+	//OBTENER UN USUARIO POR EMAIL
+	function getUserDataByEmail($email)
+	{
+		$data = array(
+			"email"	=> $email
+		);
+
+		$query = $this->db->get_where('users',$data);
+		return $query->row();
+	}
+
 }  
 
 ?>

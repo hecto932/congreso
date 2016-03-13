@@ -59,3 +59,4 @@ $route['participantes/registro'] = 'users/toRegister';
 $route['participantes/registrar'] = 'users/doRegister';
 $route['participantes/inicio-sesion'] = 'users';
 $route['participantes/iniciar'] = 'users/login';
+$route['participantes/cerrar-sesion'] = 'users/logout';

@@ -30,7 +30,7 @@ class Users extends MX_Controller {
 	{
 		if($this->isLoged())
 		{
-			echo "Voy al home";
+			redirect('app');
 		}
 		else
 		{
@@ -75,4 +75,80 @@ class Users extends MX_Controller {
 			echo "<pre>".print_r(validation_errors(), true)."</pre>";
 		}
 	}
+
+	//RETORNA TRUE O FALSE SI EL EMAIL EXISTE O NO
+	public function existEmail($email)
+	{
+		return $this->users_model->existEmail($email);
+	}
+
+	//RETORNA TRUE O FALSE SI EXISTE LA SESION O NO
+	public function verifySession()
+	{
+		$userData = array(
+			'email' 	=> $this->input->post('email'),
+			'password' 	=> sha1($this->input->post('password'))
+ 		);
+
+		return $this->users_model->verifySession($userData);
+	}
+
+
+
+	//INICIA UNA SESION POR BACKEND
+	public function login()
+	{
+		if(!empty($_POST))
+		{
+			//DEFINIENDO LAS REGLAS
+			$this->form_validation->set_rules('email', 'Correo electrónico', 'required|trim|valid_email|callback_existEmail');
+			$this->form_validation->set_rules('password', 'Contraseña', 'required|callback_verifySession');
+			
+			//DEFINIENDO MENSAJE DE ERROR
+			$this->form_validation->set_message('required', '%s es requerido.');
+			$this->form_validation->set_message('valid_email','%s invalido.');
+			$this->form_validation->set_message('existEmail', '%s no existe.');
+			$this->form_validation->set_message('verifySession','Email o Password incorrecto.');
+			$this->form_validation->set_error_delimiters('<ul class="parsley-errors-list filled"><li class="parsley-custom-error-message">', '</li></ul>');
+
+			//SI LAS VALIDACIONES SON CORRECTAS
+			if($this->form_validation->run($this))
+			{
+				//OBTENGO EL EMAIL DEL USUARIO
+				$email = $this->input->post('email');
+				//BUSCO SUS DATOS POR EMAIL
+				$userData = $this->users_model->getUserDataByEmail($email);
+				//CREO LA COOKIE DE SESION CON ID
+				$cookieData = array(
+					'user_id' 	=> $userData->id
+				);
+				$this->session->set_userdata($cookieData);
+
+				//REDIRIJO AL HOME
+				redirect('app');
+			}
+			else
+			{
+				die_pre(validation_errors());
+				//SI HUBO ALGUN ERROR REGRESAR A LA VISTA LOGIN
+				$data['title'] = 'Congreso - Iniciar Sesión';
+				$this->load->view('login',$data);
+			}
+		}
+		else
+		{
+			redirect('participantes/inicio-sesion');
+		}
+	}
+
+	public function logout()
+	{
+		if($this->getSessionId())
+		{
+			$this->session->unset_userdata('user_id');
+			$this->session->sess_destroy();
+		}
+		redirect('/');
+	}
+
 }
