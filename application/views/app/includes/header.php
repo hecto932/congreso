@@ -5,7 +5,9 @@
     <base href="<?php echo base_url(); ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="author" content="http://github.com/hecto932"/>
+    <meta name="keyword" content="CongresoFACES, UC, Congreso, DIPI, Universidad de Carabobo, Facultad de Ciencias Económicas y Sociales, FACES, congreso">
+    
     <title><?php echo $title; ?></title>
 
     <link href="assets/app/css/bootstrap.min.css" rel="stylesheet">
@@ -28,31 +30,24 @@
                     </div>
                     <div class="navbar-collapse collapse" id="navbar">
                         <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a aria-expanded="false" role="button" href="/"> Pagina principal</a>
+                            <li class="">
+                                <a aria-expanded="false" role="button" href="/"> Ir al Inicio</a>
                             </li>
-                            <li class="dropdown">
-                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Mis datos <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu">
-                                    <li><a href="">Menu item</a></li>
-                                    <li><a href="">Menu item</a></li>
-                                    <li><a href="">Menu item</a></li>
-                                    <li><a href="">Menu item</a></li>
-                                </ul>
+                            <li class="">
+                                <a aria-expanded="false" role="button" href="javascript:void(0)">
+                                    <i class="fa fa-user"></i> Bienvenido <?php echo $userData["lastName"].", ".$userData["name"]; ?>
+                                </a>
                             </li>
                             <li class="dropdown">
                                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Trabajos <span class="caret"></span></a>
                                 <ul role="menu" class="dropdown-menu">
-                                    <li><a href="participantes/agregar-trabajo">Nuevo</a></li>
+                                    <li><a href="participantes/agregar-trabajo">Agregar nuevo trabajo</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Pagos <span class="caret"></span></a>
                                 <ul role="menu" class="dropdown-menu">
-                                    <li><a href="">Menu item</a></li>
-                                    <li><a href="">Menu item</a></li>
-                                    <li><a href="">Menu item</a></li>
-                                    <li><a href="">Menu item</a></li>
+                                    <li><a href="participantes/agregar-pago">Agregar nuevo pago</a></li>
                                 </ul>
                             </li>
                         </ul>

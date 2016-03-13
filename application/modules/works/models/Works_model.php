@@ -29,6 +29,23 @@ class Works_model extends CI_Model
 		return $query->row_array();
 	}
 
+	function getWorksByUserId($user_id)
+	{
+		$query = $this->db->get_where("works", array("user_id" => $user_id));
+		return $query->result_array();
+	}
+
+	function getTitleById($area_id)
+	{
+		$query = $this->db->get_where("areas", array("id" => $area_id));
+		return $query->row()->name;
+	}
+
+	function getAllWorksWithOutPayment($user_id)
+	{
+		$query = $this->db->query("SELECT w.* FROM works w LEFT JOIN payments p ON w.id = p.work_id WHERE p.work_id IS NULL");
+		return $query->result_array();
+	}
 }  
 
 ?>

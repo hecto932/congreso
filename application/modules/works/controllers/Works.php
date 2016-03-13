@@ -166,4 +166,28 @@ class Works extends MX_Controller {
     		redirect("/app");
     	}
     }
+
+    public function getWorksByUserId($user_id)
+    {
+        $result = $this->works_model->getWorksByUserId($user_id);
+        foreach ($result as $key => $value) {
+            $result[$key]["area"] = $this->works_model->getTitleById($result[$key]["area_id"]);
+        }
+        return $result;
+    }
+
+    public function getTitleById($work_id)
+    {
+        return $this->works_model->getTitleById($work_id);
+    }
+
+    public function getAllWorksWithOutPayment($user_id)
+    {
+        $result = $this->works_model->getAllWorksWithOutPayment($user_id);
+        foreach ($result as $key => $value) {
+            $result[$key]["work"] = $this->works_model->getTitleById($result[$key]["work_id"]);
+        }
+        //die_pre($result);
+        return $result;
+    }
 }

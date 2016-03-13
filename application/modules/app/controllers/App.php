@@ -14,6 +14,8 @@ class App extends MX_Controller {
     	{
     		$data["title"] = "Congreso - 2016";
             $data["userData"] = modules::run('users/getUserSession');
+            $data["MyPayments"] = modules::run("payments/getPaymentsByUserId", modules::run('users/getSessionId'));
+            $data["MyWorks"] = modules::run("works/getWorksByUserId", modules::run('users/getSessionId'));
     		$data["contenido_principal"] = $this->load->view("app", $data, true);
     		$this->load->view("app/template", $data);
     	}

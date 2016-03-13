@@ -66,3 +66,7 @@ $route['participantes/cerrar-sesion'] = 'users/logout';
 // WORKS
 $route['participantes/agregar-trabajo'] = "works/toAddWork";
 $route['participantes/agregando-trabajo'] = "works/addWork";
+
+// PAYMENTS
+$route["participantes/agregar-pago"] = "payments/toAddPayment";
+$route["participantes/agregando-pago"] = "payments/addPayment";
