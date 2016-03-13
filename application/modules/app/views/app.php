@@ -1,6 +1,13 @@
 <div class="wrapper wrapper-content">
     <div class="container">
         <div class="row">
+            <?php if($this->session->flashdata("message")): ?>
+                 <div class="col-lg-12">
+                    <div class="alert alert-success">
+                        <?php echo $this->session->flashdata('message'); ?>
+                    </div>
+                </div>
+            <?php endif; ?>
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-content">

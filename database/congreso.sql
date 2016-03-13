@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-03-2016 a las 03:10:49
+-- Tiempo de generación: 13-03-2016 a las 15:07:55
 -- Versión del servidor: 5.5.47-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.14
 
@@ -77,6 +77,30 @@ CREATE TABLE IF NOT EXISTS `backusers` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `files`
+--
+
+CREATE TABLE IF NOT EXISTS `files` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `work_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `work_id` (`work_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `files`
+--
+
+INSERT INTO `files` (`id`, `work_id`, `name`, `type`, `createdAt`, `updatedAt`) VALUES
+(1, 8, 'ACFrOgD8jFkl7XsN3MGH_0yIR5tlFk_iN9PUFELQvZYLSro9nRVm4d6nD7efKEYG3Dhj418jT8xDvnC0grpFwRS0sC44EU10osIgfxjG6I5mqsrFyR9wYc8jAzX-sW4=.pdf', 'PDF', '2016-03-13 15:00:17', '2016-03-13 19:30:17');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `payments`
 --
 
@@ -85,6 +109,8 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `user_id` int(11) NOT NULL,
   `bank` varchar(255) NOT NULL,
   `numberReference` varchar(255) NOT NULL,
+  `amount` varchar(255) NOT NULL,
+  `status` enum('Por verificar','Conforme','No conforme') NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -162,20 +188,34 @@ CREATE TABLE IF NOT EXISTS `works` (
   `createdAt` datetime NOT NULL,
   `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`),
   KEY `area_id` (`area_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Volcado de datos para la tabla `works`
+--
+
+INSERT INTO `works` (`id`, `user_id`, `campus`, `area_id`, `modality`, `title`, `status`, `createdAt`, `updatedAt`) VALUES
+(8, 1, 'Bárbula', 2, 'Carteles', 'Trabajo 3', 'En proceso de arbitraje', '2016-03-13 15:00:17', '2016-03-13 19:30:17');
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
+-- Filtros para la tabla `files`
+--
+ALTER TABLE `files`
+  ADD CONSTRAINT `files_ibfk_1` FOREIGN KEY (`work_id`) REFERENCES `works` (`id`);
+
+--
 -- Filtros para la tabla `works`
 --
 ALTER TABLE `works`
-  ADD CONSTRAINT `works_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `works_ibfk_1` FOREIGN KEY (`area_id`) REFERENCES `areas` (`id`);
+  ADD CONSTRAINT `works_ibfk_1` FOREIGN KEY (`area_id`) REFERENCES `areas` (`id`),
+  ADD CONSTRAINT `works_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

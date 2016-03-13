@@ -25,28 +25,34 @@
             <form class="m-t" role="form" action="participantes/registrar" method="POST">
                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                 <div class="form-group">
-                    <input type="text" name="lastName" class="form-control" placeholder="Apellido(s) *" required="">
+                    <input type="text" name="lastName" class="form-control" placeholder="Apellido(s) *" required="" value="<?php echo set_value("lastName")?>">
+                    <?php echo form_error("lastName"); ?>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Nombre(s) *" required="">
+                    <input type="text" name="name" class="form-control" placeholder="Nombre(s) *" required="" value="<?php echo set_value("name")?>">
+                    <?php echo form_error("name"); ?>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="ci" class="form-control" placeholder="Cédula" required="">
+                    <input type="text" name="ci" class="form-control" placeholder="Cédula" required="" value="<?php echo set_value("ci")?>">
+                    <?php echo form_error("ci"); ?>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" class="form-control" placeholder="Teléfono *" required="">
+                    <input type="text" name="phone" class="form-control" placeholder="Teléfono *" required="" value="<?php echo set_value("phone")?>">
+                    <?php echo form_error("phone"); ?>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico *" required="">
+                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico *" required="" value="<?php echo set_value("email")?>">
+                    <?php echo form_error("email"); ?>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="university" class="form-control" placeholder="Universidad" required="">
+                    <input type="text" name="university" class="form-control" placeholder="Universidad" required="" value="<?php echo set_value("university")?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="school" class="form-control" placeholder="Escuela" required="">
+                    <input type="text" name="school" class="form-control" placeholder="Escuela" required="" value="<?php echo set_value("school")?>">
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Contraseña *" required="">
+                    <?php echo form_error("password"); ?>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>
 

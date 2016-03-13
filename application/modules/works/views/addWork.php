@@ -21,6 +21,7 @@
                                             <option value="La Morita">La Morita</option>
                                         </select>
                                         <span class="help-block m-b-none">Por favor seleccione el Campus en donde participa.</span>
+                                        <?php echo form_error("campus"); ?>
                                     </div>
                                 </div>
                                 <div class="form-group"><label class="col-lg-2 control-label">Area temática</label>
@@ -28,11 +29,17 @@
                                         <select class="form-control m-b" name="area_id">
                                             <option value="">Seleccione</option>
                                             <?php foreach($areas as $key => $value): ?>
-                                                <option value="<?php echo $value["id"]; ?>"><?php echo $value["name"]; ?></option>
+                                                <?php if(set_value("area_id") == $value["id"]): ?>
+                                                    <option value="<?php echo $value["id"]; ?>" selected><?php echo $value["name"]; ?></option>
+                                                <?php else: ?>
+                                                    <option value="<?php echo $value["id"]; ?>"><?php echo $value["name"]; ?></option>
+                                                <?php endif; ?> 
                                             <?php endforeach; ?>
                                         </select>
                                         <span class="help-block m-b-none">Seleccione el area tematica a participar.</span>
+                                        <?php echo form_error("area_id"); ?>
                                     </div>
+
                                 </div>
                                 <div class="form-group"><label class="col-lg-2 control-label">Modalidad de presentación</label>
                                     <div class="col-lg-10">
@@ -43,23 +50,26 @@
                                             <option value="Simposios">Simposios</option>
                                         </select>
                                         <span class="help-block m-b-none">Escoja la modalidad de presentación</span>
+                                        <?php echo form_error("modality"); ?>
                                     </div>
                                 </div>
-                                <div class="form-group"><label class="col-lg-2 control-label">Titulo del trabajo</label>
+                                <div class="form-group"><label class="col-lg-2 control-label">Título del trabajo</label>
                                     <div class="col-lg-10">
-                                        <input type="text" class="form-control" name="title" required="required">
+                                        <input type="text" class="form-control" placeholder="Título"name="title" required="required" value="<?php echo set_value("title"); ?>">
                                         <span class="help-block m-b-none">Escriba el titulo con detenimiento.</span>
+                                        <?php echo form_error("title"); ?>
                                     </div>
                                 </div>
                                 <div class="form-group"><label class="col-lg-2 control-label">Archivos</label>
                                     <div class="col-lg-10">
                                         <input type="file" class="form-control" name="files[]" required="required" multiple>
                                         <span class="help-block m-b-none">Por favor seleccione los archivos correspondientes al trabajo.</span>
+                                        <?php echo form_error("files"); ?>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-sm btn-white" type="submit">Cargar</button>
+                                        <button class="btn btn-primary " type="submit"><i class="fa fa-check"></i>&nbsp;Cargar</button>
                                     </div>
                                 </div>
                             </form>

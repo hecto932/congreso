@@ -18,6 +18,17 @@ class Works_model extends CI_Model
 		$this->db->insert("works", $work);
 	}
 
+	function newAttachment($data)
+	{
+		$this->db->insert("files", $data);
+	}
+
+	function getWorkByTitle($title)
+	{
+		$query = $this->db->get_where("works", array("title" => $title));
+		return $query->row_array();
+	}
+
 }  
 
 ?>

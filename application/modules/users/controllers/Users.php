@@ -48,14 +48,17 @@ class Users extends MX_Controller {
 
 	public function doRegister()
 	{
-		echo "<pre>".print_r($_POST, true)."</pre>";
-
 		$this->form_validation->set_rules("lastName", "Apellidos", "required|trim");
 		$this->form_validation->set_rules("name", "Nombres", "required|trim");
-		$this->form_validation->set_rules("ci", "Identificación", "required|trim");
+		$this->form_validation->set_rules("ci", "Cédula", "required|trim|is_unique[users.ci]");
 		$this->form_validation->set_rules("phone", "Teléfono", "required|trim");
-		$this->form_validation->set_rules("email", "Correo electrónico", "required|trim|valid_email|is_unique[users.email]");
+		$this->form_validation->set_rules("email", "Email", "required|trim|valid_email|is_unique[users.email]");
 		$this->form_validation->set_rules("password", "Contraseña", "required|trim");
+
+		$this->form_validation->set_message("required", "%s es requerido.");
+		$this->form_validation->set_message("is_unique", "%s ya existe.");
+
+		$this->form_validation->set_error_delimiters("<p class='text-danger'>", "</p>");
 
 		if($this->form_validation->run($this))
 		{
@@ -67,8 +70,7 @@ class Users extends MX_Controller {
 				'phone'		=> 	$this->input->post('phone'),
 				'email'		=> $this->input->post('email'),
 				'password'	=> sha1($this->input->post('password')),
-				'createdAt'	=> date("Y-m-d H:i:s"),
-				'updatedAt'	=> date("Y-m-d H:i:s")
+				'createdAt'	=> date("Y-m-d H:i:s")
 			);
 
 			//INSERTAMOS UN NUEVO USUARIO A LA TABLA USER_BACKEND
@@ -78,8 +80,8 @@ class Users extends MX_Controller {
 		}
 		else
 		{
-			echo "No pasaron";
-			echo "<pre>".print_r(validation_errors(), true)."</pre>";
+			$data["title"] = "Congreso - Registro";
+			$this->load->view("register", $data);
 		}
 	}
 
@@ -116,7 +118,7 @@ class Users extends MX_Controller {
 			$this->form_validation->set_message('valid_email','%s invalido.');
 			$this->form_validation->set_message('existEmail', '%s no existe.');
 			$this->form_validation->set_message('verifySession','Email o Password incorrecto.');
-			$this->form_validation->set_error_delimiters('<ul class="parsley-errors-list filled"><li class="parsley-custom-error-message">', '</li></ul>');
+			$this->form_validation->set_error_delimiters("<p class='text-danger'>", "</p>");
 
 			//SI LAS VALIDACIONES SON CORRECTAS
 			if($this->form_validation->run($this))
@@ -136,10 +138,9 @@ class Users extends MX_Controller {
 			}
 			else
 			{
-				die_pre(validation_errors());
 				//SI HUBO ALGUN ERROR REGRESAR A LA VISTA LOGIN
-				$data['title'] = 'Congreso - Iniciar Sesión';
-				$this->load->view('login',$data);
+				$data["title"] = "App Congreso";
+				$this->load->view("login", $data);
 			}
 		}
 		else
