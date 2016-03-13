@@ -20,11 +20,8 @@
 
     <div class="middle-box text-center loginscreen   animated fadeInDown">
         <div>
-            <div>
-
-            </div>
             <h3>Registro</h3>
-            <p>Los campos con asteriscos(*) son obligatorios.</p>
+            <p>Los campos con asterisco(*) son obligatorios.</p>
             <form class="m-t" role="form" action="participantes/registrar" method="POST">
                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                 <div class="form-group">
@@ -34,7 +31,7 @@
                     <input type="text" name="name" class="form-control" placeholder="Nombre(s) *" required="">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="ci" class="form-control" placeholder="Numero de Cedula o Pasaporte" required="">
+                    <input type="text" name="ci" class="form-control" placeholder="Cédula" required="">
                 </div>
                 <div class="form-group">
                     <input type="text" name="phone" class="form-control" placeholder="Teléfono *" required="">

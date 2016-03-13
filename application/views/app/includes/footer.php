@@ -1,15 +1,14 @@
-footer.php
         <div class="footer">
             <div class="pull-right">
-                10GB of <strong>250GB</strong> Free.
+                Desarrollado por <strong><a href="https://github.com/hecto932">Hector Flores</a></strong>
             </div>
             <div>
-                <strong>Copyright</strong> Example Company &copy; 2014-2015
+                <strong>Copyright</strong> Facultad de Ciencias Económicas y Sociales &copy; 2016
             </div>
         </div>
 
-        </div>
-        </div>
+    </div>
+</div>
 
 
 

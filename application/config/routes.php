@@ -55,8 +55,13 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 // APP ROUTES
+
+// USERS
 $route['participantes/registro'] = 'users/toRegister';
 $route['participantes/registrar'] = 'users/doRegister';
 $route['participantes/inicio-sesion'] = 'users';
 $route['participantes/iniciar'] = 'users/login';
 $route['participantes/cerrar-sesion'] = 'users/logout';
+
+// WORKS
+$route['participantes/agregar-trabajo'] = "works/toAddWork";

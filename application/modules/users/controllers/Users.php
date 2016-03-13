@@ -9,10 +9,23 @@ class Users extends MX_Controller {
         $this->load->model('users_model');
     }
 
+    //VERIFICA QUE EL USUARIO ESTE LOGUEADO
+	public function isLoged()
+	{	
+		return $this->session->userdata('user_id');
+	}
+
 	public function index()
 	{
-		$data["title"] = "App Congreso";
-		$this->load->view("login", $data);
+		if($this->isLoged())
+		{
+			redirect('app');
+		}
+		else
+		{
+			$data["title"] = "App Congreso";
+			$this->load->view("login", $data);
+		}
 	}
 
 	public function getSessionId()
@@ -20,11 +33,7 @@ class Users extends MX_Controller {
 		return $this->session->userdata('user_id');
 	}
 
-	//VERIFICA QUE EL USUARIO ESTE LOGUEADO
-	public function isLoged()
-	{	
-		return $this->session->userdata('user_id');
-	}
+	
 
 	public function toRegister()
 	{
@@ -149,6 +158,13 @@ class Users extends MX_Controller {
 			$this->session->sess_destroy();
 		}
 		redirect('/');
+	}
+
+	public function getUserSession()
+	{
+		$user_id = $this->getSessionId();
+		$userData = $this->users_model->getUserSession($user_id);
+		return $userData;
 	}
 
 }

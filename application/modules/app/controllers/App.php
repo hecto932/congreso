@@ -13,6 +13,7 @@ class App extends MX_Controller {
     	if(modules::run('users/getSessionId'))
     	{
     		$data["title"] = "Congreso - 2016";
+            $data["userData"] = modules::run('users/getUserSession');
     		$data["contenido_principal"] = $this->load->view("app", $data, true);
     		$this->load->view("app/template", $data);
     	}
