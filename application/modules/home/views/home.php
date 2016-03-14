@@ -589,7 +589,7 @@
                                 </strong>
                             </p>
                             <p>
-                                Una vez realizado el depósito, el participante/ponente deberá registrarlo en el presente enlace, y se le enviará una notificación en señal de recibido.   
+                                Una vez realizado el depósito, el participante/ponente deberá registrarlo <a href="/participantes/inicio-sesion">Aqui</a>, y se le enviará una notificación en señal de recibido.   
                             </p>
                         </div>
                         
