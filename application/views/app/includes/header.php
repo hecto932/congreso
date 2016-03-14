@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <base href="<?php echo base_url(); ?>"/>
+    <base href="http://faces.uc.edu.ve/congreso/2016/"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="http://github.com/hecto932"/>
