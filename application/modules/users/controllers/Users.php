@@ -77,7 +77,7 @@ class Users extends MX_Controller {
 			//INSERTAMOS UN NUEVO USUARIO A LA TABLA USER_BACKEND
 			$this->users_model->createUser($user);
 
-			redirect('/');
+			redirect('app');
 		}
 		else
 		{
