@@ -611,6 +611,23 @@
             </div>
         </section> 
         <!-- INFORMACIÓN -->
+    
+        <!-- EVENTOS PRECONGRESO -->
+        <section id="organizadores" class="faq paddings">
+            <div class="container">
+                <div class="row titles-main left wow animated bounceInUp" data-wow-delay="0.5s" data-wow-duration="0.5s">
+                    <div class="col-md-12">
+                        <h1 class="center" style="font-size: 3em;font-weight: 900;font-variant;"><u>Eventos precongreso</u></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color: #3F51B5;">- <a style="color: #3F51B5;" href="http://faces.uc.edu.ve/web/eventos/ver/elaboracion-de-articulos-cientificos">Taller de Elaboración de Articulos Científicos</a></h1>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- EVENTOS PRECONGRESO -->
 
         <!-- ORGANIZADORES -->
         <section id="organizadores" class="faq paddings">

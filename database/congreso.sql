@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-03-2016 a las 15:07:55
+-- Tiempo de generación: 14-03-2016 a las 01:22:54
 -- Versión del servidor: 5.5.47-0ubuntu0.14.04.1
 -- Versión de PHP: 5.5.9-1ubuntu4.14
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `areas` (
   `createdAt` datetime NOT NULL,
   `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Volcado de datos para la tabla `areas`
@@ -53,7 +53,9 @@ INSERT INTO `areas` (`id`, `name`, `description`, `createdAt`, `updatedAt`) VALU
 (11, 'Nueva gestión pública y calidad', NULL, '2016-02-28 00:00:00', '2016-02-29 04:06:20'),
 (12, 'Salud y sociedad', NULL, '0000-00-00 00:00:00', '2016-02-29 04:06:20'),
 (13, 'Sociología y ciencias sociales', NULL, '2016-02-28 00:00:00', '2016-02-29 04:21:51'),
-(14, 'TIC e innovación tecnológica', NULL, '2016-02-28 00:00:00', '2016-02-29 04:21:51');
+(14, 'TIC e innovación tecnológica', NULL, '2016-02-28 00:00:00', '2016-02-29 04:21:51'),
+(15, 'Educación en las Ciencias Económicas y Sociales', NULL, '2016-03-14 00:00:00', '2016-03-14 05:48:07'),
+(16, 'Empresas y actividad contable', NULL, '2016-03-14 00:00:00', '2016-03-14 05:48:21');
 
 -- --------------------------------------------------------
 
@@ -89,14 +91,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `work_id` (`work_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `files`
---
-
-INSERT INTO `files` (`id`, `work_id`, `name`, `type`, `createdAt`, `updatedAt`) VALUES
-(1, 8, 'ACFrOgD8jFkl7XsN3MGH_0yIR5tlFk_iN9PUFELQvZYLSro9nRVm4d6nD7efKEYG3Dhj418jT8xDvnC0grpFwRS0sC44EU10osIgfxjG6I5mqsrFyR9wYc8jAzX-sW4=.pdf', 'PDF', '2016-03-13 15:00:17', '2016-03-13 19:30:17');
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
 
@@ -111,10 +106,13 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `numberReference` varchar(255) NOT NULL,
   `amount` varchar(255) NOT NULL,
   `status` enum('Por verificar','Conforme','No conforme') NOT NULL,
+  `work_id` int(11) NOT NULL,
   `createdAt` datetime NOT NULL,
   `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `work_id` (`work_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
 
@@ -169,7 +167,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `image`, `lastName`, `name`, `ci`, `phone`, `email`, `university`, `school`, `password`, `rememberToken`, `createdAt`, `updatedAt`) VALUES
-(1, NULL, 'Flores Colmenarez', 'Hector Jose', '20162504', '04127762882', 'hecto932@gmail.com', NULL, NULL, '786bd9a52ee9af08db5c139b86cc60533ca1c7b6', NULL, '2016-03-10 22:18:50', '2016-03-11 02:48:50');
+(1, '1_12801367_10207978302912102_3988103398511810362_n.jpg', 'Flores', 'Hector', '20162504', '04127762882', 'hecto932@gmail.com', 'Universidad de Carabobo', 'Ciencias de la Computación', '6c7074ccaa748ece3426b0401b282248715ad5a3', NULL, '2016-03-14 01:10:10', '2016-03-14 05:52:05');
 
 -- --------------------------------------------------------
 
@@ -191,14 +189,7 @@ CREATE TABLE IF NOT EXISTS `works` (
   UNIQUE KEY `title` (`title`),
   KEY `area_id` (`area_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
-
---
--- Volcado de datos para la tabla `works`
---
-
-INSERT INTO `works` (`id`, `user_id`, `campus`, `area_id`, `modality`, `title`, `status`, `createdAt`, `updatedAt`) VALUES
-(8, 1, 'Bárbula', 2, 'Carteles', 'Trabajo 3', 'En proceso de arbitraje', '2016-03-13 15:00:17', '2016-03-13 19:30:17');
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Restricciones para tablas volcadas
@@ -209,6 +200,13 @@ INSERT INTO `works` (`id`, `user_id`, `campus`, `area_id`, `modality`, `title`, 
 --
 ALTER TABLE `files`
   ADD CONSTRAINT `files_ibfk_1` FOREIGN KEY (`work_id`) REFERENCES `works` (`id`);
+
+--
+-- Filtros para la tabla `payments`
+--
+ALTER TABLE `payments`
+  ADD CONSTRAINT `payments_ibfk_2` FOREIGN KEY (`work_id`) REFERENCES `works` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `payments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `works`

@@ -64,7 +64,7 @@
         <hr/>
         <div class="row">
             <div class="col-md-6">
-                <p>Esta aplicación fue desarrollada por <a href="https://github.com/hecto932">Hector Flores</a> bajo la supervición de la Dirección de Tecnologia, Investigación y Comunicación de la <a href="http://faces.uc.edu.ve/web">Facultad de Ciencias Económicas y Sociales de la <a href="http://uc.edu.ve">Universidad de Carabobo</a></a></p>
+                <p>Esta aplicación fue desarrollada por <a href="https://github.com/hecto932">Hector Flores</a> bajo la supervisión de la Dirección de Tecnologia, Investigación y Comunicación de la <a href="http://faces.uc.edu.ve/web">Facultad de Ciencias Económicas y Sociales de la <a href="http://uc.edu.ve">Universidad de Carabobo</a></a></p>
             </div>
             <div class="col-md-6 text-right">
                <small>© 2016</small>
