@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <base href="<?php echo base_url(); ?>"></base>
+    <base href="<?php echo base_url(); ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1,  maximum-scale=1">
     <meta name="Description" CONTENT="Congreso internacional de Investigacion e innovación de la Facultad de Ciencias Económicas y Sociales de la Universidad de Carabobo 2016"/>
