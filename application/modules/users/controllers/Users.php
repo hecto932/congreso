@@ -50,9 +50,9 @@ class Users extends MX_Controller {
 	{
 		$this->form_validation->set_rules("lastName", "Apellidos", "required|trim");
 		$this->form_validation->set_rules("name", "Nombres", "required|trim");
-		$this->form_validation->set_rules("ci", "Cédula", "required|trim|is_unique[users.ci]");
+		$this->form_validation->set_rules("ci", "Cédula", "required|trim|callback_noDuplicateCedula");
 		$this->form_validation->set_rules("phone", "Teléfono", "required|trim");
-		$this->form_validation->set_rules("email", "Email", "required|trim|valid_email|is_unique[users.email]");
+		$this->form_validation->set_rules("email", "Email", "required|trim|valid_email|callback_noDuplicateEmail");
 		$this->form_validation->set_rules("password", "Contraseña", "required|trim|min_length[8]");
 
 		$this->form_validation->set_message("required", "%s es requerido.");
