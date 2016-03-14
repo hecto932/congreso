@@ -10,10 +10,10 @@
     
     <title><?php echo $title; ?></title>
 
-    <link href="assets/app/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/app/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="assets/app/css/animate.css" rel="stylesheet">
-    <link href="assets/app/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/app/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/app/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/app/css/animate.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/app/css/style.css" rel="stylesheet">
 
 </head>
 

@@ -13,19 +13,19 @@
 
 
     <!-- Mainly scripts -->
-    <script src="assets/app/js/jquery-2.1.1.js"></script>
-    <script src="assets/app/js/bootstrap.min.js"></script>
-    <script src="assets/app/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="assets/app/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/jquery-2.1.1.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!-- Custom and plugin javascript -->
-    <script src="assets/app/js/inspinia.js"></script>
-    <script src="assets/app/js/plugins/pace/pace.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/inspinia.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/plugins/pace/pace.min.js"></script>
 
     <!-- Flot -->
-    <script src="assets/app/js/plugins/flot/jquery.flot.js"></script>
-    <script src="assets/app/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="assets/app/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/plugins/flot/jquery.flot.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/app/js/plugins/flot/jquery.flot.resize.js"></script>
 
     <!-- ChartJS-->
     <script src="assets/app/js/plugins/chartJs/Chart.min.js"></script>
