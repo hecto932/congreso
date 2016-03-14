@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <base href="http://faces.uc.edu.ve/congreso/2016/"/>
+    <base href="<?php echo base_url(); ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="http://github.com/hecto932"/>
@@ -31,10 +31,10 @@
                     <div class="navbar-collapse collapse" id="navbar">
                         <ul class="nav navbar-nav">
                             <li class="">
-                                <a aria-expanded="false" role="button" href="/"> Ir al Inicio</a>
+                                <a aria-expanded="false" role="button" href="app"> Ir al Inicio</a>
                             </li>
                             <li class="">
-                                <a aria-expanded="false" role="button" href="/participantes/mis-datos"> Mi perfil</a>
+                                <a aria-expanded="false" role="button" href="participantes/mis-datos"> Mi perfil</a>
                             </li>
                             <li class="dropdown">
                                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Trabajos <span class="caret"></span></a>
