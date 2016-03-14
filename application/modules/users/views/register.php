@@ -52,6 +52,7 @@
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Contraseña *" required="">
+                    <span class="help-block m-b-none">La contraseña debe tener minimo ocho(8) caracteres.</span>
                     <?php echo form_error("password"); ?>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>

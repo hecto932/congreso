@@ -34,9 +34,7 @@
                                 <a aria-expanded="false" role="button" href="/"> Ir al Inicio</a>
                             </li>
                             <li class="">
-                                <a aria-expanded="false" role="button" href="javascript:void(0)">
-                                    <i class="fa fa-user"></i> Bienvenido <?php echo $userData["lastName"].", ".$userData["name"]; ?>
-                                </a>
+                                <a aria-expanded="false" role="button" href="/participantes/mis-datos"> Mi perfil</a>
                             </li>
                             <li class="dropdown">
                                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Trabajos <span class="caret"></span></a>
@@ -52,11 +50,6 @@
                             </li>
                         </ul>
                         <ul class="nav navbar-top-links navbar-right">
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-user"></i> Bienvenido <?php echo $userData["lastName"].", ".$userData["name"]; ?>
-                                </a>
-                            </li>
                             <li>
                                 <a href="/participantes/cerrar-sesion">
                                     <i class="fa fa-sign-out"></i> Cerrar sesión

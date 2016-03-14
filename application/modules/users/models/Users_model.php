@@ -44,6 +44,24 @@ class Users_model extends CI_Model
 		return $query->row_array();
 	}
 
+	function noDuplicateEmail($user_id, $email)
+	{
+		$query = $this->db->get_where("users", array("id !=" => $user_id, "email" => $email) );
+		return $query->num_rows() == 0;
+	}
+
+	function updateUser($user_id, $user)
+	{
+		$this->db->where("id", $user_id);
+		$this->db->update("users", $user);
+	}
+
+	function noDuplicateCedula($user_id, $ci)
+	{
+		$query = $this->db->get_where("users", array("id !=" => $user_id, "ci" => $ci) );
+		return $query->num_rows() == 0;
+	}
+
 }  
 
 ?>

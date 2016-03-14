@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="form-group"><label class="col-lg-2 control-label">Monto</label>
                                     <div class="col-lg-10">
-                                        <input type="text" name="amount" class="form-control" placeholder="Expresado en Bolivares" value="<?php echo set_value("amount"); ?>">
+                                        <input type="text" name="amount" class="form-control" placeholder="Expresado en Bolivares" value="<?php echo set_value("amount", "1950"); ?>">
                                         <span class="help-block m-b-none">El monto despositado o transferido. </span>
                                         <?php echo form_error("amount"); ?>
                                     </div>

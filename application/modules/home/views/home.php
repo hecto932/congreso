@@ -70,7 +70,7 @@
                             <span class="icon-bar"></span>
                             </button>
 
-                            <a class="navbar-brand" href="#home" style="color: white;font-size: 1.5em;font-weight: 900;padding: 0.5em 0 0 0;">CONGRESO</a>
+                            <a class="navbar-brand" href="#home" style="color: white;font-size: 1.3em;font-weight: 900;padding: 0.5em 0 0 0;">CONGRESO</a>
                             
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                                 <li><a href="#informacion">Información</a></li>
                                 <li><a href="#organizadores">Organizadores</a></li>
                                 <li><a href="#preguntas">Preguntas</a></li>
-                                <li><a href="#noticias">Noticias</a></li>
+                                <li><a href="/participantes/inicio-sesion">Ingresar</a></li>
                                 <li><a href="#contacto">Contacto</a></li>
                             </ul>
                         </div>
@@ -241,14 +241,14 @@
                         Las Áreas Temáticas del Congreso están definidas por las discusiones que están en boga a nivel internacional, bien sea por universidades, institutos de investigaciones, organismos multilaterales, empresas privadas, gobiernos, entre otros, que de alguna manera marcan la agenda de los temas relevantes para el porvenir y el desarrollo de la sociedad. Estas Áreas se especifican a continuación:
                     </p>
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-ciudades-desarrollo-urbano.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-ciudades-desarrollo-urbano.pdf">
                             <p class="center"><i class="icon-man-woman area-icon"></i></p>
                             <h3 class="center">Ciudadanía y desarrollo urbano</h3>
                         </a>
                     </div>
 
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-vida-ecologia-ambiente.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-vida-ecologia-ambiente.pdf">
                             <p class="center"><i class="icon-leaf area-icon"></i></p>
                             <h3 class="center">Vida, ecología y ambiente</h3>
                         </a>
@@ -263,7 +263,7 @@
                        
                     </div>
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-educacion.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-educacion.pdf">
                             <p class="center"><i class="icon-books area-icon"></i></p>
                             <h3 class="center">Educación en las ciencias económicas y sociales </h3>
                         </a>
@@ -279,7 +279,7 @@
                     </div>
 
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-diversidad.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-diversidad.pdf">
                             <p class="center"><i class="icon-users area-icon"></i></p>
                             <h3 class="center">Diversidad, equidad e inclusión social</h3>
                         </a>
@@ -288,14 +288,14 @@
 
 
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-estudio-trabajo.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-estudio-trabajo.pdf">
                             <p class="center"><i class="icon-profile area-icon"></i></p>
                             <h3 class="center">Estudios del trabajo</h3>
                         </a>
                        
                     </div>
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-gerencia-sectores-productivos.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-gerencia-sectores-productivos.pdf">
                             <p class="center"><i class="icon-cogs area-icon"></i></p>
                             <h3 class="center">Gerencia y sectores productivos</h3>
                         </a>
@@ -304,28 +304,28 @@
 
                 <div class="row top-mini wow fadeIn" data-wow-delay="0.6s">
                      <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-historia-filosofia-sociedad.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-historia-filosofia-sociedad.pdf">
                             <p class="center"><i class="icon-book2 area-icon"></i></p>
                             <h3 class="center">Historia, filosofía y sociedad</h3>
                         </a>
                        
                     </div>
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-innovacion-social.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-innovacion-social.pdf">
                             <p class="center"><i class="icon-earth area-icon"></i></p>
                             <h3 class="center">Innovación social y organizaciones</h3>
                         </a>
                        
                     </div>
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/nueva-gestion-publica-calidad.pdf">
+                        <a href="assets/front/file/areas-tematicas/nueva-gestion-publica-calidad.pdf">
                             <p class="center"><i class="icon-library area-icon"></i></p>
                             <h3 class="center">Nueva gestión pública y calidad</h3>
                         </a>
                        
                     </div>
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-sociedad-salud.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-sociedad-salud.pdf">
                             <p class="center"><i class="icon-earth area-icon"></i></p>
                             <h3 class="center">Salud y sociedad</h3>
                         </a>
@@ -336,18 +336,29 @@
 
                 <div class="row top-mini wow fadeIn" data-wow-delay="0.6s">
                      <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-sociologia-ciencias-sociales.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-sociologia-ciencias-sociales.pdf">
                             <p class="center"><i class="icon-bubbles area-icon"></i></p>
                             <h3 class="center">Sociología y ciencias sociales</h3>
                         </a>
                        
                     </div>
                     <div class="col-md-3">
-                        <a href="file/areas-tematicas/area-tic-innovacion-tecnologia.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-tic-innovacion-tecnologia.pdf">
                             <p class="center"><i class="icon-display area-icon"></i></p>
                             <h3 class="center">TIC e innovación tecnológica</h3>
                         </a>
-                       
+                    </div>
+                    <div class="col-md-3">
+                        <a href="assets/front/file/areas-tematicas/area-educacion-cs-economicas-sociales.pdf">
+                            <p class="center"><i class="icon-pencil area-icon"></i></p>
+                            <h3 class="center">Educación en las ciencias económicas y sociales</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="assets/front/file/areas-tematicas/area-empresas-actividad-contable.pdf">
+                            <p class="center"><i class="icon-book area-icon"></i></p>
+                            <h3 class="center">Empresas y actividad contable</h3>
+                        </a>
                     </div>
                 </div>
 
@@ -483,7 +494,7 @@
                     <br>
                     <div class="col-md-12" style=" padding:0.7em; background: #4CAF50;color: white;text-align: justify;">
                         <h2 style="text-align:center;color: white;font-size: 3em;">Puede descargarlo haciendo clic <strong>
-                            <a style="color:#3F51B5;" href="file/programa-academico.pdf"><u>aquí</u></a>
+                            <a style="color:#3F51B5;" href="assets/front/file/programa-academico.pdf"><u>aquí</u></a>
                         </strong>.</h2>
                     </div>
 
@@ -526,10 +537,10 @@
                                 Usted dispone de una plantilla que lo orientará en la realización del trabajo, así como las instrucciones para los autores a través de los siguientes enlaces:
                             </p>
                             <ul>
-                                <li><a style="color: #1A237E;" href="file/instrucciones-para-autores-2016.pdf">Instrucciones para los Autores</a></li>
-                                <li><a style="color: #1A237E;" href="file/plantilla-para-trabajos-2016.pdf">Plantilla para Trabajos</a></li>
-                                <li><a style="color: #1A237E;" href="file/requisitos-carteles.pdf">Requisitos para Carteles</a></li>
-                                <li><a style="color: #1A237E;" href="file/inscripcion-simposio-normativa-2016.docx">Inscripción de Simposio y Normativa</a></li>
+                                <li><a style="color: #1A237E;" href="assets/front/file/instrucciones-para-autores-2016.pdf">Instrucciones para los Autores</a></li>
+                                <li><a style="color: #1A237E;" href="assets/front/file/plantilla-para-trabajos-2016.pdf">Plantilla para Trabajos</a></li>
+                                <li><a style="color: #1A237E;" href="assets/front/file/requisitos-carteles.pdf">Requisitos para Carteles</a></li>
+                                <li><a style="color: #1A237E;" href="assets/front/file/inscripcion-simposio-normativa-2016.docx">Inscripción de Simposio y Normativa</a></li>
                             </ul>
                             <h3>Beneficios</h3>
                             <p style="text-align:justify;">
@@ -792,8 +803,8 @@
                            Sí. Usted dispondrá de una plantilla que lo oriente; a su vez, encontrará las instrucciones para los autores. Puede descargar los archivos a través de los siguientes enlaces:
                         </p>
                         <ul>
-                            <li><a style="color: #1A237E;" href="file/plantilla-para-trabajos-2016.pdf">Planilla</a></li>
-                            <li><a style="color: #1A237E;" href="file/instrucciones-para-autores-2016.pdf">Instrucciones para los autores</a></li>
+                            <li><a style="color: #1A237E;" href="assets/front/file/plantilla-para-trabajos-2016.pdf">Planilla</a></li>
+                            <li><a style="color: #1A237E;" href="assets/front/file/instrucciones-para-autores-2016.pdf">Instrucciones para los autores</a></li>
                         </ul>
                     </div>
                 </div>

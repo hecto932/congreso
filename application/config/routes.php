@@ -62,10 +62,13 @@ $route['participantes/registrar'] = 'users/doRegister';
 $route['participantes/inicio-sesion'] = 'users';
 $route['participantes/iniciar'] = 'users/login';
 $route['participantes/cerrar-sesion'] = 'users/logout';
+$route['participantes/mis-datos'] = "users/toUpdateUserSession";
+$route['participantes/actualizar-datos'] = "users/updateUserSession";
 
 // WORKS
 $route['participantes/agregar-trabajo'] = "works/toAddWork";
 $route['participantes/agregando-trabajo'] = "works/addWork";
+$route['participantes/trabajos/(:num)']	= "works/work/$1";
 
 // PAYMENTS
 $route["participantes/agregar-pago"] = "payments/toAddPayment";

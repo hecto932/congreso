@@ -17,6 +17,12 @@ class Payments_model extends CI_Model
 	{
 		$this->db->insert("payments", $payment);
 	}
+
+	function numberPaymentsByUserId($user_id)
+	{
+		$query = $this->db->get_where("payments", array("user_id" => $user_id));
+		return $query->num_rows();
+	}
 }  
 
 ?>

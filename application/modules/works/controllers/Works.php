@@ -93,7 +93,7 @@ class Works extends MX_Controller {
                 if ($error == UPLOAD_ERR_OK) 
                 {
                     $tmp_name = $_FILES["files"]["tmp_name"][$key];
-                    $name = $_FILES["files"]["name"][$key];
+                    $name = modules::run("users/getSessionId")."_".$_FILES["files"]["name"][$key];
                     $type = $_FILES["files"]["type"][$key];
                     move_uploaded_file($tmp_name, "uploads/files/$name");
                     if($type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
@@ -171,23 +171,57 @@ class Works extends MX_Controller {
     {
         $result = $this->works_model->getWorksByUserId($user_id);
         foreach ($result as $key => $value) {
-            $result[$key]["area"] = $this->works_model->getTitleById($result[$key]["area_id"]);
+            $result[$key]["area"] = $this->works_model->getAreaName($result[$key]["area_id"]);
         }
         return $result;
     }
 
-    public function getTitleById($work_id)
+    public function getAreaName($work_id)
     {
-        return $this->works_model->getTitleById($work_id);
+        return $this->works_model->getAreaName($work_id);
     }
 
     public function getAllWorksWithOutPayment($user_id)
     {
         $result = $this->works_model->getAllWorksWithOutPayment($user_id);
         foreach ($result as $key => $value) {
-            $result[$key]["work"] = $this->works_model->getTitleById($result[$key]["work_id"]);
+            $result[$key]["work"] = $this->works_model->getAreaName($result[$key]["work_id"]);
         }
         //die_pre($result);
         return $result;
+    }
+
+    public function numberWorksByUserId($user_id)
+    {
+        return $this->works_model->numberWorksByUserId($user_id);
+    }
+
+    public function getTitleWork($work_id)
+    {
+        return $this->works_model->getTitleWork($work_id);
+    }
+
+    public function getWorkById($work_id)
+    {
+        $query = $this->works_model->getWorkById($work_id);
+        $query["files"] = $this->works_model->getFilesWork($work_id);
+        $query["area"] = $this->works_model->getAreaName($query["area_id"]);
+        return $query; 
+    }
+
+    public function work($work_id)
+    {
+        if(modules::run("users/getSessionId"))
+        {
+            $data["title"] = "Congreso - Trabajo";
+            $data["userData"] = modules::run('users/getUserSession');
+            $data["work"] = $this->getWorkById($work_id);
+            $data["contenido_principal"] = $this->load->view("work", $data, true);
+            $this->load->view("app/template", $data);
+        }
+        else
+        {
+            redirect("/app");
+        }
     }
 }

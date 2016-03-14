@@ -34,16 +34,39 @@ class Works_model extends CI_Model
 		$query = $this->db->get_where("works", array("user_id" => $user_id));
 		return $query->result_array();
 	}
-
-	function getTitleById($area_id)
+	function getAreaName($area_id)
 	{
 		$query = $this->db->get_where("areas", array("id" => $area_id));
 		return $query->row()->name;
 	}
 
+	function getTitleWork($work_id)
+	{
+		$query = $this->db->get_where("works", array("id" => $work_id));
+		return $query->row()->title;
+	}
+
 	function getAllWorksWithOutPayment($user_id)
 	{
 		$query = $this->db->query("SELECT w.* FROM works w LEFT JOIN payments p ON w.id = p.work_id WHERE p.work_id IS NULL");
+		return $query->result_array();
+	}
+
+	function numberWorksByUserId($user_id)
+	{
+		$query = $this->db->get_where("works", array("user_id" => $user_id));
+		return $query->num_rows();
+	}
+
+	function getWorkById($work_id)
+	{
+		$query = $this->db->get_where("works", array("id" => $work_id));
+		return $query->row_array();
+	}
+
+	function getFilesWork($work_id)
+	{
+		$query = $this->db->get_where("files", array("work_id" => $work_id));
 		return $query->result_array();
 	}
 }  

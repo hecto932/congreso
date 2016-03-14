@@ -16,6 +16,8 @@ class App extends MX_Controller {
             $data["userData"] = modules::run('users/getUserSession');
             $data["MyPayments"] = modules::run("payments/getPaymentsByUserId", modules::run('users/getSessionId'));
             $data["MyWorks"] = modules::run("works/getWorksByUserId", modules::run('users/getSessionId'));
+            $data["numberPayments"] = modules::run("payments/numberPaymentsByUserId", modules::run('users/getSessionId'));
+            $data["numberWorks"] = modules::run("works/numberWorksByUserId", modules::run('users/getSessionId'));
     		$data["contenido_principal"] = $this->load->view("app", $data, true);
     		$this->load->view("app/template", $data);
     	}
