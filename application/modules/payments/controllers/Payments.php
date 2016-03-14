@@ -39,7 +39,7 @@ class Payments extends MX_Controller {
         if(!empty($_POST))
         {
             $this->form_validation->set_rules("bank", "Banco", "required");
-            $this->form_validation->set_rules("numberReference", "Numero de referencia", "required|is_unique[payments.numberReference]");
+            $this->form_validation->set_rules("numberReference", "Numero de referencia", "required");
             $this->form_validation->set_rules("amount", "Monto", "required");
             $this->form_validation->set_rules("work_id", "Trabajo", "required");
 
