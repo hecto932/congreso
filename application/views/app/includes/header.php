@@ -26,12 +26,12 @@
                         <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                             <i class="fa fa-reorder"></i>
                         </button>
-                        <a href="/app" class="navbar-brand">Congreso</a>
+                        <a href="app" class="navbar-brand">Congreso</a>
                     </div>
                     <div class="navbar-collapse collapse" id="navbar">
                         <ul class="nav navbar-nav">
                             <li class="">
-                                <a aria-expanded="false" role="button" href="app"> Ir al Inicio</a>
+                                <a aria-expanded="false" role="button" href="<?php echo base_url(); ?>"> Ir al Inicio</a>
                             </li>
                             <li class="">
                                 <a aria-expanded="false" role="button" href="participantes/mis-datos"> Mi perfil</a>
