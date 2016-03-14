@@ -85,7 +85,7 @@
                                 <li><a href="#informacion">Información</a></li>
                                 <li><a href="#organizadores">Organizadores</a></li>
                                 <li><a href="#preguntas">Preguntas</a></li>
-                                <li><a href="/participantes/inicio-sesion">Ingresar</a></li>
+                                <li><a href="<?php echo base_url(); ?>participantes/inicio-sesion">Ingresar</a></li>
                                 <li><a href="#contacto">Contacto</a></li>
                             </ul>
                         </div>
