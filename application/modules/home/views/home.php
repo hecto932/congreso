@@ -541,6 +541,9 @@
                                     <li><strong>Resumen del evento en formato electrónico</strong></li>
                                 </ul>
                             </p>
+                            <h3>Enviar trabajos</h3>
+
+                            <p>Para enviar su(s) trabajo(s) libre o simposio al Congreso, haga click <a href="<a style="color: #1A237E;" href="participantes/inicio-sesion">">Aquí</a></p>
                         </div>
                         <div class="col-md-6">
                             <h3>Importante</h3>
