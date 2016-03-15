@@ -1,7 +1,7 @@
 <div class="wrapper wrapper-content">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-6 col-md-offset-3">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5><?php echo $work["title"]; ?></h5>

@@ -2,11 +2,7 @@
     <div class="container">
         <div class="row">
             <?php if($this->session->flashdata("message")): ?>
-                 <div class="col-lg-12">
-                    <div class="alert alert-success">
-                        <?php echo $this->session->flashdata('message'); ?>
-                    </div>
-                </div>
+                <?php echo $this->session->flashdata('message'); ?>
             <?php endif; ?>
             <div class="col-lg-12">
                 <div class="row m-b-lg m-t-lg">

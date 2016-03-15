@@ -11,19 +11,18 @@
                             <form class="form-horizontal" action="participantes/agregando-pago" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <p>Todos los campos son absolutamente obligatorios.</p>
-                                <p>Recuerde que solo se aceptara un pago UNICO por trabajo.</p>
-                                <p>Todos los campos son absolutamente obligatorios.</p>
+                                <p>Recuerde que sólo se aceptará un pago ÚNICO por trabajo.</p>
                                 <div class="form-group"><label class="col-lg-2 control-label">Banco</label>
                                     <div class="col-lg-10">
                                         <input type="text" name="bank" placeholder="Ejemplo: Banco Mercantil" class="form-control" value="<?php echo set_value("bank"); ?>">
-                                        <span class="help-block m-b-none">Nombre del banco en donde deposito o de donde realizo la transferencia.</span>
+                                        <span class="help-block m-b-none">Nombre del banco donde realizó el depósito o transferencia.</span>
                                         <?php echo form_error("bank"); ?>
                                     </div>
                                 </div>
-                                <div class="form-group"><label class="col-lg-2 control-label">Numero de referencia</label>
+                                <div class="form-group"><label class="col-lg-2 control-label">Número de referencia</label>
                                     <div class="col-lg-10">
                                         <input type="text" name="numberReference" placeholder="Ejemplo: 87484184" class="form-control" value="<?php echo set_value("numberReference"); ?>">
-                                        <span class="help-block m-b-none">Coloque cuidadosamente el numero de referencia de su deposito o transferencia.</span>
+                                        <span class="help-block m-b-none">Coloque cuidadosamente el número de referencia de su deposito o transferencia.</span>
                                         <?php echo form_error("numberReference"); ?>
                                     </div>
 

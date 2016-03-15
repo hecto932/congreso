@@ -11,8 +11,7 @@
                             <form class="form-horizontal" action="participantes/agregando-trabajo" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                                 <p>Todos los campos son absolutamente obligatorios.</p>
-                                <p>Solo se permitira cargar maximo tres(3) archivos por trabajo.</p>
-                                <p>Todos los campos son absolutamente obligatorios.</p>
+                                <p>Solo se permitirá cargar un máximo de tres(3) archivos.</p>
                                 <div class="form-group"><label class="col-lg-2 control-label">Campus</label>
                                     <div class="col-lg-10">
                                         <select class="form-control m-b" name="campus">
@@ -56,7 +55,7 @@
                                 <div class="form-group"><label class="col-lg-2 control-label">Título del trabajo</label>
                                     <div class="col-lg-10">
                                         <input type="text" class="form-control" placeholder="Título"name="title" required="required" value="<?php echo set_value("title"); ?>">
-                                        <span class="help-block m-b-none">Escriba el titulo con detenimiento.</span>
+                                        <span class="help-block m-b-none">Escriba el título exacto del trabajo presentado.</span>
                                         <?php echo form_error("title"); ?>
                                     </div>
                                 </div>
@@ -65,6 +64,7 @@
                                         <input type="file" class="form-control" name="files[]" required="required" multiple>
                                         <span class="help-block m-b-none">Por favor seleccione los archivos correspondientes al trabajo.</span>
                                         <?php echo form_error("files"); ?>
+                                        <?php echo $this->session->flashdata('message'); ?>
                                     </div>
                                 </div>
                                 <div class="form-group">

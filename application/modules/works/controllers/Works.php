@@ -116,6 +116,12 @@ class Works extends MX_Controller {
         }
     }
 
+    public function getNumberFiles()
+    {
+        $this->session->set_flashdata('message', '<span class="badge badge-danger">Solo pueden cargarse maximo tres(3) archivos.</span>');
+        return count($_FILES["files"]["name"]) <= 3;
+    }
+
     public function addWork()
     {
     	if(!empty($_POST))
@@ -130,7 +136,10 @@ class Works extends MX_Controller {
 
     		$this->form_validation->set_error_delimiters("<p class='text-danger'>", "</p>");
 
-    		if($this->form_validation->run($this))
+            //echo count($_FILES["files"]["name"]);
+            //die_pre($_FILES);
+
+    		if($this->form_validation->run($this) && $this->getNumberFiles())
     		{
     			$work = array(
     				"user_id" 	=> modules::run("users/getSessionId"),
@@ -148,7 +157,7 @@ class Works extends MX_Controller {
 
                 $this->upload_attachments($workData["id"]);
 
-    			$this->session->set_flashdata('message', 'Trabajo cargado exitosamente.');
+    			$this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-success">Trabajo cargado exitosamente.</div></div>');
 
     			redirect("/app");
     		}

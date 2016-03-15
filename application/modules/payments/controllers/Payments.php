@@ -15,7 +15,7 @@ class Payments extends MX_Controller {
         {
             $data["title"] = "Agregar nuevo pago";
             $data["userData"] = modules::run("users/getUserSession");
-            $data["MyWorks"] = modules::run("works/getAllWorksWithOutPayment", modules::run('users/getSessionId'));
+            $data["MyWorks"] = modules::run("works/getWorksByUserId", modules::run('users/getSessionId'));
             $data["contenido_principal"] = $this->load->view("addPayment", $data, true);
             $this->load->view("app/template", $data);
         }
@@ -62,13 +62,13 @@ class Payments extends MX_Controller {
 
                 $this->payments_model->addPayment($payment);
 
-                $this->session->set_flashdata('message', 'Pago realizado exitosamente. Por favor espere por su confirmación.');
+                $this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-success">Pago realizado exitosamente. Por favor espere por su confirmación..</div></div>');
 
                 redirect("/app");
             }
             else
             {
-                 $data["title"] = "Agregar nuevo pago";
+                $data["title"] = "Agregar nuevo pago";
                 $data["userData"] = modules::run("users/getUserSession");
                 $data["MyWorks"] = modules::run("works/getAllWorksWithOutPayment", modules::run('users/getSessionId'));
                 $data["contenido_principal"] = $this->load->view("addPayment", $data, true);

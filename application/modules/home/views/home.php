@@ -85,8 +85,8 @@
                                 <li><a href="#informacion">Información</a></li>
                                 <li><a href="#organizadores">Organizadores</a></li>
                                 <li><a href="#preguntas">Preguntas</a></li>
-                                <li><a href="<?php echo base_url(); ?>participantes/inicio-sesion">Ingresar</a></li>
                                 <li><a href="#contacto">Contacto</a></li>
+                                <li><a href="participantes/inicio-sesion">Mi cuenta</a></li>
                             </ul>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                     <li><a href="#generalidades"><i class="icon-file-text"></i> <p>Generalidades</p></a></li>
                     <li><a href="#informacion"><i class="icon-info"></i> <p> Información</p></a></li>
                     <li><a href="#organizadores"><i class="icon-user"></i> <p>Organizadores</p></a></li>
-                    <li><a href="#contacto"><i class="icon-addressbook"></i> <p>Preguntas frecuentes</p></a></li>
+                    <li><a href="#preguntas"><i class="icon-addressbook"></i> <p>Preguntas frecuentes</p></a></li>
                 </ul>
 
             </div>
@@ -264,7 +264,7 @@
                        
                     </div>
                     <div class="col-md-3">
-                        <a href="assets/front/file/areas-tematicas/area-educacion.pdf">
+                        <a href="assets/front/file/areas-tematicas/area-educacion-cs-economicas-sociales.pdf">
                             <p class="center"><i class="icon-books area-icon"></i></p>
                             <h3 class="center">Educación en las ciencias económicas y sociales </h3>
                         </a>
@@ -273,7 +273,7 @@
 
                 <div class="row top-mini wow fadeIn" data-wow-delay="0.6s">
                      <div class="col-md-3">
-                        <a href="javascript:void(0);">
+                        <a href="assets/front/file/areas-tematicas/area-empresas-actividad-contable.pdf">
                             <p class="center"><i class="icon-office area-icon"></i></p>
                             <h3 class="center">Empresas y actividad contable</h3>
                         </a>
@@ -347,18 +347,6 @@
                         <a href="assets/front/file/areas-tematicas/area-tic-innovacion-tecnologia.pdf">
                             <p class="center"><i class="icon-display area-icon"></i></p>
                             <h3 class="center">TIC e innovación tecnológica</h3>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="assets/front/file/areas-tematicas/area-educacion-cs-economicas-sociales.pdf">
-                            <p class="center"><i class="icon-pencil area-icon"></i></p>
-                            <h3 class="center">Educación en las ciencias económicas y sociales</h3>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="assets/front/file/areas-tematicas/area-empresas-actividad-contable.pdf">
-                            <p class="center"><i class="icon-book area-icon"></i></p>
-                            <h3 class="center">Empresas y actividad contable</h3>
                         </a>
                     </div>
                 </div>
@@ -559,10 +547,7 @@
                             <p style="text-align:justify;">
                                 <ul>
                                     <li><strong>Máximo tres (03) trabajos postulados por persona.</strong></li>
-                                    <!-- 
-                                        <li><strong>Credencial solicitada por co-autor Bs. 50,00 (Se le debe sumar al precio)</strong></li>
-                                    <li><strong>Inscripción de Eventos (Taller, Simposium, Foro, Conversatorio, Mesa redonda, Curso): Hasta el 14 de Mayo de 2015.</strong></li>
-                                    -->
+                                    <li><a style="color: #1A237E;" href="participantes/inicio-sesion">Enviar trabajos haga clic aquí.</a></li>
                                 </ul>
                             </p>
                         </div>
@@ -590,7 +575,10 @@
                                 </strong>
                             </p>
                             <p>
-                                Una vez realizado el depósito, el participante/ponente deberá registrarlo <a href="/participantes/inicio-sesion">Aqui</a>, y se le enviará una notificación en señal de recibido.   
+                                Una vez realizado el depósito, el participante/ponente deberá registrarlo <a style="color: #1A237E;" href="participantes/inicio-sesion">Aquí</a>, y se le enviará una notificación en señal de recibido.   
+                            </p>
+                            <p>
+                                
                             </p>
                         </div>
                         
@@ -604,7 +592,7 @@
                             <br> 
                             <br> 
                             <p>
-                                Los ponentes, estudiantes y participantes extranjeros cancelarán su cuota de participac ión al inicio del evento, en inscripciones previstas para estos casos. Para información,comuníquese a través del correo electrónico <a style="color: #1A237E;" href="mailto:congresofacesuc@gmail.com">congresofacesuc@gmail.com</a> o a través del teléfono <a style="color: #1A237E;" href="tel:+582414177734">+582414177734</a>
+                                Los ponentes, estudiantes y participantes extranjeros cancelarán su cuota de participac ión al inicio del evento, en inscripciones previstas para estos casos. Para información, comuníquese a través del correo electrónico <a style="color: #1A237E;" href="mailto:congresofacesuc@gmail.com">congresofacesuc@gmail.com</a> o a través del teléfono <a style="color: #1A237E;" href="tel:+582414177734">+582414177734</a>
                             </p>                       
                         </div>
                     </div>
@@ -614,7 +602,7 @@
         <!-- INFORMACIÓN -->
     
         <!-- EVENTOS PRECONGRESO -->
-        <section id="organizadores" class="faq paddings">
+        <section id="eventosprecongreso" class="faq paddings">
             <div class="container">
                 <div class="row titles-main left wow animated bounceInUp" data-wow-delay="0.5s" data-wow-duration="0.5s">
                     <div class="col-md-12">
@@ -623,7 +611,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 style="color: #3F51B5;">- <a style="color: #3F51B5;" href="http://faces.uc.edu.ve/web/eventos/ver/elaboracion-de-articulos-cientificos">Taller de Elaboración de Articulos Científicos</a></h1>
+                        <h1 style="color: #3F51B5;">- <a style="color: #3F51B5;" href="http://faces.uc.edu.ve/web/eventos/ver/elaboracion-de-articulos-cientificos">Taller de Elaboración de Artículos Científicos</a></h1>
                     </div>
                 </div>
             </div>
@@ -679,7 +667,7 @@
                                 <li>Dra. Yamile Delgado de Smith - Coordinadora de la Comisión de Arbitraje </li>
                                 <li>Profa. Nazareth Franco Coordinadora de la Comisión de Finanzas </li>
                                 <li>Dr. Leonardo Villalba - Coordinador de la Comisión de Postgrado e Investigadores Nóveles </li>
-                                <li>Dra. Aura Adriana Delgado, Profa. Nuvia Pernía y Profa. Themis Sandoval - Coordinadoras de la Comisión de Logística</li>
+                                <li>Dra. Aura Adriana Delgado, Dra. Alicia Silva, Profa. Nuvia Pernía y Profa. Themis Sandoval - Coordinadoras de la Comisión de Logística</li>
                                 <li>Lic. Mariela Amaro - Coordinadora de la Comisión de Medios y Publicidad</li>
                                 <li>Dra. Ana Cordero y Prof. Luis Lozada - Coordinadores de la Comisión de Relaciones Interinstitucionales</li>
                                 <li>Prof. Germán Ospino - Coordinador de la Comisión de Informática</li>
@@ -698,7 +686,7 @@
                     </div>
                     <div class="col-md-12">
                         <blockquote style="background: #FFCA28;border-radius: 0px 7px 7px 0px; text-align:justify;">
-                            Este evento está organizado por la Facultad de Ciencias Económicas y Sociales de la Universidad de Carabobo, a través de la Dirección de Investigación y Producción Intelectual (DIPI), con la participación de todas sus estructuras de Investigación, Extensión y Docencia, tanto del Campus Bárbula como de La Morita, ademas de otros colaboradores.
+                            Este evento está organizado por la Facultad de Ciencias Económicas y Sociales de la Universidad de Carabobo, a través de la Dirección de Investigación y Producción Intelectual (DIPI), con la participación de todas sus estructuras de Investigación, Extensión y Docencia, tanto del Campus Bárbula como de La Morita, además de otros colaboradores.
                         </blockquote>
                     </div>
                 </div>
@@ -801,7 +789,7 @@
                         <h3>¿A dónde debo consignar mi investigación?</h3>
                         <hr>
                         <p style="text-align:justify;">
-                            Los trabajos postulados al Congreso deberán ser cargados en línea a través del Sistema, donde tendrá que iniciar sesión respectivamente para poder incorporar dichos archivos. En el transcurso de los próximos días se dispondrá de un enlace para Registrarse en el Sistema y a partir del día 14 de marzo podrá comenzar a cargar sus trabajos.
+                            Los trabajos postulados al Congreso deberán ser cargados en línea a través del Sistema, donde tendrá que iniciar sesión respectivamente para poder incorporar dichos archivos. Para cargar sus trabajos haga clic <a style="color: #1A237E;" href="participantes/inicio-sesion">Aquí</a>.
                         </p>
                     </div>
 

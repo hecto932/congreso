@@ -10,7 +10,7 @@
                         <div class="ibox-content">
                             <form class="form-horizontal" action="participantes/actualizar-datos" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-                                <p>Los campos con asterisco(*) son obligatorios.</p>
+                                <p>Los campos con asteriscos(*) son obligatorios.</p>
                                 <div class="form-group"><label class="col-lg-2 control-label">Avatar</label>
                                     <div class="col-lg-10">
                                         <div class="profile-image">
@@ -55,9 +55,9 @@
                                         <?php echo form_error("email"); ?>
                                     </div>
                                 </div>
-                                <div class="form-group"><label class="col-lg-2 control-label">Universidad</label>
+                                <div class="form-group"><label class="col-lg-2 control-label">Universidad/organización</label>
                                     <div class="col-lg-10">
-                                        <input type="text" name="university" class="form-control" placeholder="Universidad de Carabobo" value="<?php echo set_value("university", $userData["university"]); ?>">
+                                        <input type="text" name="university" class="form-control" placeholder="" value="<?php echo set_value("university", $userData["university"]); ?>">
                                         <?php echo form_error("university"); ?>
                                     </div>
                                 </div>
