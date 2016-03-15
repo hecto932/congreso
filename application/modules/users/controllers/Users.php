@@ -241,12 +241,14 @@ class Users extends MX_Controller {
 			{
 				//EMPAQUETAMOS LA DATA A GUARDAR EN LA BASE DE DATOS
 				$user = array(
-					'lastName' 	=> $this->input->post('lastName'),
-					'name'		=> $this->input->post('name'),
-					'ci'		=> $this->input->post('ci'),
-					'phone'		=> 	$this->input->post('phone'),
-					'email'		=> $this->input->post('email'),
-					'createdAt'	=> date("Y-m-d H:i:s")
+					'lastName' 		=> $this->input->post('lastName'),
+					'name'			=> $this->input->post('name'),
+					'ci'			=> $this->input->post('ci'),
+					'phone'			=> 	$this->input->post('phone'),
+					'email'			=> $this->input->post('email'),
+					'university' 	=> $this->input->post('university'),
+					'school' 		=> $this->input->post('school'),
+					'createdAt'		=> date("Y-m-d H:i:s")
 				);
 
 				if(!empty($this->input->post("password")) || !empty($this->input->post("repass")))
