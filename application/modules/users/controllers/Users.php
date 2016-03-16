@@ -93,6 +93,8 @@ class Users extends MX_Controller {
 			//INSERTAMOS UN NUEVO USUARIO A LA TABLA USER_BACKEND
 			$this->users_model->createUser($user);
 
+			$this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-success">Registro completado exitosamente.</div></div>');
+
 			redirect('app');
 		}
 		else
@@ -150,7 +152,7 @@ class Users extends MX_Controller {
 				);
 				$this->session->set_userdata($cookieData);
 
-				$this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-success">Registro completado exitosamente.</div></div>');
+				$this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-info">Bienvenido.</div></div>');
 
 				//REDIRIJO AL HOME
 				redirect('app');
