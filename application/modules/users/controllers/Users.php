@@ -46,18 +46,34 @@ class Users extends MX_Controller {
 		}
 	}
 
+	public function isUniqueEmail()
+	{
+		$email = $this->input->post("email");
+		return $this->users_model->isUniqueEmail($email);
+	}
+
+	public function isUniqueCedula()
+	{
+		$cedula = $this->input->post("ci");
+		return $this->users_model->isUniqueCedula($cedula);
+	}
+
 	public function doRegister()
 	{
 		$this->form_validation->set_rules("lastName", "Apellidos", "required|trim");
 		$this->form_validation->set_rules("name", "Nombres", "required|trim");
-		$this->form_validation->set_rules("ci", "Cédula", "required|trim|callback_noDuplicateCedula");
+		$this->form_validation->set_rules("ci", "Cédula", "required|trim|callback_isUniqueCedula");
 		$this->form_validation->set_rules("phone", "Teléfono", "required|trim");
-		$this->form_validation->set_rules("email", "Email", "required|trim|valid_email|callback_noDuplicateEmail");
+		$this->form_validation->set_rules("email", "Correo electrónico", "required|trim|valid_email|callback_isUniqueEmail");
 		$this->form_validation->set_rules("password", "Contraseña", "required|trim|min_length[8]");
+		$this->form_validation->set_rules("repass", "Repita la contraseña", "required|trim|matches[password]");
 
 		$this->form_validation->set_message("required", "%s es requerido.");
 		$this->form_validation->set_message("is_unique", "%s ya existe.");
 		$this->form_validation->set_message("min_length", "%s es muy corta.");
+		$this->form_validation->set_message("matches", "Las contraseñas no coinciden.");
+		$this->form_validation->set_message("isUniqueEmail", "%s registrado.");
+		$this->form_validation->set_message("isUniqueCedula", "%s registrada.");
 
 		$this->form_validation->set_error_delimiters("<p class='text-danger'>", "</p>");
 
@@ -157,7 +173,7 @@ class Users extends MX_Controller {
 			$this->session->unset_userdata('user_id');
 			$this->session->sess_destroy();
 		}
-		redirect('/');
+		redirect('app');
 	}
 
 	public function getUserSession()
@@ -178,7 +194,7 @@ class Users extends MX_Controller {
 		}
 		else
 		{
-			redirect("/participantes/inicio-sesion");
+			redirect("participantes/inicio-sesion");
 		}
 	}
 
@@ -266,7 +282,7 @@ class Users extends MX_Controller {
 				$user_id = $this->getSessionId();
 				$this->users_model->updateUser($user_id, $user);
 
-				redirect('/app');
+				redirect('app');
 			}
 			else
 			{

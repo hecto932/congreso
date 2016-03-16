@@ -45,15 +45,19 @@
                     <?php echo form_error("email"); ?>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="university" class="form-control" placeholder="Universidad/organización" required="" value="<?php echo set_value("university")?>">
+                    <input type="text" name="university" class="form-control" placeholder="Universidad/organización" value="<?php echo set_value("university")?>">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="school" class="form-control" placeholder="Escuela" required="" value="<?php echo set_value("school")?>">
+                    <input type="text" name="school" class="form-control" placeholder="Escuela" value="<?php echo set_value("school")?>">
                 </div>
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Contraseña *" required="">
-                    <span class="help-block m-b-none">La contraseña debe tener minimo ocho(8) caracteres.</span>
                     <?php echo form_error("password"); ?>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="repass" class="form-control" placeholder="Repita la contraseña *" required="">
+                    <span class="help-block m-b-none">Las contraseñas deben tener minimo ocho(8) caracteres.</span>
+                    <?php echo form_error("repass"); ?>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>
 

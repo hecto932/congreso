@@ -21,7 +21,6 @@
                                             <?php endif; ?>
                                         </div>
                                         <input type="file" class="form-control" name="image" >
-                                        
                                         <?php echo form_error("image"); ?>
                                     </div>
                                 </div>

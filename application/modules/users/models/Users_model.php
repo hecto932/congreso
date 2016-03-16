@@ -62,6 +62,18 @@ class Users_model extends CI_Model
 		return $query->num_rows() == 0;
 	}
 
+	function isUniqueEmail($email)
+	{
+		$query = $this->db->get_where("users", array("email" => $email));
+		return $query->num_rows() == 0;
+	}
+
+	function isUniqueCedula($ci)
+	{
+		$query = $this->db->get_where("users", array("ci" => $ci));
+		return $query->num_rows() == 0;
+	}
+
 }  
 
 ?>

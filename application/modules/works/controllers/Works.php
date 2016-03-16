@@ -56,7 +56,7 @@ class Works extends MX_Controller {
 
     public function toAddWork()
     {
-    	if(modules::run("users/getSessionId"))
+    	if(modules::run("users/getSessionId") && ($this->getNumberWorks()<3))
     	{
     		$data["title"] = "Agregar un nuevo trabajo";
     		$data["userData"] = modules::run('users/getUserSession');
@@ -66,7 +66,8 @@ class Works extends MX_Controller {
     	}
     	else
     	{
-    		redirect("/");
+    		$this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-danger">Usted ha alcanzado el maximo de trabajos permitidos.</div></div>');
+            redirect("/app");
     	}
     }
 
@@ -122,6 +123,18 @@ class Works extends MX_Controller {
         return count($_FILES["files"]["name"]) <= 3;
     }
 
+    public function getNumberWorks()
+    {
+        $user_id = modules::run("users/getSessionId");
+        return $this->works_model->getNumberWorks($user_id);
+    }
+
+    public function isUniqueTitle()
+    {
+        $title = $this->input->post("title");
+        return $this->works_model->isUniqueTitle($title);
+    }
+
     public function addWork()
     {
     	if(!empty($_POST))
@@ -129,10 +142,11 @@ class Works extends MX_Controller {
     		$this->form_validation->set_rules("campus", "Campus", "required");
     		$this->form_validation->set_rules("area_id", "Area temática", "required");
     		$this->form_validation->set_rules("modality", "Modalidad", "required");
-    		$this->form_validation->set_rules("title", "Titulo", "required|trim");
+    		$this->form_validation->set_rules("title", "Titulo", "required|trim|callback_isUniqueTitle");
 
     		$this->form_validation->set_message('required', '%s es requerido.');
     		$this->form_validation->set_message('is_unique', '%s no es unico.');
+            $this->form_validation->set_message("isUniqueTitle","Título es repetido.");
 
     		$this->form_validation->set_error_delimiters("<p class='text-danger'>", "</p>");
 
@@ -172,6 +186,7 @@ class Works extends MX_Controller {
     	}
     	else
     	{
+            $this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-error">Usted ha alcanzado el maximo de trabajos permitidos.</div></div>');
     		redirect("/app");
     	}
     }

@@ -69,6 +69,18 @@ class Works_model extends CI_Model
 		$query = $this->db->get_where("files", array("work_id" => $work_id));
 		return $query->result_array();
 	}
+
+	function getNumberWorks($user_id)
+	{
+		$query = $this->db->get_where("works", array("user_id" => $user_id));
+		return $query->num_rows();
+	}
+
+	function isUniqueTitle($title)
+	{
+		$query = $this->db->get_where("works", array("title" => $title));
+		return $query->num_rows() == 0;
+	}
 }  
 
 ?>
