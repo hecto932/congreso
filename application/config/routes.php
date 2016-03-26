@@ -73,3 +73,7 @@ $route['participantes/trabajos/(:num)']	= "works/work/$1";
 // PAYMENTS
 $route["participantes/agregar-pago"] = "payments/toAddPayment";
 $route["participantes/agregando-pago"] = "payments/addPayment";
+
+// BACKEND
+$route["backend"] = 'backend';
+$route["backend/iniciar-sesion"] = "backusers/login"; 
