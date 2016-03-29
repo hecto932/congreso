@@ -77,3 +77,4 @@ $route["participantes/agregando-pago"] = "payments/addPayment";
 // BACKEND
 $route["backend"] = 'backend';
 $route["backend/iniciar-sesion"] = "backusers/login"; 
+$route["backend/cerrar-sesion"] = "backusers/logout";

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 26-03-2016 a las 15:25:05
--- Versión del servidor: 5.5.47-0ubuntu0.14.04.1
--- Versión de PHP: 5.5.9-1ubuntu4.14
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 29-03-2016 a las 07:15:52
+-- Versión del servidor: 10.1.10-MariaDB
+-- Versión de PHP: 7.0.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `congreso`
@@ -26,14 +26,13 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `areas`
 --
 
-CREATE TABLE IF NOT EXISTS `areas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `areas` (
+  `id` int(11) NOT NULL,
   `name` varchar(140) NOT NULL,
   `description` text,
   `createdAt` datetime NOT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `areas`
@@ -61,18 +60,24 @@ INSERT INTO `areas` (`id`, `name`, `description`, `createdAt`, `updatedAt`) VALU
 -- Estructura de tabla para la tabla `backusers`
 --
 
-CREATE TABLE IF NOT EXISTS `backusers` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `backusers` (
+  `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `campus` enum('Bárbula','La Morita') NOT NULL,
-  `rol` enum('Administrador','Arbitro','Fundaprofaces') NOT NULL,
+  `role_id` int(11) NOT NULL,
   `rememberToken` varchar(255) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `backusers`
+--
+
+INSERT INTO `backusers` (`id`, `name`, `email`, `password`, `campus`, `role_id`, `rememberToken`, `createdAt`, `updatedAt`) VALUES
+(1, 'Hector Flores', 'hecto932@gmail.com', '786bd9a52ee9af08db5c139b86cc60533ca1c7b6', 'Bárbula', 1, NULL, '2016-03-27 00:00:00', '2016-03-27 22:52:57');
 
 -- --------------------------------------------------------
 
@@ -80,16 +85,14 @@ CREATE TABLE IF NOT EXISTS `backusers` (
 -- Estructura de tabla para la tabla `files`
 --
 
-CREATE TABLE IF NOT EXISTS `files` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL,
   `work_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `createdAt` datetime NOT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `work_id` (`work_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `files`
@@ -98,7 +101,11 @@ CREATE TABLE IF NOT EXISTS `files` (
 INSERT INTO `files` (`id`, `work_id`, `name`, `type`, `createdAt`, `updatedAt`) VALUES
 (1, 18, '3_LISTADO DE PARTICIPANTES EN EL TALLER formacion de proyecto.docx', 'DOCX', '2016-03-16 09:07:43', '2016-03-16 13:37:43'),
 (2, 19, '3_Propuesta de Proyectos gestionable.docx', 'DOCX', '2016-03-16 09:08:13', '2016-03-16 13:38:13'),
-(3, 20, '3_Listado CYTVEN 2015.xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', '2016-03-16 09:08:54', '2016-03-16 13:38:54');
+(3, 20, '3_Listado CYTVEN 2015.xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', '2016-03-16 09:08:54', '2016-03-16 13:38:54'),
+(4, 22, '12_Articulo DV&AS Congreso FacesUC.docx', 'DOCX', '2016-03-25 09:11:47', '2016-03-25 13:41:47'),
+(5, 23, '12_Articulo DV,AS&TC Congreso FacesUC.docx', 'DOCX', '2016-03-25 10:55:09', '2016-03-25 15:25:09'),
+(6, 24, '13_El docente como modelo de cuidado en la formación de enfermería.doc', 'DOC', '2016-03-25 15:56:39', '2016-03-25 20:26:39'),
+(7, 25, '14_Articulo AS y DV Congreso FacesUC.doc', 'DOC', '2016-03-26 18:36:31', '2016-03-26 23:06:31');
 
 -- --------------------------------------------------------
 
@@ -106,8 +113,8 @@ INSERT INTO `files` (`id`, `work_id`, `name`, `type`, `createdAt`, `updatedAt`) 
 -- Estructura de tabla para la tabla `payments`
 --
 
-CREATE TABLE IF NOT EXISTS `payments` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `payments` (
+  `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `bank` varchar(255) NOT NULL,
   `numberReference` varchar(255) NOT NULL,
@@ -115,11 +122,8 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `status` enum('Por verificar','Conforme','No conforme') NOT NULL,
   `work_id` int(11) NOT NULL,
   `createdAt` datetime NOT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `user_id` (`user_id`),
-  KEY `work_id` (`work_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `payments`
@@ -140,11 +144,10 @@ INSERT INTO `payments` (`id`, `user_id`, `bank`, `numberReference`, `amount`, `s
 -- Estructura de tabla para la tabla `roles`
 --
 
-CREATE TABLE IF NOT EXISTS `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(140) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL,
+  `name` varchar(140) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `roles`
@@ -165,8 +168,8 @@ INSERT INTO `roles` (`id`, `name`) VALUES
 -- Estructura de tabla para la tabla `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
   `image` varchar(140) DEFAULT NULL,
   `lastName` varchar(140) NOT NULL,
   `name` varchar(140) NOT NULL,
@@ -178,9 +181,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(255) NOT NULL,
   `rememberToken` varchar(140) DEFAULT NULL,
   `createdAt` datetime NOT NULL,
-  `updatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+  `updatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -195,7 +197,11 @@ INSERT INTO `users` (`id`, `image`, `lastName`, `name`, `ci`, `phone`, `email`, 
 (7, NULL, 'Sarkis Bathani', 'Marlena', '10965197', '04168496266', 'makysagm@hotmail.com', NULL, NULL, '76c8364f6bfce83b86f1ea73eb6b69e5a9ad757e', NULL, '2016-03-17 15:25:53', '2016-03-17 19:55:53'),
 (8, NULL, 'Valencia', 'Mònica', '20696082', '04144702846', 'mvalenci10@gmail.com', NULL, NULL, 'a4ce40c88633df2d934eb2d147507517bff86b9d', NULL, '2016-03-18 09:06:06', '2016-03-18 13:36:06'),
 (9, '9_foto barlin.jpg', 'Olivares Campos', 'Barlin Orlando', '17799306', '+584243173568', 'barlinolivares@gmail.com', 'Universidad de Córdoba (España)', 'Doctorado en Agroalimentación', 'e1933306bb269ecc7b466a6cba27d57c901eebf2', NULL, '2016-03-18 12:16:56', '2016-03-18 16:46:56'),
-(10, NULL, 'Ojeda Segovia', 'Juan José', '19.609.590', '(0416)-7662679 / (0414)-7438267', 'juanjoe.os@gmail.com', 'Universidad de Los Andes, Núcleo Universitario "Rafael Rangel", (ULA-NURR)', 'Escuela de Educación, Departamento de Ciencias Sociales, Área de Geografía ', 'd849d0de391c754302e7c9c4352f07ac450b4952', NULL, '2016-03-22 12:49:34', '2016-03-22 17:19:34');
+(10, NULL, 'Ojeda Segovia', 'Juan José', '19.609.590', '(0416)-7662679 / (0414)-7438267', 'juanjoe.os@gmail.com', 'Universidad de Los Andes, Núcleo Universitario "Rafael Rangel", (ULA-NURR)', 'Escuela de Educación, Departamento de Ciencias Sociales, Área de Geografía ', 'd849d0de391c754302e7c9c4352f07ac450b4952', NULL, '2016-03-22 12:49:34', '2016-03-22 17:19:34'),
+(11, '11_10632840_1645411025680922_925332899795459140_n.jpg', 'Calanchez Urribarri', 'Africa del Valle', '11454790', '04124277346', 'calanchezafrica@gmail.com', '', '', '3f261873ac0f8cc061ba9242fe27024bb8abb9af', NULL, '2016-03-24 20:54:11', '2016-03-25 01:24:11'),
+(12, NULL, 'VERENZUELA BARROETA', 'DANIEL ANTONIO', '16658767', '04144905876', 'danielvb_cp@hotmail.com', NULL, NULL, '694965ac3d0e9b5e708567c149bc2953a5a89f7c', NULL, '2016-03-25 09:10:25', '2016-03-25 13:40:25'),
+(13, NULL, 'Mejías', 'Marianela', '6322577', '04163336588', 'nelamejias@hotmail.com', 'Universidad de Carabobo', 'Enfermería', 'e865517978ea15a8277f52b2588a0d7f9267e0ae', NULL, '2016-03-25 15:55:21', '2016-03-25 20:25:21'),
+(14, NULL, 'Salas Hernández', 'Adrián José', '16509162', '02435541447', 'ash3000_3@hotmail.com', NULL, NULL, '11b568a1a361946869d5795fc05f71e25d49620c', NULL, '2016-03-26 18:33:59', '2016-03-26 23:03:59');
 
 -- --------------------------------------------------------
 
@@ -203,8 +209,8 @@ INSERT INTO `users` (`id`, `image`, `lastName`, `name`, `ci`, `phone`, `email`, 
 -- Estructura de tabla para la tabla `works`
 --
 
-CREATE TABLE IF NOT EXISTS `works` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `works` (
+  `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `campus` varchar(140) NOT NULL,
   `area_id` int(11) NOT NULL,
@@ -212,12 +218,8 @@ CREATE TABLE IF NOT EXISTS `works` (
   `title` varchar(140) NOT NULL,
   `status` enum('En proceso de arbitraje','Aprobado','Rechazado') NOT NULL,
   `createdAt` datetime NOT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `title` (`title`),
-  KEY `area_id` (`area_id`),
-  KEY `user_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `works`
@@ -228,8 +230,104 @@ INSERT INTO `works` (`id`, `user_id`, `campus`, `area_id`, `modality`, `title`, 
 (18, 3, 'Bárbula', 1, 'Presentación oral', 'AAAA', 'En proceso de arbitraje', '2016-03-16 09:07:43', '2016-03-16 13:37:43'),
 (19, 3, 'La Morita', 8, 'Simposios', 'BBBB', 'En proceso de arbitraje', '2016-03-16 09:08:13', '2016-03-16 13:38:13'),
 (20, 3, 'Bárbula', 6, 'Carteles', 'CCCCCCC', 'En proceso de arbitraje', '2016-03-16 09:08:54', '2016-03-16 13:38:54'),
-(21, 8, 'Bárbula', 12, 'Presentación oral', 'INTERSUBJETIVIDAD ORIENTATIVA Nueva ética en la que la acción individual y el compromiso personal no estén desvinculados de los intereses co', 'En proceso de arbitraje', '2016-03-18 09:10:28', '2016-03-18 13:40:28');
+(21, 8, 'Bárbula', 12, 'Presentación oral', 'INTERSUBJETIVIDAD ORIENTATIVA Nueva ética en la que la acción individual y el compromiso personal no estén desvinculados de los intereses co', 'En proceso de arbitraje', '2016-03-18 09:10:28', '2016-03-18 13:40:28'),
+(22, 12, 'La Morita', 5, 'Carteles', 'Gestión de Costos en Industrias Manufactureras de Aluminio: Una experiencia venezolana', 'En proceso de arbitraje', '2016-03-25 09:11:47', '2016-03-25 13:41:47'),
+(23, 12, 'La Morita', 8, 'Presentación oral', 'Aplicación de la Técnica 5S´s en una Industria Venezolana: Una Práctica de Mejora Continua y Reducción de Costos', 'En proceso de arbitraje', '2016-03-25 10:55:09', '2016-03-25 15:25:09'),
+(24, 13, 'Bárbula', 4, 'Presentación oral', 'El docente como modelo de cuidado en la formación de enfermería', 'En proceso de arbitraje', '2016-03-25 15:56:39', '2016-03-25 20:26:39'),
+(25, 14, 'La Morita', 7, 'Carteles', 'FACTORES DE SATISFACCIÓN LABORAL QUE INCIDEN EN EL  COMPROMISO ORGANIZACIONAL DE LOS ADMINISTRATIVOS DE LA GOBERNACIÓN DEL  ESTADO ARAGUA', 'En proceso de arbitraje', '2016-03-26 18:36:31', '2016-03-26 23:06:31');
 
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `areas`
+--
+ALTER TABLE `areas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `backusers`
+--
+ALTER TABLE `backusers`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- Indices de la tabla `files`
+--
+ALTER TABLE `files`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `work_id` (`work_id`);
+
+--
+-- Indices de la tabla `payments`
+--
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `work_id` (`work_id`);
+
+--
+-- Indices de la tabla `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `works`
+--
+ALTER TABLE `works`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `title` (`title`),
+  ADD KEY `area_id` (`area_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `areas`
+--
+ALTER TABLE `areas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT de la tabla `backusers`
+--
+ALTER TABLE `backusers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `files`
+--
+ALTER TABLE `files`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `payments`
+--
+ALTER TABLE `payments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT de la tabla `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT de la tabla `works`
+--
+ALTER TABLE `works`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- Restricciones para tablas volcadas
 --

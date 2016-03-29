@@ -43,6 +43,18 @@ class Backusers_model extends CI_Model
 		$query = $this->db->get_where('users', array("id" => $user_id));
 		return $query->row_array();
 	}
+
+	function getSessionUserData($backuser_id)
+	{
+		$query = $this->db->get_where("backusers", array( "id" => $backuser_id ));
+		return $query->row_array();
+	}
+
+	function getNameRoleById($role_id)
+	{
+		$query = $this->db->get_where("roles", array("id" => $role_id) );
+		return $query->row()->name;
+	}
 }  
 
 ?>

@@ -61,7 +61,7 @@ class Backusers extends MX_Controller {
 				$this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-info">Bienvenido.</div></div>');
 
 				//REDIRIJO AL HOME
-				redirect('app');
+				redirect('backend');
 			}
 			else
 			{
@@ -72,7 +72,7 @@ class Backusers extends MX_Controller {
 		}
 		else
 		{
-			redirect('participantes/inicio-sesion');
+			redirect('backend');
 		}
 	}
 
@@ -80,9 +80,17 @@ class Backusers extends MX_Controller {
 	{
 		if($this->getSessionId())
 		{
-			$this->session->unset_userdata('user_id');
+			$this->session->unset_userdata('backuser_id');
 			$this->session->sess_destroy();
 		}
-		redirect('app');
+		redirect('backend');
+	}
+
+	public function getSessionUserData()
+	{
+		$backuser_id = $this->session->userdata("backuser_id");
+		$userdata = $this->backusers_model->getSessionUserData($backuser_id);
+		$userdata["role"] = $this->backusers_model->getNameRoleById($userdata["role_id"]);
+		return $userdata;
 	}
 }
