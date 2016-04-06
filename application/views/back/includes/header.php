@@ -40,20 +40,26 @@
                             </ul>
                         </div>
                         <div class="logo-element">
-                            IN+
+                            CF
                         </div>
                     </li>
-                     <li class="backend/arbitraje">
-                        <a href="index.html"><i class="fa fa-gavel"></i> <span class="nav-label">Arbitro</span></a>
-                    </li>
+                    <?php if($userData["role_id"] == 1 || $userData["role_id"] == 2 || $userData["role_id"] == 3): ?>
+                        <li class="backend/arbitraje">
+                            <a href="javascript:void(0);"><i class="fa fa-gavel"></i> <span class="nav-label">Arbitro</span></a>
+                        </li>
+                    <?php endif; ?>
+                     
                     <?php if($userData["role_id"] == 1 || $userData["role_id"] == 5): ?>
                          <li class="javascript:void(0);">
                             <a href="backend/pagos"><i class="fa fa-money"></i> <span class="nav-label">Fundaprofaces</span></a>
                         </li>
                     <?php endif; ?>
-                     <li class="backend/simposios">
-                        <a href="index.html"><i class="fa fa-users"></i> <span class="nav-label">Simposios</span></a>
-                    </li>
+                    <?php if($userData["role_id"] == 1 || $userData["role_id"] == 6 || $userData["role_id"] == 7): ?>
+                        <li class="backend/simposios">
+                            <a href="javascript:void(0);"><i class="fa fa-users"></i> <span class="nav-label">Simposios</span></a>
+                        </li>
+                    <?php endif; ?>
+                     
                 </ul>
 
             </div>
