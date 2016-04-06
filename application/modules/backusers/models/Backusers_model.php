@@ -10,20 +10,20 @@ class Backusers_model extends CI_Model
 	//INSERTA UN NUEVO USUARIO EN LA BASE DE DATOS
 	function createUser($user)
 	{
-		$this->db->insert('users', $user); 
+		$this->db->insert('backusers', $user); 
 	}
 
 	//VERIFICA SI UN EMAIL EXISTE
 	function existEmail($email)
 	{
-		$query = $this->db->get_where('users', array('email' => $email));
+		$query = $this->db->get_where('backusers', array('email' => $email));
 		return $query->num_rows() == 1;
 	}
 
 	//VERIFICA SI EXISTE ESA SESION
 	function verifySession($data)
 	{
-		$query = $this->db->get_where('users',$data);
+		$query = $this->db->get_where('backusers',$data);
 		return $query->num_rows() == 1;
 	}
 
@@ -38,9 +38,9 @@ class Backusers_model extends CI_Model
 		return $query->row();
 	}
 
-	function getUserSession($user_id)
+	function getUserSession($backuser_id)
 	{
-		$query = $this->db->get_where('users', array("id" => $user_id));
+		$query = $this->db->get_where('backusers', array("id" => $backuser_id));
 		return $query->row_array();
 	}
 

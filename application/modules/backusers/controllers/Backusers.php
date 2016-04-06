@@ -33,6 +33,7 @@ class Backusers extends MX_Controller {
 	//INICIA UNA SESION POR BACKEND
 	public function login()
 	{
+		die_pre($_POST);
 		if(!empty($_POST))
 		{
 			//DEFINIENDO LAS REGLAS
