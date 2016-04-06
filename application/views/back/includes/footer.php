@@ -86,14 +86,6 @@
             </div>
 
         </div>
-        <div id="small-chat">
-
-            <span class="badge badge-warning pull-right">5</span>
-            <a class="open-small-chat">
-                <i class="fa fa-comments"></i>
-
-            </a>
-        </div>
     </div>
 
     <!-- Mainly scripts -->
@@ -145,7 +137,7 @@
                     showMethod: 'slideDown',
                     timeOut: 4000
                 };
-                toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
+                //toastr.success('Responsive Admin Theme', 'Welcome to INSPINIA');
 
             }, 1300);
 

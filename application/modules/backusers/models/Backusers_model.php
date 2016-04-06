@@ -55,6 +55,12 @@ class Backusers_model extends CI_Model
 		$query = $this->db->get_where("roles", array("id" => $role_id) );
 		return $query->row()->name;
 	}
+
+	function getRoleId($backuser_id)
+	{
+		$query = $this->db->get_where("backusers", array("id" => $backuser_id) );
+		return $query->row()->role_id;
+	}
 }  
 
 ?>

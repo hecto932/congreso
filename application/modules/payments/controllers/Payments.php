@@ -9,6 +9,27 @@ class Payments extends MX_Controller {
         $this->load->model('payments_model');
     }
 
+    public function getAccessPayments()
+    {
+        return modules::run("backusers/getSessionId") && (modules::run("backusers/getRoleId")==1 || modules::run("backusers/getRoleId")==5);
+    }
+
+    public function index()
+    {
+        if($this->getAccessPayments())
+        {
+            $data["title"] = "Backend - Pagos";
+            $data["userData"] = modules::run("backusers/getSessionUserData");
+            $data["payments"] = $this->getAllPaymentsWithoutVerify();
+            $data["contenido_principal"] = $this->load->view("payments", $data, true);
+            $this->load->view("back/template", $data);
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
     public function toAddPayment()
     {
         if(modules::run("users/getSessionId"))
@@ -85,4 +106,72 @@ class Payments extends MX_Controller {
     {
         return $this->payments_model->numberPaymentsByUserId($user_id);
     }
+
+    public function getAllPaymentsWithoutVerify()
+    {
+        $result =  $this->payments_model->getAllPaymentsWithoutVerify();
+        foreach ($result as $key => $value) {
+            $result[$key]["work"] = modules::run("works/getTitleWork", $result[$key]["work_id"]);
+            $result[$key]["user"] = modules::run("users/getFullName", $result[$key]["user_id"]);
+        }
+        return $result;   
+    }
+
+    public function changeStatus()
+    {
+        if($this->getAccessPayments())
+        {
+            $status = $this->input->post("status");
+            $paymentId = $this->input->post("paymentId");
+            $this->payments_model->changeStatus($paymentId, $status);
+            redirect("backend/pagos");
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    public function getPayments($status)
+    {
+        $result =  $this->payments_model->getPayments($status);
+        foreach ($result as $key => $value) {
+            $result[$key]["work"] = modules::run("works/getTitleWork", $result[$key]["work_id"]);
+            $result[$key]["user"] = modules::run("users/getFullName", $result[$key]["user_id"]);
+        }
+        return $result; 
+    }
+
+    public function getPaymentsConforme()
+    {
+        if($this->getAccessPayments())
+        {
+            $data["title"] = "Backend - Pagos";
+            $data["userData"] = modules::run("backusers/getSessionUserData");
+            $data["payments"] = $this->getPayments("Conforme");
+            $data["contenido_principal"] = $this->load->view("payments", $data, true);
+            $this->load->view("back/template", $data);
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    public function getPaymentsNoConforme()
+    {
+        if($this->getAccessPayments())
+        {
+            $data["title"] = "Backend - Pagos";
+            $data["userData"] = modules::run("backusers/getSessionUserData");
+            $data["payments"] = $this->getPayments("No conforme");
+            $data["contenido_principal"] = $this->load->view("payments", $data, true);
+            $this->load->view("back/template", $data);
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
 }

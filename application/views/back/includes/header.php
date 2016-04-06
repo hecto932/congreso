@@ -29,15 +29,12 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="assets/back/img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="assets/back/img/user-alt-128.png" />
                              </span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $userData["name"]; ?></strong>
                              </span> <span class="text-muted text-xs block"><?php echo $userData["role"]; ?> <b class="caret"></b></span> </span> </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a href="javascript:void(0);">Profile</a></li>
-                                <li><a href="javascript:void(0);">Contacts</a></li>
-                                <li><a href="javascript:void(0);">Mailbox</a></li>
                                 <li class="divider"></li>
                                 <li><a href="backend/cerrar-sesion">Cerrar sesion</a></li>
                             </ul>
@@ -46,12 +43,16 @@
                             IN+
                         </div>
                     </li>
-                    <li class="">
-                        <a href="index.html"><i class="fa fa-users"></i> <span class="nav-label">Usuarios</span> <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li class="active"><a href="index.html">Registrar</a></li>
-                            <li><a href="dashboard_2.html">Ver todos</a></li>
-                        </ul>
+                     <li class="backend/arbitraje">
+                        <a href="index.html"><i class="fa fa-gavel"></i> <span class="nav-label">Arbitro</span></a>
+                    </li>
+                    <?php if($userData["role_id"] == 1 || $userData["role_id"] == 5): ?>
+                         <li class="javascript:void(0);">
+                            <a href="backend/pagos"><i class="fa fa-money"></i> <span class="nav-label">Fundaprofaces</span></a>
+                        </li>
+                    <?php endif; ?>
+                     <li class="backend/simposios">
+                        <a href="index.html"><i class="fa fa-users"></i> <span class="nav-label">Simposios</span></a>
                     </li>
                 </ul>
 
@@ -66,7 +67,7 @@
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">Welcome to Backend del Congreso 2016.</span>
+                    <span class="m-r-sm text-muted welcome-message">Bienvenido al Backend del Congreso 2016.</span>
                 </li>
 
                 <li>

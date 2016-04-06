@@ -74,7 +74,12 @@ $route['participantes/trabajos/(:num)']	= "works/work/$1";
 $route["participantes/agregar-pago"] = "payments/toAddPayment";
 $route["participantes/agregando-pago"] = "payments/addPayment";
 
+
 // BACKEND
 $route["backend"] = 'backend';
 $route["backend/iniciar-sesion"] = "backusers/login"; 
 $route["backend/cerrar-sesion"] = "backusers/logout";
+$route["backend/pagos"] = "payments";
+$route["backend/pagos/verificar"] = "payments/changeStatus";
+$route["backend/pagos/conforme"] = "payments/getPaymentsConforme";
+$route["backend/pagos/no-conforme"] = "payments/getPaymentsNoConforme";

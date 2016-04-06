@@ -74,6 +74,12 @@ class Users_model extends CI_Model
 		return $query->num_rows() == 0;
 	}
 
+	function getFullName($user_id)
+	{
+		$query = $this->db->get_where('users', array("id" => $user_id));
+		return $query->row()->name." ".$query->row()->lastName;
+	}
+
 }  
 
 ?>

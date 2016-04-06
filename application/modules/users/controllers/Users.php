@@ -298,4 +298,9 @@ class Users extends MX_Controller {
 		}
 	}
 
+	public function getFullName($user_id)
+	{
+		return $this->users_model->getFullName($user_id);
+	}
+
 }

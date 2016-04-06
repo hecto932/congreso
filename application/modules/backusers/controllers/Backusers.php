@@ -93,4 +93,10 @@ class Backusers extends MX_Controller {
 		$userdata["role"] = $this->backusers_model->getNameRoleById($userdata["role_id"]);
 		return $userdata;
 	}
+
+	public function getRoleId()
+	{
+		$backuser_id = $this->getSessionId();
+		return $this->backusers_model->getRoleId($backuser_id);
+	}
 }
