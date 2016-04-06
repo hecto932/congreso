@@ -51,7 +51,7 @@
                      
                     <?php if($userData["role_id"] == 1 || $userData["role_id"] == 5): ?>
                          <li class="javascript:void(0);">
-                            <a href="backend/pagos"><i class="fa fa-money"></i> <span class="nav-label">Fundaprofaces</span></a>
+                            <a href="backend/pagos"><i class="fa fa-money"></i> <span class="nav-label">Pagos</span></a>
                         </li>
                     <?php endif; ?>
                     <?php if($userData["role_id"] == 1 || $userData["role_id"] == 6 || $userData["role_id"] == 7): ?>
