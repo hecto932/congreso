@@ -81,6 +81,18 @@ class Works_model extends CI_Model
 		$query = $this->db->get_where("works", array("title" => $title));
 		return $query->num_rows() == 0;
 	}
+
+	function getWorks($campus, $status)
+	{
+		$query = $this->db->get_where("works", array("campus" => $campus, "status" => $status));
+		return $query->result_array();
+	}
+
+	function changeStatus($workId, $status)
+	{
+		$this->db->where("id", $workId);
+		$this->db->update("works", array("status" => $status));
+	}
 }  
 
 ?>

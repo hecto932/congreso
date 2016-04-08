@@ -3,7 +3,7 @@
                         10GB of <strong>250GB</strong> Free.
                     </div>
                     <div>
-                        <strong>Copyright</strong> Example Company &copy; 2014-2015
+                        <strong>Copyright</strong> Universidad de Carabobo &copy; 2015-2016
                     </div>
                 </div>
             </div>

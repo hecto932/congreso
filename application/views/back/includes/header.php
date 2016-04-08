@@ -44,8 +44,8 @@
                         </div>
                     </li>
                     <?php if($userData["role_id"] == 1 || $userData["role_id"] == 2 || $userData["role_id"] == 3): ?>
-                        <li class="backend/arbitraje">
-                            <a href="javascript:void(0);"><i class="fa fa-gavel"></i> <span class="nav-label">Arbitro</span></a>
+                        <li class="javascript:void(0);">
+                            <a href="backend/arbitraje"><i class="fa fa-gavel"></i> <span class="nav-label">Arbitro</span></a>
                         </li>
                     <?php endif; ?>
                      

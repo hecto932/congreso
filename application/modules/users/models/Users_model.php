@@ -80,6 +80,12 @@ class Users_model extends CI_Model
 		return $query->row()->name." ".$query->row()->lastName;
 	}
 
+	function getUserData($user_id)
+	{
+		$query = $this->db->get_where('users', array("id" => $user_id));
+		return $query->row_array();
+	}
+
 }  
 
 ?>

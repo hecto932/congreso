@@ -248,4 +248,144 @@ class Works extends MX_Controller {
             redirect("/app");
         }
     }
+
+    public function getWorks($campus, $status)
+    {
+        $result = $this->works_model->getWorks($campus, $status);
+        foreach ($result as $key => $value) {
+            $result[$key]["area"] = $this->works_model->getAreaName($result[$key]["area_id"]);
+            $result[$key]["user"] = modules::run("users/getUserData", $result[$key]["user_id"]);
+        }
+        return $result;
+    }
+
+    public function arbitration()
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1 || $role == 2 || $role == 3)
+            {
+                $data["title"] = "Backend - Arbitraje";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["works"] = $this->getWorks($data["userData"]["campus"], "En proceso de arbitraje");
+                $data["contenido_principal"] = $this->load->view("arbitration", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            else
+            {
+                redirect("backend");
+            }   
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    public function getWork($work_id)
+    {
+        $query = $this->works_model->getWorkById($work_id);
+        $query["user"] = modules::run("users/getUserData", $query["user_id"]);
+        $query["area"] = $this->works_model->getAreaName($query["area_id"]);
+        $query["files"] = $this->works_model->getFilesWork($work_id);
+        return $query;
+    }
+
+    public function show_work($work_id)
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1 || $role == 2 || $role == 3)
+            {
+                $data["title"] = "Backend - Arbitraje";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["work"] = $this->getWork($work_id);
+                $data["contenido_principal"] = $this->load->view("show_work", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            else
+            {
+                redirect("backend");
+            }   
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+
+    public function evaluate()
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1 || $role == 2 || $role == 3)
+            {
+
+                $status = $this->input->post("status");
+                $workId = $this->input->post("workId");
+                $this->works_model->changeStatus($workId, $status);
+                redirect("backend/arbitraje");
+            }
+            else
+            {
+                redirect("backend");
+            }   
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    public function aprobados()
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1 || $role == 2 || $role == 3)
+            {
+                $data["title"] = "Backend - Arbitraje";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["works"] = $this->getWorks($data["userData"]["campus"], "Aprobado");
+                $data["contenido_principal"] = $this->load->view("arbitration", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            else
+            {
+                redirect("backend");
+            }   
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    public function rechazados()
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1 || $role == 2 || $role == 3)
+            {
+                $data["title"] = "Backend - Arbitraje";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["works"] = $this->getWorks($data["userData"]["campus"], "Rechazado");
+                $data["contenido_principal"] = $this->load->view("arbitration", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            else
+            {
+                redirect("backend");
+            }   
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
 }
