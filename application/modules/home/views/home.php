@@ -257,7 +257,7 @@
 
 
                     <div class="col-md-3">
-                        <a href="javascript:void(0);">
+                        <a href="assets/front/file/areas-tematicas/economia-finanzas.pdf">
                             <p class="center"><i class="icon-stats-dots area-icon"></i></p>
                             <h3 class="center">Economía y finanzas</h3>
                         </a>
