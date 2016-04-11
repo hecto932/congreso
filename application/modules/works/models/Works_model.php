@@ -93,6 +93,12 @@ class Works_model extends CI_Model
 		$this->db->where("id", $workId);
 		$this->db->update("works", array("status" => $status));
 	}
+
+	function getWorksAdmin($status)
+	{
+		$query = $this->db->get_where("works", array("status" => $status));
+		return $query->result_array();
+	}
 }  
 
 ?>

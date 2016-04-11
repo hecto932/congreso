@@ -1,7 +1,4 @@
 <div class="footer">
-                    <div class="pull-right">
-                        10GB of <strong>250GB</strong> Free.
-                    </div>
                     <div>
                         <strong>Copyright</strong> Universidad de Carabobo &copy; 2015-2016
                     </div>

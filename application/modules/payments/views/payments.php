@@ -35,6 +35,9 @@
                                                 #<?php echo $value["id"]; ?>
                                             </td>
                                             <td>
+                                                <?php echo $value["createdAt"]; ?>
+                                            </td>
+                                            <td>
                                                 #REF <strong><?php echo $value["numberReference"]; ?></strong>
                                             </td>
                                             <td>

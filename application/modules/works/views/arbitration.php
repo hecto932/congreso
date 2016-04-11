@@ -12,16 +12,68 @@
                 <strong>Trabajos</strong>
             </li>
         </ol>
-        <div class="ibox-tools">
-            <a href="backend/arbitraje/aprobados"class="btn btn-primary dim" ><i class="fa fa-check"></i> Aprobados</a>
-            <a href="backend/arbitraje/rechazados"class="btn btn-danger dim" ><i class="fa fa-warning"></i> Rechazados</a>
+        <div class="pull-right">
+			<a style="color:white;" href="backend/arbitraje"class="btn btn-info" ><i class="fa fa-check"></i> En proceso de arbitraje</a>
+            <a style="color:white;" href="backend/arbitraje/aprobados"class="btn btn-success" ><i class="fa fa-check"></i> Aprobados</a>
+            <a style="color:white;" href="backend/arbitraje/rechazados"class="btn btn-danger" ><i class="fa fa-warning"></i> Rechazados</a>
         </div>
     </div>
 </div>
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
     	<?php if(!empty($works)): ?>
+    		<div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Trabajos</h5>
+                        <div class="ibox-tools">
+                            <span class="label label-warning-light pull-right"><?php echo count($works); ?></span>
+                           </div>
+                    </div>
+                    <div class="ibox-content">
+						<?php foreach($works as $key => $value): ?>
+	                        <div>
+	                            <div class="feed-activity-list">
+	                                <div class="feed-element">
+	                                    <a href="backend/arbitraje/<?php echo $value["id"]; ?>" class="pull-left">
+	                                    	<?php $image = "uploads/avatars/".$value['user']['image']; ?>
+						                    <?php if(file_exists($image) && $value['user']['image'] != null ): ?>
+						                    	<img alt="image" class="img-circle" src="uploads/avatars/<?php echo $value["user"]["image"]; ?>">
+				                            <?php else: ?>
+				                                <img alt="image" class="img-circle" src="assets/app/img/profile2.jpg">
+				                            <?php endif; ?>
+	                                    </a>
+	                                    <div sytle="font-size:16px;" class="media-body ">
+	                                        <small class="pull-right"><?php echo $value["createdAt"]; ?></small>
+	                                        Campus: <strong><?php echo $value["campus"]; ?></strong><br>
+	                                        Autor: <strong><?php echo $value["user"]["lastName"].", ".$value["user"]["name"]; ?></strong><br>
+											Título: <a href="backend/arbitraje/<?php echo $value["id"]; ?>"><strong><?php echo $value["title"]; ?></strong><br></a>
+		                        			Area: <strong><?php echo $value["area"]; ?></strong><br>
+		                        			Cédula: <strong><?php echo $value["user"]["ci"]; ?></strong><br/>
+		                        			Teléfono: <strong><?php echo $value["user"]["phone"]; ?></strong><br/>
+		                        			Correo electrónico: <a href="mailto:<?php echo $value["user"]["email"]; ?>"><?php echo $value["user"]["email"]; ?></a><br/>
+	                                        Universidad/Organización: <strong><?php echo $value["user"]["university"]; ?></strong><br/>
+	                                        <small class="text-muted"></small><br/>
+	                                        <?php if($value["status"] == "Aprobado"): ?>
+	                                        	Estatus: <span class="label label-success"><?php echo $value["status"]; ?></span>
+	                                        <?php elseif($value["status"] == "Rechazado"): ?>
+	                                        	Estatus: <span class="label label-danger"><?php echo $value["status"]; ?></span>
+	                                        <?php else: ?>
+												Estatus: <span class="label label-info"><?php echo $value["status"]; ?></span>
+	                                        <?php endif; ?>
+	                                    </div>
+	                                </div>
+	                            </div>
+                            	<br>
+                        	</div>
+						<?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
 			<?php foreach($works as $key => $value): ?>
+
 				 <div class="col-lg-12">
 		            <div class="contact-box">
 		                <a href="backend/arbitraje/<?php echo $value["id"]; ?>">
@@ -53,5 +105,7 @@
 		<?php else: ?>
 			<p>No hay trabajos que arbitrar.</p>
     	<?php endif; ?>
+
+    	-->
     </div>
 </div>
