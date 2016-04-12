@@ -54,10 +54,22 @@
                             <strong>Modalidad:</strong> <?php echo $work["modality"]; ?>
                         </p>
                         <p>
-                            <p><span style="font-size: 16px;"class="label label-info"><?php echo $work["status"]; ?></span></p>
+                            <strong>Correo electrónico:</strong> <?php echo $work["user"]["email"]; ?>
+                        </p>
+                        <p>
+                            <strong>Cédula:</strong> <?php echo $work["user"]["ci"]; ?>
+                        </p>
+                        <p>
+                            <?php if($work["status"] == "En proceso de arbitraje"): ?>
+                                <p><span style="font-size: 16px;"class="label label-info"><?php echo $work["status"]; ?></span></p>
+                            <?php elseif($work["status"] == "Aprobado"): ?>
+                                <p><span style="font-size: 16px;"class="label label-success"><?php echo $work["status"]; ?></span></p>
+                            <?php else: ?>
+                                <p><span style="font-size: 16px;"class="label label-danger"><?php echo $work["status"]; ?></span></p>
+                            <?php endif; ?>
                         </p>
                         <?php if(!empty($work["files"])): ?>
-                            <h5>Archivos: </h5>
+                            <h4>Adjuntos del trabajo: </h4>
                             <hr>
                             <ul class="folder-list" style="padding: 0">
                                 <?php foreach($work["files"] as $key => $value): ?>
@@ -65,23 +77,25 @@
                                 <?php endforeach; ?>
                             </ul>
                         <?php else: ?>
-                        	<p>Este trabajo no posee archivos.</p>
+                        	<p><strong>Este trabajo no posee archivos.</strong></p>
                         <?php endif; ?>
                     </div>
-                        <form action="backend/arbitraje/evaluar" method="post">
-		                	 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-		                    <input type="hidden" name="workId" value="<?php echo $work["id"]; ?>">
-		                    <div class="form-group">
-		                        <div class="col-sm-9">
-		                            <select class="form-control m-b" name="status">
-		                                <option value="En proceso de arbitraje"><?php echo $work["status"]; ?></option>
-		                                <option value="Aprobado">Aprobado</option>
-		                                <option value="Rechazado">Rechazado</option>
-		                            </select>
-		                        </div>
-		                        <button class="col-sm-3 btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Aceptar</strong></button>
-		                    </div>
-		                </form>
+                        <?php if($work["status"] == "En proceso de arbitraje"): ?>
+                            <form action="backend/arbitraje/evaluar" method="post">
+                                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                                <input type="hidden" name="workId" value="<?php echo $work["id"]; ?>">
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <select class="form-control m-b" name="status">
+                                            <option value="En proceso de arbitraje"><?php echo $work["status"]; ?></option>
+                                            <option value="Aprobado">Aprobado</option>
+                                            <option value="Rechazado">Rechazado</option>
+                                        </select>
+                                    </div>
+                                    <button class="col-sm-3 btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Aceptar</strong></button>
+                                </div>
+                            </form>
+                        <?php endif; ?>
                     
                 </div>
                 

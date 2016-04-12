@@ -119,8 +119,8 @@ class Works extends MX_Controller {
 
     public function getNumberFiles()
     {
-        $this->session->set_flashdata('message', '<span class="badge badge-danger">Solo pueden cargarse maximo tres(3) archivos.</span>');
-        return count($_FILES["files"]["name"]) <= 3;
+        $this->session->set_flashdata('message', '<span class="badge badge-danger">Debe cargarse minimo un(1) archivo o maximo tres(3).</span>');
+        return count($_FILES["files"]["name"]) <= 3 && count($_FILES["files"]["name"]) >= 1;
     }
 
     public function getNumberWorks()
@@ -416,6 +416,148 @@ class Works extends MX_Controller {
             {
                 redirect("backend");
             }   
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    function getSimposios($data)
+    {
+        $result = $this->works_model->getSimposios($data);
+        foreach ($result as $key => $value) {
+            $result[$key]["area"] = $this->works_model->getAreaName($result[$key]["area_id"]);
+            $result[$key]["user"] = modules::run("users/getUserData", $result[$key]["user_id"]);
+        }
+        return $result;
+    }
+
+    public function simposios()
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1)
+            {
+                $query = array(
+                    "status" => "En proceso de arbitraje",
+                    "modality" => "Simposios",
+                );
+
+                $data["title"] = "Backend - Simposios";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["works"] = $this->getSimposios($query);
+                $data["contenido_principal"] = $this->load->view("simposios", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            elseif($role == 6 || $role == 7)
+            {
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $query = array(
+                    
+                    "status" => "En proceso de arbitraje",
+                    "modality" => "Simposios",
+                    "campus" => $data["userData"]["campus"]
+                );
+
+                $data["title"] = "Backend - Simposios";
+                $data["works"] = $this->getSimposios($query);
+                $data["contenido_principal"] = $this->load->view("simposios", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            else
+            {
+                redirect("backend");
+            }
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    public function simposios_aprobados()
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1)
+            {
+                $query = array(
+                    "status" => "Aprobado",
+                    "modality" => "Simposios",
+                );
+
+                $data["title"] = "Backend - Simposios";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["works"] = $this->getSimposios($query);
+                $data["contenido_principal"] = $this->load->view("simposios", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            elseif($role == 6 || $role == 7)
+            {
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $query = array(
+                    
+                    "status" => "Aprobado",
+                    "modality" => "Simposios",
+                    "campus" => $data["userData"]["campus"]
+                );
+
+                $data["title"] = "Backend - Simposios";
+                $data["works"] = $this->getSimposios($query);
+                $data["contenido_principal"] = $this->load->view("simposios", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            else
+            {
+                redirect("backend");
+            }
+        }
+        else
+        {
+            redirect("backend");
+        }
+    }
+
+    public function simposios_rechazados()
+    {
+        if(modules::run("backusers/getSessionId"))
+        {
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1)
+            {
+                $query = array(
+                    "status" => "Rechazado",
+                    "modality" => "Simposios",
+                );
+
+                $data["title"] = "Backend - Simposios";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["works"] = $this->getSimposios($query);
+                $data["contenido_principal"] = $this->load->view("simposios", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            elseif($role == 6 || $role == 7)
+            {
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $query = array(
+                    
+                    "status" => "Rechazado",
+                    "modality" => "Simposios",
+                    "campus" => $data["userData"]["campus"]
+                );
+
+                $data["title"] = "Backend - Simposios";
+                $data["works"] = $this->getSimposios($query);
+                $data["contenido_principal"] = $this->load->view("simposios", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            else
+            {
+                redirect("backend");
+            }
         }
         else
         {

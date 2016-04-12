@@ -84,7 +84,7 @@ class Works_model extends CI_Model
 
 	function getWorks($campus, $status)
 	{
-		$query = $this->db->get_where("works", array("campus" => $campus, "status" => $status));
+		$query = $this->db->get_where("works", array("campus" => $campus, "status" => $status, "modality !=" => "Simposios"));
 		return $query->result_array();
 	}
 
@@ -96,7 +96,13 @@ class Works_model extends CI_Model
 
 	function getWorksAdmin($status)
 	{
-		$query = $this->db->get_where("works", array("status" => $status));
+		$query = $this->db->get_where("works", array("status" => $status, "modality !=" => "Simposios"));
+		return $query->result_array();
+	}
+
+	function getSimposios($data)
+	{
+		$query = $this->db->get_where("works", $data);
 		return $query->result_array();
 	}
 }  

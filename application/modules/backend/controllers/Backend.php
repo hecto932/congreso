@@ -12,10 +12,27 @@ class Backend extends MX_Controller {
     {
     	if(modules::run("backusers/backUserSession"))
     	{
-    		$data["title"] = "Backend - Congreso";
-            $data["userData"] = modules::run("backusers/getSessionUserData");
-    		$data["contenido_principal"] = $this->load->view("home", $data, true);
-    		$this->load->view("back/template", $data);
+            $role = modules::run("backusers/getRoleId");
+            if($role == 1)
+            {
+                $data["title"] = "Backend - Congreso";
+                $data["userData"] = modules::run("backusers/getSessionUserData");
+                $data["contenido_principal"] = $this->load->view("home", $data, true);
+                $this->load->view("back/template", $data);
+            }
+            elseif($role == 2 || $role 3)
+            {
+                redirect("backend/arbitraje");
+            }
+            elseif($role == 5)
+            {
+                redirect("backend/pagos");
+            }
+            elseif($role == 6 || $role == 7)
+            {
+                redirect("backend/simposios");
+            }
+    		
     	}
     	else
     	{

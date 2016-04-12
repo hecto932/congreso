@@ -55,8 +55,8 @@
                         </li>
                     <?php endif; ?>
                     <?php if($userData["role_id"] == 1 || $userData["role_id"] == 6 || $userData["role_id"] == 7): ?>
-                        <li class="backend/simposios">
-                            <a href="javascript:void(0);"><i class="fa fa-users"></i> <span class="nav-label">Simposios</span></a>
+                        <li class="javascript:void(0);">
+                            <a href="backend/simposios"><i class="fa fa-users"></i> <span class="nav-label">Simposios</span></a>
                         </li>
                     <?php endif; ?>
                      

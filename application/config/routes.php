@@ -88,3 +88,6 @@ $route["backend/arbitraje/evaluar"] = "works/evaluate";
 $route["backend/arbitraje/aprobados"] = "works/aprobados";
 $route["backend/arbitraje/rechazados"] = "works/rechazados";
 $route["backend/arbitraje/(.*)"] = "works/show_work/$1";
+$route["backend/simposios"] = "works/simposios";
+$route["backend/simposios/aprobados"] = "works/simposios_aprobados";
+$route["backend/simposios/rechazados"] = "works/simposios_rechazados";
