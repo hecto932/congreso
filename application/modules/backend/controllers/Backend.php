@@ -20,7 +20,7 @@ class Backend extends MX_Controller {
                 $data["contenido_principal"] = $this->load->view("home", $data, true);
                 $this->load->view("back/template", $data);
             }
-            elseif($role == 2 || $role 3)
+            elseif($role == 2 || $role == 3)
             {
                 redirect("backend/arbitraje");
             }
