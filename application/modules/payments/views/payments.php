@@ -35,6 +35,9 @@
                                                 #<?php echo $value["id"]; ?>
                                             </td>
                                             <td>
+                                                <?php echo $value["user"]; ?>
+                                            </td>
+                                            <td>
                                                 <?php echo $value["createdAt"]; ?>
                                             </td>
                                             <td>
@@ -46,9 +49,7 @@
                                             <td>
                                                 <strong>Bs. <?php echo $value["amount"]; ?></strong>
                                             </td>
-                                            <td>
-                                                <?php echo $value["user"]; ?>
-                                            </td>
+                                            
                                             <td>
                                                 <?php if($value["status"] == "Por verificar"): ?>
                                                     <p><span style="font-size: 16px;"class="label label-primary"><?php echo $value["status"]; ?></span></p>

@@ -441,6 +441,8 @@
                     <div class="col-md-12">
                         <ul class="sponsor-list top">
                             <li><a href="#"><img src="assets/front/img/logos/logo1.png" alt="Escuela de Administración y Contaduria Pública"></a></li>
+                            <li><a href="#"><img src="assets/front/img/logos/logo14.png" alt="Escuela de Relaciones Industriales"></a></li>
+                            <li><a href="#"><img src="assets/front/img/logos/logo11.png" alt="Estudios Generales"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo2.jpg" alt="INFACES"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo3.jpg" alt="CISET"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo4.png" alt="CIDPyMESMicro"></a></li>
@@ -450,12 +452,11 @@
                             <li><a href="#"><img src="assets/front/img/logos/logo8.jpg" alt="GIPI"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo9.png" alt="GIG"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo10.jpg" alt="Fundaprofaces"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo11.png" alt="Estudios Generales"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo12.png" alt="Vicerrectorado"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo14.png" alt="Escuela de Relaciones Industriales"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo15.jpg" alt="CEATE"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo17.jpg" alt="APUC"></a></li>
                             <li><a href="#"><img src="assets/front/img/logos/logo17.png" alt="IPAPEDI"></a></li>
+                            <li><a href="#"><img src="assets/front/img/logos/logo16.png" alt="Universidad Arturo Michelena, UAM"></a></li>
                         </ul>
                     </div>
                 </div>
