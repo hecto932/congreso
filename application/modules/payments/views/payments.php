@@ -32,9 +32,6 @@
                                     <?php foreach($payments as $key => $value): ?>
                                         <tr>
                                             <td>
-                                                #<?php echo $value["id"]; ?>
-                                            </td>
-                                            <td>
                                                 <?php echo $value["user"]; ?>
                                             </td>
                                             <td>

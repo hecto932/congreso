@@ -31,9 +31,15 @@
                             <?php echo $work["user"]["lastName"].", ".$work["user"]["name"]; ?>
                         </h2>
                         <h4><?php echo $work["user"]["university"]; ?></h4>
-                        <small>
+                        <h4>
                             <?php echo $work["user"]["school"]; ?>
-                        </small>
+                        </h4>
+                         <h4>
+                            <i class="fa fa-envelope-o"></i> <?php echo $work["user"]["email"]; ?>
+                        </h4>
+                         <h4>
+                            <i class="fa fa-comment"></i> <?php echo $work["user"]["ci"]; ?>
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -54,12 +60,6 @@
                             <strong>Modalidad:</strong> <?php echo $work["modality"]; ?>
                         </p>
                         <p>
-                            <strong>Correo electrónico:</strong> <?php echo $work["user"]["email"]; ?>
-                        </p>
-                        <p>
-                            <strong>Cédula:</strong> <?php echo $work["user"]["ci"]; ?>
-                        </p>
-                        <p>
                             <?php if($work["status"] == "En proceso de arbitraje"): ?>
                                 <p><span style="font-size: 16px;"class="label label-info"><?php echo $work["status"]; ?></span></p>
                             <?php elseif($work["status"] == "Aprobado"): ?>
@@ -71,9 +71,9 @@
                         <?php if(!empty($work["files"])): ?>
                             <h4>Adjuntos del trabajo: </h4>
                             <hr>
-                            <ul class="folder-list" style="padding: 0">
+                            <ul class="list-unstyled file-list" style="padding: 0">
                                 <?php foreach($work["files"] as $key => $value): ?>
-                                    <li><a target="_blank" href="uploads/files/<?php echo $value["name"]; ?>"><i class="fa fa-file"></i> <?php echo $value["name"]; ?></a></li>
+                                    <li class=""></i><a target="_blank" href="uploads/files/<?php echo $value["name"]; ?>"><i class="fa fa-file"></i> <?php echo $value["name"]; ?></a></li>
                                 <?php endforeach; ?>
                             </ul>
                         <?php else: ?>

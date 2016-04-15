@@ -86,7 +86,7 @@
                                 <li><a href="#organizadores">Organizadores</a></li>
                                 <li><a href="#preguntas">Preguntas</a></li>
                                 <li><a href="#contacto">Contacto</a></li>
-                                <li><a href="participantes/inicio-sesion">Mi cuenta</a></li>
+                                <li><a href="participantes/inicio-sesion">Mi  cuenta</a></li>
                             </ul>
                         </div>
                     </div>
@@ -1015,13 +1015,15 @@
             <div class="container">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <p style="text-align:center; ">
-                        Desarrollado por <a href="http://github.com/hecto932" style="color:white;"><u>Hector Flores</u></a>
+                        Desarrollado por <a href="http://github.com/hecto932" style="color:white;"><u>Lic. Hector Flores</u></a>
                         <br/>
                         Dirección de Tecnología, Información y Comunicación
                         <br>
                         Facultad de Ciencias Económicas y Sociales
                         <br>
                         Universidad de Carabobo
+                        <br>
+                        Carabobo, Venzuela
                     </p>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
