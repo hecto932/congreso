@@ -50,10 +50,7 @@
 											Título: <a href="backend/arbitraje/<?php echo $value["id"]; ?>"><strong><?php echo $value["title"]; ?></strong><br></a>
 		                        			Area: <strong><?php echo $value["area"]; ?></strong><br>
 		                        			Modalidad: <strong><?php echo $value["modality"]; ?></strong><br>
-		                        			Cédula: <strong><?php echo $value["user"]["ci"]; ?></strong><br/>
-		                        			Teléfono: <strong><?php echo $value["user"]["phone"]; ?></strong><br/>
-		                        			Correo electrónico: <a href="mailto:<?php echo $value["user"]["email"]; ?>"><?php echo $value["user"]["email"]; ?></a><br/>
-	                                        Universidad/Organización: <strong><?php echo $value["user"]["university"]; ?></strong><br/>
+		                        			
 	                                        <small class="text-muted"></small><br/>
 	                                        <?php if($value["status"] == "Aprobado"): ?>
 	                                        	Estatus: <span class="label label-success"><?php echo $value["status"]; ?></span>
