@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="form-group"><label class="col-lg-2 control-label">Archivos</label>
                                     <div class="col-lg-10">
-                                        <input type="file" class="form-control" name="files[]" required="required" multiple>
+                                        <input type="file" class="form-control" name="files[]" required="required" accept="application/msword, .doc, .docx." multiple >
                                         <span class="help-block m-b-none">Por favor seleccione los archivos correspondientes al trabajo.</span>
                                         <?php echo form_error("files"); ?>
                                         <?php echo $this->session->flashdata('message'); ?>

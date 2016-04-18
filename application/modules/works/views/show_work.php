@@ -34,12 +34,15 @@
                         <h4>
                             <?php echo $work["user"]["school"]; ?>
                         </h4>
-                         <h4>
-                            <i class="fa fa-envelope-o"></i> <?php echo $work["user"]["email"]; ?>
-                        </h4>
-                         <h4>
-                            <i class="fa fa-comment"></i> <?php echo $work["user"]["ci"]; ?>
-                        </h4>
+                         <h5>
+                            <i class="fa fa-envelope-o"></i> <a href="mailto:<?php echo $work["user"]["email"]; ?>"><?php echo $work["user"]["email"]; ?></a>
+                        </h5>
+                         <h5>
+                            <i class="fa fa-phone"></i> <a href="tel:+58<?php echo $work["user"]["phone"]; ?>"><?php echo $work["user"]["phone"]; ?></a>
+                        </h5>
+                        <h5>
+                            <i class="fa fa-info"></i> Cédula: <?php echo $work["user"]["ci"]; ?>
+                        </h5>
                     </div>
                 </div>
             </div>

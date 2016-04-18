@@ -329,4 +329,20 @@ class Users extends MX_Controller {
 			redirect("backend");
 		}
 	}
+
+	public function showParticipant($user_id)
+	{
+		if(modules::run("backusers/getRoleId") == 1)
+		{
+			$data["title"] = "Backend - Participante";
+			$data["userData"] = modules::run('backusers/getSessionUserData');
+			$data["user"] = $this->getUserData($user_id);
+ 			$data["contenido_principal"] = $this->load->view("showParticipant", $data, true);
+			$this->load->view("back/template", $data);
+		}
+		else
+		{
+			redirect("backend");
+		}
+	}
 }

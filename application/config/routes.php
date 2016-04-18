@@ -77,7 +77,6 @@ $route["participantes/agregando-pago"] = "payments/addPayment";
 
 // BACKEND
 $route["backend"] = 'backend';
-$route["backend/participantes"] = "users/participants";
 $route["backend/iniciar-sesion"] = "backusers/login"; 
 $route["backend/cerrar-sesion"] = "backusers/logout";
 $route["backend/pagos"] = "payments";
@@ -88,7 +87,9 @@ $route["backend/arbitraje"] = "works/arbitration";
 $route["backend/arbitraje/evaluar"] = "works/evaluate";
 $route["backend/arbitraje/aprobados"] = "works/aprobados";
 $route["backend/arbitraje/rechazados"] = "works/rechazados";
-$route["backend/arbitraje/(.*)"] = "works/show_work/$1";
+$route["backend/arbitraje/(:num)"] = "works/show_work/$1";
 $route["backend/simposios"] = "works/simposios";
 $route["backend/simposios/aprobados"] = "works/simposios_aprobados";
 $route["backend/simposios/rechazados"] = "works/simposios_rechazados";
+$route["backend/participantes"] = "users/participants";
+$route["backend/participantes/(:num)"] = "users/showParticipant/$1";
