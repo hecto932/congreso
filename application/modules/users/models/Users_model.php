@@ -86,6 +86,13 @@ class Users_model extends CI_Model
 		return $query->row_array();
 	}
 
+	function getAllUsers()
+	{
+		$this->db->order_by('lastName', 'ASC');
+		$query = $this->db->get("users");
+		return $query->result_array();
+	}
+
 }  
 
 ?>

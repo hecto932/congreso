@@ -59,7 +59,11 @@
                             <a href="backend/simposios"><i class="fa fa-users"></i> <span class="nav-label">Simposios</span></a>
                         </li>
                     <?php endif; ?>
-                     
+                    <?php if($userData["role_id"] == 1): ?>
+                         <li class="javascript:void(0);">
+                            <a href="backend/participantes"><i class="fa fa-user"></i> <span class="nav-label">Participantes</span></a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
 
             </div>

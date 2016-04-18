@@ -308,4 +308,25 @@ class Users extends MX_Controller {
 		return $this->users_model->getUserData($user_id);
 	}
 
+	public function getAllUsers()
+	{
+		$query = $this->users_model->getAllUsers();
+		return $query;
+	}
+
+	public function participants()
+	{
+		if(modules::run("backusers/getRoleId") == 1)
+		{
+			$data["title"] = "Backend - Directorio de usuarios";
+			$data["userData"] = modules::run('backusers/getSessionUserData');
+			$data["users"] = $this->getAllUsers();
+ 			$data["contenido_principal"] = $this->load->view("participants", $data, true);
+			$this->load->view("back/template", $data);
+		}
+		else
+		{
+			redirect("backend");
+		}
+	}
 }
