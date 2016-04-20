@@ -174,4 +174,14 @@ class Payments extends MX_Controller {
         }
     }
 
+    public function getAllPaymentsByUserId($user_id)
+    {
+        $result = $this->payments_model->getAllPaymentsByUserId($user_id);
+        foreach ($result as $key => $value) {
+            $result[$key]["work"] = modules::run("works/getTitleWork", $result[$key]["work_id"]);
+            $result[$key]["user"] = modules::run("users/getFullName", $result[$key]["user_id"]);
+        }
+        return $result; 
+    }
+
 }

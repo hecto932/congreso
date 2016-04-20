@@ -564,4 +564,14 @@ class Works extends MX_Controller {
             redirect("backend");
         }
     }
+
+    public function getAllWorksByUserId($user_id)
+    {
+        $result = $this->works_model->getAllWorksByUserId($user_id);
+        foreach ($result as $key => $value) {
+            $result[$key]["area"] = $this->works_model->getAreaName($result[$key]["area_id"]);
+            $result[$key]["user"] = modules::run("users/getUserData", $result[$key]["user_id"]);
+        }
+        return $result;
+    }
 }

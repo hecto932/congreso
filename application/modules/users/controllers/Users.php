@@ -305,7 +305,10 @@ class Users extends MX_Controller {
 
 	public function getUserData($user_id)
 	{
-		return $this->users_model->getUserData($user_id);
+		$query = $this->users_model->getUserData($user_id);
+		//$query["works"] = modules::run("works/getAllWorksByUserId", $user_id);
+		//$query["payments"] = modules::run("payments/getAllPaymentsByUserId", $query["id"]);
+		return $query;
 	}
 
 	public function getAllUsers()
@@ -330,13 +333,21 @@ class Users extends MX_Controller {
 		}
 	}
 
+	function getAllDataParticipant($user_id)
+	{
+		$query = $this->users_model->getUserData($user_id);
+		$query["works"] = modules::run("works/getAllWorksByUserId", $user_id);
+		$query["payments"] = modules::run("payments/getAllPaymentsByUserId", $query["id"]);
+		return $query;
+	}
+
 	public function showParticipant($user_id)
 	{
 		if(modules::run("backusers/getRoleId") == 1)
 		{
 			$data["title"] = "Backend - Participante";
 			$data["userData"] = modules::run('backusers/getSessionUserData');
-			$data["user"] = $this->getUserData($user_id);
+			$data["user"] = $this->getAllDataParticipant($user_id);
  			$data["contenido_principal"] = $this->load->view("showParticipant", $data, true);
 			$this->load->view("back/template", $data);
 		}

@@ -43,6 +43,13 @@ class Payments_model extends CI_Model
 		$query = $this->db->get_where("payments", array("status" => $status));
 		return $query->result_array();
 	}
+
+	function getAllPaymentsByUserId($user_id)
+	{
+		$this->db->where("user_id", $user_id);
+		$query = $this->db->get("payments");
+		return $query->result_array();
+	}
 }  
 
 ?>

@@ -105,6 +105,13 @@ class Works_model extends CI_Model
 		$query = $this->db->get_where("works", $data);
 		return $query->result_array();
 	}
+
+	function getAllWorksByUserId($user_id)
+	{
+		$this->db->where("user_id", $user_id);
+		$query = $this->db->get("works");
+		return $query->result_array();
+	}
 }  
 
 ?>
