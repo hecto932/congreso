@@ -30,8 +30,12 @@
                 <div class="ibox-content">
                     <div class="row">
                         <div class="col-sm-6 offset-3-sm">
-                            <div class="input-group"><input type="text" placeholder="Buscador..." class="input-sm form-control"> <span class="input-group-btn">
+                            <div class="input-group">
+                                <input type="text" placeholder="Buscador..." class="input-sm form-control"> 
+                                <span class="input-group-btn">
                                 <button type="button" class="btn btn-sm btn-primary"> Buscar</button> </span></div>
+                                <br>
+                                <span class="pull-right label label-primary"><?php echo count($users); ?></span>
                         </div>
                     </div>
                     <div class="table-responsive">
