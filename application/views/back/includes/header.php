@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<base href="<?php echo base_url(); ?>">
     <meta charset="utf-8">
@@ -19,10 +18,12 @@
 
     <link href="assets/back/css/animate.css" rel="stylesheet">
     <link href="assets/back/css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="assets/back/angular/controllers/participants.js"></script>
 
 </head>
 
-<body>
+<body ng-app="mainApp">
     <div id="wrapper">
         <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
