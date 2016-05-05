@@ -20,11 +20,12 @@
         <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>Participantes </h5>
+                    <h5><span class="pull-left label label-primary"><?php echo count($users); ?></span> Participantes </h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
                         </a>
+
                     </div>
                 </div>
                 <div class="ibox-content">
@@ -33,9 +34,7 @@
                             <div class="input-group">
                                 <input type="text" placeholder="Buscador..." class="input-sm form-control"> 
                                 <span class="input-group-btn">
-                                <button type="button" class="btn btn-sm btn-primary"> Buscar</button> </span></div>
-                                <br>
-                                <span class="pull-right label label-primary"><?php echo count($users); ?></span>
+                                <button type="button" class="btn btn-sm btn-primary"> Buscar</button> </span></div>                              
                         </div>
                     </div>
                     <div class="table-responsive">
