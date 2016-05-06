@@ -432,18 +432,16 @@
                         </div>
                         <div class="col-md-9">
                             <h3>Ángel Solanes Puchol - España</h3>
-                            <p>
+                            <p style="text-align: justify;">
                                 Psicólogo, Director del Máster Universitario Oficial en Gestión de RR.HH., Trabajo y Organizaciones y Coordinador del Doctorado en Gestión de Recursos Humanos, Trabajo y Organizaciones de la Universidad “Miguel Hernández” de Elche, España. Se desempeña en el Departamento de Psicología de la Salud como Profesor Interino Titular en el Área de Psicología Social, impartiendo diversas asignaturas a nivel de pre y postgrado, tales como: Psicología de las organizaciones, Psicología de los recursos humanos, Nuevas tecnologías y recursos humanos, Organizaciones saludables, Sistemas de calidad en las empresas, entre otras. Dirige el Grupo de Investigación Salud Ocupacional de la Universidad “Miguel Hernández”
                             </p>
                         </div>
                     </div>
 
-                    <br>
-                    <br>
                      <div class="col-md-12">
                         <div class="col-md-9">
                             <h3>Enrique de la Garza Toledo - México</h3>
-                            <p>
+                            <p style="text-align: justify;">
                                 Doctor en Sociología por El Colegio de México, Postdoctorado en las Universidades de Warwick, Inglaterra y Berkeley, California con estancia de Investigación en la Universidad de Roma, Italia. Es Profesor Investigador Titular C en el Doctorado en Estudios Sociales de la Universidad Autónoma Metropolitana. Miembro del Sistema Nacional de Investigadores nivel III . Director de la revista Trabajo publicada entre la UAM y la Organización Internacional del Trabajo, ex director de la Revista Latinoamericana de Estudios del Trabajo de la Asociación Latinoamericana de Estudios del Trabajo; miembro, entre otros, de los comités editoriales de las revistas Sociología del Trabajo (España), Work and Occupations (USA), Economic and Industrial Democracy (Suecia); Latinoamericana de Estudios del Trabajo (Venezuela); Work, Employment and Society (USA); Labor Studies Journal (USA). Ha recibido importantes premiaciones y distinciones académicas entre las que se mencionan: Premio Nacional de Economía, Premio Anual de Investigación Económica (tres veces), Premio Nacional de Investigación Laboral (2 veces), Premio Nacional de Ciencias y Artes (2009), entre otras. Es autor y coordinador de innumerables libros, artículos publicados en revistas científicas, ponente a nivel internacional, entre otras distinciones.
                             </p>
                         </div>
@@ -458,7 +456,7 @@
                         </div>
                         <div class="col-md-9">
                             <h3>Julio César Tapia León - Ecuador</h3>
-                            <p>
+                            <p style="text-align: justify;">
                                 Ingeniero Comercial, Licenciado en Administración de Empresas, Magister en Administración de Empresas con énfasis en Pequeñas y Medianas Empresas en la Universidad de las Fuerzas Armadas ESPE, Magister Ejecutivo en Dirección de Empresas con Énfasis en Gerencia Estratégica, Especialización en Gerencia de Proyectos, Docente Ocasional del Instituto de Altos Estudios Nacional. Actualmente Director de la Carrera de Ingeniería de Finanzas y Auditoría en la Universidad de las Fuerzas Armadas ESPE Extensión Latacunga. Especialización en Periodismo y Cooperación Internacional por la Universidad Complutense de Madrid.
                             </p>
                         </div>
@@ -468,7 +466,7 @@
                      <div class="col-md-12">
                         <div class="col-md-9">
                             <h3>Magda Cejas - Ecuador</h3>
-                            <p>
+                            <p style="text-align: justify;">
                                 Lic. en Relaciones Industriales y Lic. en Administracion y Organización de Empresas. Posee Master en:  Relaciones Laborales (1996), Sociología (2004), Experto Laboral (2004), e Investigación (2003), Especialista en Gerencia (1994), Recorversión Profesional (2004), Educación Superior (1998)  y Docencia (2003). Doctorado en Empresas ( Universidad de Barcelona-Espana) , Doctorado en Ciencias Sociales (Universidad de Carabobo-Venezuela) . Es investigadora Acreditada del  Ministerio del Poder Popular para Ciencia, Tecnología e Industrias Intermedias (Venezuela). Realizó estudios de postdoctorado en Venezuela: Universidad de Carabobo (2012) y en la Unviersidad Simón Rodríguez (2011). Profesora Investigadora y Titular de la Universidad de Carabobo. ExBecaria del Proyecto Prometeo-Ecuador-SENESCYT. Actualmente Docente /Investigador del CEAC- ESPE. Extensión Latacunga. Ecuador.
                             </p>
                         </div>
@@ -483,7 +481,7 @@
                         </div>
                         <div class="col-md-9">
                             <h3>Galo Vásquez - Ecuador</h3>
-                            <p>
+                            <p style="text-align: justify;">
                                 Ingeniero de Empresas, Cursó estudios de Maestría en Docencia Universitaria y Administración Educativa y en Maestría en Gestión de Proyectos. Ha ocupado cargos de relevancia en la empresa privada (Ecuador) relacionados con el Área de Administración y de Recursos Humanos. Se desempeña como docente investigador de la Universidad de las Fuerzas Armadas ESPE-Extensión Latacunga. Actualmente es Director del Departamento de Ciencias Económicas, Administrativas y de Comercio-CEAC- Extensión de Latacunga.
                             </p>
                         </div>
@@ -492,7 +490,7 @@
                      <div class="col-md-12">
                         <div class="col-md-9">
                             <h3>Carlos Geovanny Albán Yánez - Ecuador</h3>
-                            <p>
+                            <p style="text-align: justify;">
                                 Ingeniero en Ecoturismo,  Cursó estudios de Maestría en Gestion Empresarial Agroturismo.  Se ha desempenado como docente en Instituciones de Educación Superior en Ecuador, igualmente es docente investigador de la Universidad de las Fuerzas Armadas ESPE-Extensión Latacunga. Conferencista. Actualmente es Director de la Carrera Ingeniería en Turismo y Hotelería. Universidad de las Fuerzas Armadas. ESPE. Extensión Latacunga
                             </p>
                         </div>
@@ -517,33 +515,83 @@
                 <div class="row titles-main left wow animated bounceInUp" data-wow-delay="0.5s" data-wow-duration="0.5s">
                     <div class="col-md-12">
                         <h1 class="center" style="font-size: 3em;font-weight: 900;font-variant;"><u>Patrocinantes</u></h1>
+                        <br>
+                        <br>
                     </div>
-                        <!--titles main-->
+                    <!--titles main-->
                     <div class="col-md-12">
-                        <ul class="sponsor-list top">
-                            <li><a href="#"><img src="assets/front/img/logos/logo1.png" alt="Escuela de Administración y Contaduria Pública"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo14.png" alt="Escuela de Relaciones Industriales"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo11.png" alt="Estudios Generales"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo2.jpg" alt="INFACES"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo3.jpg" alt="CISET"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo4.png" alt="CIDPyMESMicro"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo5.png" alt="UICB"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo6.jpg" alt="LAINET"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo7.jpg" alt="GIECO"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo8.jpg" alt="GIPI"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo9.png" alt="GIG"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo10.jpg" alt="Fundaprofaces"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo12.png" alt="Vicerrectorado"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo15.jpg" alt="CEATE"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo17.jpg" alt="APUC"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo17.png" alt="IPAPEDI"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo16.png" alt="Universidad Arturo Michelena, UAM"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo22.jpg" alt="Universitas Miguel Hernandez"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo23.jpg" alt="Universidad Autónoma Metropolitana"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo24.jpg" alt="Universidad de las fuerzas armadas"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo25.jpg" alt="Centro de Investigación y Desarrollo Ecuador"></a></li>
-                            <li><a href="#"><img src="assets/front/img/logos/logo26.jpg" alt="Departamento de Ciencias Economicas Administrativas y de Comercio"></a></li>
-                        </ul>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo22.jpg" alt="Universitas Miguel Hernandez"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo23.jpg" alt="Universidad Autónoma Metropolitana"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo24.jpg" alt="Universidad de las fuerzas armadas"></a></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo25.jpg" alt="Centro de Investigación y Desarrollo Ecuador"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo26.jpg" alt="Departamento de Ciencias Economicas Administrativas y de Comercio"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo27.jpg" alt="DUSA"></a>
+                        </div>
+                         <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo28.jpg" alt="Hotel Lidotel"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo1.png" alt="Escuela de Administración y Contaduria Pública"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo14.png" alt="Escuela de Relaciones Industriales"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo11.png" alt="Estudios Generales"></a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="#"><img src="assets/front/img/logos/logo2.jpg" alt="INFACES"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo3.jpg" alt="CISET"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo4.png" alt="CIDPyMESMicro"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo5.png" alt="UICB"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo6.jpg" alt="LAINET"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo7.jpg" alt="GIECO"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo8.jpg" alt="GIPI"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo9.png" alt="GIG"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo10.jpg" alt="Fundaprofaces"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo12.png" alt="Vicerrectorado"></a>
+                        </div>
+                         <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo15.jpg" alt="CEATE"></a>
+                        </div>
+                         <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo17.jpg" alt="APUC"></a>
+                        </div>
+                         <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo17.png" alt="IPAPEDI"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="#"><img src="assets/front/img/logos/logo16.png" alt="Universidad Arturo Michelena, UAM"></a>
+                        </div>
                     </div>
                 </div>
             </div>

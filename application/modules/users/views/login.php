@@ -28,11 +28,17 @@
             <div class="col-md-6">
                 <h2 class="font-bold">Inicio de sesión</h2>
 
-                <p>
-                    Bienvenido al sistema de ingreso del II Congreso Internacional de Investigación FACES - UC 2016.
+                <p style="text-align: justify;">
+                    Bienvenido al sistema de ingreso del Congreso Internacional de Investigación e Innovación de la FACES - UC 2016, Venezuela.
                 </p>
+                <h5><strong>Pasos para cargar trabajos libres o simposios</strong></h5>
                 <p>
-                    Iniciando sesión a traves de esta aplicacion podras ingresar pagos, registrar documentos sobre ponencias y actualizar tus datos personales.
+                    <ol>
+                        <li>Deberás registrate aportando tus datos personales.</li>
+                        <li>Inicia sesión en la aplicación.</li>
+                        <li>Actualiza tus datos personales como foto de perfil u otros.</li>
+                        <li>Carga tu(s) trabajo(s) y los respectivos pagos.</li>
+                    </ol>
                 </p>
 
             </div>
