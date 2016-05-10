@@ -4,6 +4,9 @@
             <?php if($this->session->flashdata("message")): ?>
                 <?php echo $this->session->flashdata('message'); ?>
             <?php endif; ?>
+            <?php if($userData["image"] == null): ?>
+                <div class="col-lg-12"><div class="alert alert-info">Actualmente tu cuenta no posee una foto de perfil. Carga una <a href="participantes/mis-datos">Aquí</a></div></div>
+            <?php endif; ?>
             <div class="col-lg-12">
                 <div class="row m-b-lg m-t-lg">
                     <div class="col-md-6">

@@ -119,8 +119,15 @@ class Works extends MX_Controller {
 
     public function getNumberFiles()
     {
-        $this->session->set_flashdata('message', '<span class="badge badge-danger">Debe cargarse minimo un(1) archivo o maximo tres(3).</span>');
-        return count($_FILES["files"]["name"]) <= 3 && count($_FILES["files"]["name"]) >= 1;
+        $this->session->set_flashdata('message', '<span class="badge badge-danger">Debe cargarse un(1) archivo por trabajo</span>');
+        return count($_FILES["files"]["name"]) == 1;
+    }
+
+    public function verifyMaxSizeUpload()
+    {
+        $MAX_FILE_SIZE = 20000000;
+        $this->session->set_flashdata('message', '<span class="badge badge-danger">El documento a cargar debe pesar a lo maximo 20MB.</span>');
+        return $_FILES["files"]["size"][0] <= $MAX_FILE_SIZE;
     }
 
     public function getNumberWorks()
@@ -153,8 +160,9 @@ class Works extends MX_Controller {
             //echo count($_FILES["files"]["name"]);
             //die_pre($_FILES);
 
-    		if($this->form_validation->run($this) && $this->getNumberFiles())
+    		if($this->form_validation->run($this) && $this->getNumberFiles() && $this->verifyMaxSizeUpload())
     		{
+                
     			$work = array(
     				"user_id" 	=> modules::run("users/getSessionId"),
     				"campus" 	=> $this->input->post("campus"),
