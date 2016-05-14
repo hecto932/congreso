@@ -95,7 +95,7 @@ class Users extends MX_Controller {
 
 			$this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-success">Registro completado exitosamente.</div></div>');
 
-			redirect('app');
+			redirect('participantes/inicio-sesion');
 		}
 		else
 		{

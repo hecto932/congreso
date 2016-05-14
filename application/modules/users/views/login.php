@@ -20,8 +20,9 @@
 
     <div class="loginColumns animated fadeInDown">
         <div class="row">
+            <?php echo $this->session->flashdata('message'); ?>
             <div class="col-md-6">
-                <?php echo $this->session->flashdata('message'); ?>
+                
                 <h2 class="font-bold">Inicio de sesión</h2>
 
                 <p style="text-align: justify;">
