@@ -20,7 +20,7 @@
                                                 <img src="uploads/avatars/<?php echo $userData["image"]; ?>" class="img-circle circle-border m-b-md" alt="profile">
                                             <?php endif; ?>
                                         </div>
-                                        <input type="file" class="form-control" name="image" >
+                                        <input type="file" class="form-control" name="image" accept="image/*" >
                                         <?php echo form_error("image"); ?>
                                     </div>
                                 </div>
