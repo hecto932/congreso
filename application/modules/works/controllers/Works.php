@@ -348,7 +348,7 @@ class Works extends MX_Controller {
         if(modules::run("backusers/getSessionId"))
         {
             $role = modules::run("backusers/getRoleId");
-            if($role == 1 || $role == 2 || $role == 3)
+            if($role == 1 || $role == 2 || $role == 3 || $role == 6 || $role == 7)
             {
 
                 $status = $this->input->post("status");
