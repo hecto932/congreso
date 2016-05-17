@@ -94,7 +94,9 @@ class Works extends MX_Controller {
                 if ($error == UPLOAD_ERR_OK) 
                 {
                     $tmp_name = $_FILES["files"]["tmp_name"][$key];
-                    $name = modules::run("users/getSessionId")."_".$_FILES["files"]["name"][$key];
+                    $date = new DateTime();
+                    $result = $date->format('d-m-Y H:i:s');
+                    $name = modules::run("users/getSessionId")."_".$result."-".$_FILES["files"]["name"][$key];
                     $type = $_FILES["files"]["type"][$key];
                     move_uploaded_file($tmp_name, "uploads/files/$name");
                     if($type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
@@ -153,14 +155,14 @@ class Works extends MX_Controller {
 
     		$this->form_validation->set_message('required', '%s es requerido.');
     		$this->form_validation->set_message('is_unique', '%s no es unico.');
-            $this->form_validation->set_message("isUniqueTitle","Título es repetido.");
+            $this->form_validation->set_message("isUniqueTitle","Este título ha sido utilizado.");
 
     		$this->form_validation->set_error_delimiters("<p class='text-danger'>", "</p>");
 
             //echo count($_FILES["files"]["name"]);
             //die_pre($_FILES);
 
-    		if($this->form_validation->run($this) && $this->getNumberFiles() && $this->verifyMaxSizeUpload())
+    		if($this->form_validation->run($this) && $this->getNumberFiles())
     		{
                 
     			$work = array(

@@ -64,7 +64,8 @@
                                         <input type="file" class="form-control" name="files[]" required="required" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple >
                                         <span class="help-block m-b-none">Por favor seleccione los archivos correspondientes al trabajo.
                                         <br>
-                                        <strong>Solo se permiten cargar archivos Microsoft Word</strong></span>
+                                        <strong style="font-size: 14px;"class="badge badge-info">Solo se permiten cargar archivos Microsoft Word</strong></span>
+                                        <strong style="font-size: 14px;"class="badge badge-warning">El nombre del documento no puede tener mas de 140 caracteres.</strong></span>
                                         <?php echo form_error("files"); ?>
                                         <?php echo $this->session->flashdata('message'); ?>
                                     </div>
