@@ -521,82 +521,82 @@
                     <!--titles main-->
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo22.jpg" alt="Universitas Miguel Hernandez"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo22.jpg" alt="Universitas Miguel Hernandez"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo23.jpg" alt="Universidad Autónoma Metropolitana"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo23.jpg" alt="Universidad Autónoma Metropolitana"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo24.jpg" alt="Universidad de las fuerzas armadas"></a></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo24.jpg" alt="Universidad de las fuerzas armadas"></a></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo25.jpg" alt="Centro de Investigación y Desarrollo Ecuador"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo25.jpg" alt="Centro de Investigación y Desarrollo Ecuador"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo26.jpg" alt="Departamento de Ciencias Economicas Administrativas y de Comercio"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo26.jpg" alt="Departamento de Ciencias Economicas Administrativas y de Comercio"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo27.jpg" alt="DUSA"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo27.jpg" alt="DUSA"></a>
                         </div>
                          <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo28.jpg" alt="Hotel Lidotel"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo28.jpg" alt="Hotel Lidotel"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo1.png" alt="Escuela de Administración y Contaduria Pública"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo1.png" alt="Escuela de Administración y Contaduria Pública"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo14.png" alt="Escuela de Relaciones Industriales"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo14.png" alt="Escuela de Relaciones Industriales"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo11.png" alt="Estudios Generales"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo11.png" alt="Estudios Generales"></a>
                         </div>
                         <div class="col-md-2">
-                            <a href="#"><img src="assets/front/img/logos/logo2.jpg" alt="INFACES"></a>
+                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo2.jpg" alt="INFACES"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo3.jpg" alt="CISET"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo3.jpg" alt="CISET"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo4.png" alt="CIDPyMESMicro"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo4.png" alt="CIDPyMESMicro"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo5.png" alt="UICB"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo5.png" alt="UICB"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo6.jpg" alt="LAINET"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo6.jpg" alt="LAINET"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo7.jpg" alt="GIECO"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo7.jpg" alt="GIECO"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo8.jpg" alt="GIPI"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo8.jpg" alt="GIPI"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo9.png" alt="GIG"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo9.png" alt="GIG"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo10.jpg" alt="Fundaprofaces"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo10.jpg" alt="Fundaprofaces"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo12.png" alt="Vicerrectorado"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo12.png" alt="Vicerrectorado"></a>
                         </div>
                          <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo15.jpg" alt="CEATE"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo15.jpg" alt="CEATE"></a>
                         </div>
                          <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo17.jpg" alt="APUC"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo17.jpg" alt="APUC"></a>
                         </div>
                          <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo17.png" alt="IPAPEDI"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo17.png" alt="IPAPEDI"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo16.png" alt="Universidad Arturo Michelena, UAM"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo16.png" alt="Universidad Arturo Michelena, UAM"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo29.png" alt="Centro de Estudios Trnasdiciplinarios Bolivia, CET - BOLIVIA"></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo29.png" alt="Centro de Estudios Trnasdiciplinarios Bolivia, CET - BOLIVIA"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo30.jpg" alt="Universal Components, C.A "></a>
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo30.jpg" alt="Universal Components, C.A"></a>
                         </div>
                     </div>
                 </div>
