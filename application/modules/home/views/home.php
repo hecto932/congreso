@@ -462,19 +462,6 @@
                         </div>
                     </div>
 
-
-                     <div class="col-md-12">
-                        <div class="col-md-9">
-                            <h3>Magda Cejas - Ecuador</h3>
-                            <p style="text-align: justify;">
-                                Lic. en Relaciones Industriales y Lic. en Administracion y Organización de Empresas. Posee Master en:  Relaciones Laborales (1996), Sociología (2004), Experto Laboral (2004), e Investigación (2003), Especialista en Gerencia (1994), Recorversión Profesional (2004), Educación Superior (1998)  y Docencia (2003). Doctorado en Empresas ( Universidad de Barcelona-Espana) , Doctorado en Ciencias Sociales (Universidad de Carabobo-Venezuela) . Es investigadora Acreditada del  Ministerio del Poder Popular para Ciencia, Tecnología e Industrias Intermedias (Venezuela). Realizó estudios de postdoctorado en Venezuela: Universidad de Carabobo (2012) y en la Unviersidad Simón Rodríguez (2011). Profesora Investigadora y Titular de la Universidad de Carabobo. ExBecaria del Proyecto Prometeo-Ecuador-SENESCYT. Actualmente Docente /Investigador del CEAC- ESPE. Extensión Latacunga. Ecuador.
-                            </p>
-                        </div>
-                        <div class="col-md-3">
-                            <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/magda-cejas.jpg" alt="Magda Cejas - Ecuador">
-                        </div>
-                    </div>
-
                      <div class="col-md-12">
                         <div class="col-md-3">
                             <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/galo-vasquez.jpg" alt="Galo Vásquez - Ecuador">
