@@ -596,7 +596,7 @@
                            <a href="#"><img src="assets/front/img/logos/logo29.png" alt="Centro de Estudios Trnasdiciplinarios Bolivia, CET - BOLIVIA"></a>
                         </div>
                         <div class="col-md-2">
-                           <a href="#"><img src="assets/front/img/logos/logo30.jpg" alt="Universal Components, C.A"></a>
+                           <a href="#"><img src="assets/front/img/logos/logo30.jpg" alt="Universal Components, C.A "></a>
                         </div>
                     </div>
                 </div>
