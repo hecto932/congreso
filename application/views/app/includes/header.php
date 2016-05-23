@@ -36,12 +36,7 @@
                             <li class="">
                                 <a aria-expanded="false" role="button" href="participantes/mis-datos"> Mi perfil</a>
                             </li>
-                            <li class="dropdown">
-                                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Trabajos <span class="caret"></span></a>
-                                <ul role="menu" class="dropdown-menu">
-                                    <li><a href="participantes/agregar-trabajo">Agregar nuevo trabajo</a></li>
-                                </ul>
-                            </li>
+                            
                             <li class="dropdown">
                                 <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Pagos <span class="caret"></span></a>
                                 <ul role="menu" class="dropdown-menu">
