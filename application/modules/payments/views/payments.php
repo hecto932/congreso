@@ -18,7 +18,7 @@
 
             <div class="ibox">
                 <div class="ibox-title">
-                    <h5>Pagos</h5>
+                    <h5><span class="pull-left label label-primary"><?php echo count($payments); ?></span> Pagos</h5>
                     <div class="ibox-tools">
                         <a style="color:white;"href="backend/pagos"class="btn btn-info dim" ><i class="fa fa-check"></i> Por verificar</a>
                         <a style="color:white;"href="backend/pagos/conforme"class="btn btn-primary dim" ><i class="fa fa-check"></i> Conforme</a>
