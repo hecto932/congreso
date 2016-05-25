@@ -585,6 +585,12 @@
                         <div class="col-md-2">
                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo30.JPG" alt="Universal Components, C.A"></a>
                         </div>
+                        <div class="col-md-2">
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo31.jpg" alt="GinCis"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo32.jpg" alt="AsoVac Carabobo"></a>
+                        </div>
                     </div>
                 </div>
             </div>
