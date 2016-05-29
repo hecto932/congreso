@@ -757,6 +757,11 @@
                         <h1 style="color: #3F51B5;">- <a style="color: #3F51B5;" href="http://faces.uc.edu.ve/web/eventos/ver/jornadas-contables">Jornadas Contables</a></h1>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color: #3F51B5;">- <a style="color: #3F51B5;" href="http://faces.uc.edu.ve/web/eventos/ver/iv-jornada-de-la-escuela-de-administracion-y-contaduria-publica">IV Jornada de La Escuela de Administración y Contaduría Pública</a></h1>
+                    </div>
+                </div>
             </div>
         </section> 
         <!-- EVENTOS PRECONGRESO -->
