@@ -4,9 +4,9 @@
     <base href="<?php echo base_url(); ?>"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1,  maximum-scale=1">
-    <meta name="Description" CONTENT="Congreso internacional de Investigacion e innovación de la Facultad de Ciencias Económicas y Sociales de la Universidad de Carabobo 2016"/>
+    <meta name="Description" CONTENT="Congreso Internacional de Investigación e Innovación de la FACES - UC 2016, Venezuela"/>
     <meta name="author" content="http://github.com/hecto932"/>
-    <meta name="keyword" content="CongresoFACES, UC, Congreso, DIPI, Universidad de Carabobo, Facultad de Ciencias Económicas y Sociales, FACES, congreso">
+    <meta name="keyword" content="CongresoFACES, UC, Congreso, DIPI, Universidad de Carabobo, Facultad de Ciencias Económicas y Sociales, FACES, Congreso Internacional de Investigación e Innovación de la FACES - UC 2016, Venezuela">
     <title>Congreso Internacional de Investigacion de FACES-UC 2016</title>
     
     <!-- Your styles -->
@@ -590,6 +590,9 @@
                         </div>
                         <div class="col-md-2">
                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo32.jpg" alt="AsoVac Carabobo"></a>
+                        </div>
+                        <div class="col-md-2">
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo33.jpg" alt="GINES"></a>
                         </div>
                     </div>
                 </div>

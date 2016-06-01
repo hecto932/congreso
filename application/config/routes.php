@@ -65,6 +65,16 @@ $route['participantes/cerrar-sesion'] = 'users/logout';
 $route['participantes/mis-datos'] = "users/toUpdateUserSession";
 $route['participantes/actualizar-datos'] = "users/updateUserSession";
 
+// ASISTENTES
+$route['asistentes/iniciar-sesion'] = "assistant";
+$route['asistentes/registro'] = "assistant/toRegister";
+$route['asistentes/registrar'] = 'assistant/doRegister';
+$route['asistentes/app'] = "assistant";
+$route['asistentes/iniciar'] = 'assistant/login'; 
+$route['asistentes/cerrar-sesion'] = 'assistant/logout'; 
+$route['asistentes/mis-datos'] = "assistant/toUpdateUserAssistant";
+$route["asistentes/actualizar-datos"] = "assistant/updateAssistant";
+
 // WORKS
 $route['participantes/agregar-trabajo'] = "works/toAddWork";
 $route['participantes/agregando-trabajo'] = "works/addWork";
@@ -93,3 +103,7 @@ $route["backend/simposios/aprobados"] = "works/simposios_aprobados";
 $route["backend/simposios/rechazados"] = "works/simposios_rechazados";
 $route["backend/participantes"] = "users/participants";
 $route["backend/participantes/(:num)"] = "users/showParticipant/$1";
+
+//185/60/14 95 potensa
+//195/75/14 affinity
+//165/75/14 Goodyear

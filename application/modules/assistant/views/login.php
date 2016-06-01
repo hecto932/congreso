@@ -28,21 +28,21 @@
                 <p style="text-align: justify;">
                     Bienvenido al sistema de ingreso del Congreso Internacional de Investigación e Innovación de la FACES - UC 2016, Venezuela.
                 </p>
-                <h5><strong>Pasos para cargar trabajos libres o simposios</strong></h5>
+                <h5><strong>Pasos para inscribirte como asistente: </strong></h5>
                 <p>
                     <ol>
                         <li>Deberás registrate aportando tus datos personales.</li>
                         <li>Inicia sesión en la aplicación.</li>
                         <li>Actualiza tus datos personales como foto de perfil u otros.</li>
-                        <li>Carga tu(s) trabajo(s) y los respectivos pagos.</li>
+                        <li>Carga el respectivo pago.</li>
                     </ol>
                 </p>
 
             </div>
             <div class="col-md-6">
                 <div class="ibox-content">
-                    <div style="text-align: center;"><strong>Participantes</strong> | <a href="asistentes/iniciar-sesion">Asistentes</a></div>
-                    <form class="m-t" role="form" action="participantes/iniciar" method="POST">
+                    <div style="text-align: center;"> <a href="participantes/inicio-sesion">Participantes</a> | <strong>Asistentes</strong> </div>
+                    <form class="m-t" role="form" action="asistentes/iniciar" method="POST">
                         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" placeholder="Correo electrónico" required="" value="<?php echo set_value('email'); ?>">
@@ -57,11 +57,11 @@
                         <a href="#">
                             <small>¿Olvidaste la contraseña?</small>
                         </a>
-                        <!-- 
+
                         <p class="text-muted text-center">
                             <small>¿No posees una cuenta?</small>
                         </p>
-                        <a class="btn btn-sm btn-white btn-block" href="participantes/registro">Registrate</a> -->
+                        <a class="btn btn-sm btn-white btn-block" href="asistentes/registro">Registrate</a>
                     </form>
                     <p class="m-t">
                         <small>Inspinia we app framework base on Bootstrap 3 &copy; 1</small>
