@@ -44,8 +44,12 @@
                             CF
                         </div>
                     </li>
-                    <?php if($userData["role_id"] == 1 || $userData["role_id"] == 2 || $userData["role_id"] == 3): ?>
+                    <?php if($userData["role_id"] == 1): ?>
                         <li class="javascript:void(0);">
+                            <a href="backend/arbitraje"><i class="fa fa-gavel"></i> <span class="nav-label">Arbitro</span></a>
+                        </li>
+                    <?php elseif($userData["role_id"] == 2 || $userData["role_id"] == 3): ?>
+                         <li class="javascript:void(0);">
                             <a href="backend/arbitraje"><i class="fa fa-gavel"></i> <span class="nav-label">Arbitro</span></a>
                         </li>
                     <?php endif; ?>
@@ -63,6 +67,9 @@
                     <?php if($userData["role_id"] == 1): ?>
                          <li class="javascript:void(0);">
                             <a href="backend/participantes"><i class="fa fa-user"></i> <span class="nav-label">Participantes</span></a>
+                        </li>
+                        <li class="javascript:void(0);">
+                            <a href="backend/asistentes"><i class="fa fa-user"></i> <span class="nav-label">Asistentes</span></a>
                         </li>
                     <?php endif; ?>
                 </ul>

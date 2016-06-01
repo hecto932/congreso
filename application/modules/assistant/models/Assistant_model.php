@@ -86,7 +86,7 @@ class Assistant_model extends CI_Model
 		return $query->row_array();
 	}
 
-	function getAllUsers()
+	function getAllAssistants()
 	{
 		$this->db->order_by('lastName', 'ASC');
 		$query = $this->db->get("assistants");

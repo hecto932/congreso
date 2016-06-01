@@ -9,7 +9,7 @@
                 <a href="backend/participantes">Participantes y Asistentes</a>
             </li>
             <li class="active">
-                <strong>Perfil de Prueba</strong>
+                <strong><?php echo $user["lastName"].", ".$user["name"]; ?></strong>
             </li>
         </ol>
     </div>

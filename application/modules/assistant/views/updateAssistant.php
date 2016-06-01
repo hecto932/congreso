@@ -81,7 +81,7 @@
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-10">
                                         <button class="btn btn-primary " type="submit"><i class="fa fa-check"></i>&nbsp;Actualizar datos</button>
-                                        <a href="/app" class="btn btn-w-m btn-warning">Cancelar</a>
+                                        <a href="asistentes/app" class="btn btn-w-m btn-warning">Cancelar</a>
                                     </div>
                                 </div>
 
