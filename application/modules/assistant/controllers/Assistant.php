@@ -86,7 +86,9 @@ class Assistant extends MX_Controller {
 				'name'		=> $this->input->post('name'),
 				'campus_id'	=> $this->input->post("campus_id"),
 				'ci'		=> $this->input->post('ci'),
-				'phone'		=> 	$this->input->post('phone'),
+				'phone'		=> $this->input->post('phone'),
+				'university'=> $this->input->post("university"),
+				'school'=> 	$this->input->post("school"),
 				'email'		=> $this->input->post('email'),
 				'password'	=> sha1($this->input->post('password')),
 				'createdAt'	=> date("Y-m-d H:i:s")
