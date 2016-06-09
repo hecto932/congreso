@@ -8,7 +8,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 | URL to your CodeIgniter root. Typically this will be your base URL,
 | WITH a trailing slash:
-|
+|   SELECT r.campus, r.lastName, r.name, r.ci, r.phone, r.email, r.university, r.school, r.title, a.name, r.status
+	FROM areas a 
+	INNER JOIN (SELECT w.campus, u.lastName, u.name, u.ci, u.phone, u.email, u.university, u.school, w.title, w.area_id, w.status
+	FROM users u
+	INNER JOIN works w
+	ON u.id = w.user_id) r
+	ON a.id = r.area_id
 |	http://example.com/
 |
 | WARNING: You MUST set this value!

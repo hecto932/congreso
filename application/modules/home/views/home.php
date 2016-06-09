@@ -594,6 +594,9 @@
                         <div class="col-md-2">
                            <a href="javascript:void(0);"><img src="assets/front/img/logos/logo33.jpg" alt="GINES"></a>
                         </div>
+                        <div class="col-md-2">
+                           <a href="javascript:void(0);"><img src="assets/front/img/logos/logo34.jpg" alt="Gilog"></a>
+                        </div>
                     </div>
                 </div>
             </div>
