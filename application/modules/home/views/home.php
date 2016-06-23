@@ -439,14 +439,14 @@
                     </div>
 
                      <div class="col-md-12">
+                        <div class="col-md-3">
+                            <center><img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/enrique-garza.jpg" alt="Enrique de la Garza Toledo - México"></center>
+                        </div>
                         <div class="col-md-9">
                             <h3>Enrique de la Garza Toledo - México</h3>
                             <p style="text-align: justify;">
                                 Doctor en Sociología por El Colegio de México, Postdoctorado en las Universidades de Warwick, Inglaterra y Berkeley, California con estancia de Investigación en la Universidad de Roma, Italia. Es Profesor Investigador Titular C en el Doctorado en Estudios Sociales de la Universidad Autónoma Metropolitana. Miembro del Sistema Nacional de Investigadores nivel III . Director de la revista Trabajo publicada entre la UAM y la Organización Internacional del Trabajo, ex director de la Revista Latinoamericana de Estudios del Trabajo de la Asociación Latinoamericana de Estudios del Trabajo; miembro, entre otros, de los comités editoriales de las revistas Sociología del Trabajo (España), Work and Occupations (USA), Economic and Industrial Democracy (Suecia); Latinoamericana de Estudios del Trabajo (Venezuela); Work, Employment and Society (USA); Labor Studies Journal (USA). Ha recibido importantes premiaciones y distinciones académicas entre las que se mencionan: Premio Nacional de Economía, Premio Anual de Investigación Económica (tres veces), Premio Nacional de Investigación Laboral (2 veces), Premio Nacional de Ciencias y Artes (2009), entre otras. Es autor y coordinador de innumerables libros, artículos publicados en revistas científicas, ponente a nivel internacional, entre otras distinciones.
                             </p>
-                        </div>
-                        <div class="col-md-3">
-                            <center><img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/enrique-garza.jpg" alt="Enrique de la Garza Toledo - México"></center>
                         </div>
                     </div>
 
@@ -475,16 +475,42 @@
                     </div>
 
                      <div class="col-md-12">
+                        <div class="col-md-3">
+                            <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/carlos-alban.jpg" alt="Carlos Geovanny Albán Yánez - Ecuador">
+                        </div>
                         <div class="col-md-9">
                             <h3>Carlos Geovanny Albán Yánez - Ecuador</h3>
                             <p style="text-align: justify;">
                                 Ingeniero en Ecoturismo,  Cursó estudios de Maestría en Gestion Empresarial Agroturismo.  Se ha desempenado como docente en Instituciones de Educación Superior en Ecuador, igualmente es docente investigador de la Universidad de las Fuerzas Armadas ESPE-Extensión Latacunga. Conferencista. Actualmente es Director de la Carrera Ingeniería en Turismo y Hotelería. Universidad de las Fuerzas Armadas. ESPE. Extensión Latacunga
                             </p>
                         </div>
+                    </div>
+
+                    <div class="col-md-12">
                         <div class="col-md-3">
-                            <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/carlos-alban.jpg" alt="Carlos Geovanny Albán Yánez - Ecuador">
+                            <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/teresa-velasco-portero.jpg" alt="Carlos Geovanny Albán Yánez - Ecuador">
+                        </div>
+                        <div class="col-md-9">
+                            <h3>Teresa Velasco Portero - España</h3>
+                            <p style="text-align: justify;">
+                                Docente – investigadora  de la Universidad Loyola Andalucía (España).  Estudios doctorales en derecho. Acreditada como Profesora titular por la ANECA, agencia oficial española de calidad docente. Investigadora en el área de igualdad de oportunidades entre mujeres y hombres; Seguridad Social y Comunitaria. Ha realizado estancia de investigación en el Bundesministerium fúr Arbeit und Soziales, en Bon, Alemania. Recibió premiación por trabajo de investigación sobre Despido de la Trabajadora Víctima de violencia de Género y sobre Trabajo y Salud Mental de Mujeres y Hombres. Tiene una vasta producción intelectual en el área de género y trabajo.
+                            </p>
                         </div>
                     </div>
+
+
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/mariel-celicila-martin.jpg" alt="Carlos Geovanny Albán Yánez - Ecuador">
+                        </div>
+                        <div class="col-md-9">
+                            <h3>Mariel Celicila Martin - Argentina</h3>
+                            <p style="text-align: justify;">
+                                Docente-Investigadora en la Universidad Nacional de Mar del Plata (UNMDP), Argentina. Especialista en Gestión de Salud y Seguridad en el Trabajo. Directora del Grupo de Investigación ”El Hombre, la Mujer y su entorno”. Obtuvo Premio Anual de Salud y Seguridad, Investigación y Teoría Universitaria, instaurado por el Consejo Inter – universitario  Nacional (Resolución C.E.Nº 321/05) y Ministerio de Trabajo Empleo y Seguridad Social y la Superintendencia de Riesgos del Trabajo. Autora de libros y publicaciones sobre el tema Condiciones y Ambiente de Trabajo. Presidenta del Comité Científico del II Congreso Internacional “Salud Laboral: Aspectos Sociales de la Prevención, y el ll Taller Internacional de Prevención de Riesgos y Gestión Ambiental en Instituciones de la Educación Superior en la ciudad de Mar del Plata Argentina (septiembre 2016). Integrante de La Red Universitaria Iberoamericana de Investigación y Promoción de la Seguridad y Salud Laboral (Iberpsoc). Colaboradora en la redacción del capítulo de Condiciones y Ambiente de Trabajo del Convenio Colectivo de Trabajo  de los Docentes Universitarios en el año 2015, (primer convenio colectivo de trabajo de docentes en la Argentina).
+                            </p>
+                        </div>
+                    </div>
+
 
                 </div>
                 <!-- /SEDE -->
