@@ -511,6 +511,34 @@
                         </div>
                     </div>
 
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/annherys-paz-marcano.jpg" alt="Carlos Geovanny Albán Yánez - Ecuador">
+                        </div>
+                        <div class="col-md-9">
+                            <h3>Annherys Paz Marcanos - Colombia</h3>
+                            <p style="text-align: justify;">
+                                Doctora en Ciencias Gerenciales, Postdoctora en Gerencia de las
+
+                                Organizaciones, Postdoctora en Integración y Desarrollo en América
+
+                                Latina. Magister en Gerencia de Recursos Humanos, Licenciada en
+
+                                Administración de Empresas. Ha realizado el Diplomado en Formación
+
+                                de investigadores, Programa Internacional de Formación de Formadores
+
+                                de Responsabilidad Social Empresarial, Diplomado internacional de
+
+                                formación en desarrollo de competencias Investigativas y políticas
+
+                                editoriales para la publicación de investigaciones científicas. Actualmente
+
+                                se desempeña como docente en la Universidad de la Guajira, Colombia.
+                            </p>
+                        </div>
+                    </div>
+
 
                 </div>
                 <!-- /SEDE -->
