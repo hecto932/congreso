@@ -174,6 +174,20 @@
                         <br>
                         <img src="assets/front/img/afiche-2016.jpg" alt="II Congreso de Investigacion de la Facultad de Ciencias Económicas y Sociales"/>
                     </div>
+                    <div class="col-md-12">
+                        <div class="row top-mini wow fadeIn" data-wow-delay="0.6s" style="background: rgb(33, 150, 243);border-radius: 1em 1em 0em 0em;">
+                            <h2 class="center" style="font-size: 3em;font-weight: 900;font-variant; color:white;"><i class="icon-calendar"></i> Programas</h2>
+                            <div class="col-md-12">
+                                <h4 style="text-align:center; font-size: 5em; color:white;">
+                                    <u><a style="color:white;" href="assets/front/file/programa-barbula.pdf">Campus Bárbula</a></u>
+                                </h4>
+                                <h4 style="text-align:center; font-size: 5em; color:white;">
+                                    <u><a style="color:white;" href="assets/front/file/programa-la-morita.pdf">Campus La Morita</a></u>
+                                </h4>
+                                <p>Haz clic en el programa del Campus en el cual quieras participar.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section> 
