@@ -22,6 +22,7 @@ class Assistant extends MX_Controller {
 			//redirect("asistentes/app");
 			$data["title"] = "Congreso - Asistente";
 			$data["userData"] = $this->getUserSession();
+			$data["MyPayments"] = modules::run('payments/getMyPaymentAssistant');
 			$data["contenido_principal"] = $this->load->view("app", $data, true);
 			$this->load->view("asistenteapp/template", $data);
 		}

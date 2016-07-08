@@ -4,6 +4,9 @@
             <?php if($this->session->flashdata("message")): ?>
                 <?php echo $this->session->flashdata('message'); ?>
             <?php endif; ?>
+            <?php if($this->session->flashdata("payments")): ?>
+                <?php echo $this->session->flashdata('payments'); ?>
+            <?php endif; ?>
             <?php if($userData["image"] == null): ?>
                 <div class="col-lg-12"><div class="alert alert-info">Actualmente tu cuenta no posee una foto de perfil. Carga una <a href="asistentes/mis-datos">Aquí</a></div></div>
             <?php endif; ?>
@@ -50,7 +53,6 @@
                                             <th>Banco </th>
                                             <th>Numero de Referencia </th>
                                             <th>Monto</th>
-                                            <th>Trabajo </th>
                                             <th>Realizada </th>
                                             <th>Estatus </th>
                                         </tr>
@@ -63,7 +65,6 @@
                                                 <td><?php echo $value["bank"]; ?></td>
                                                 <td><?php echo $value["numberReference"]; ?></td>
                                                 <td>Bs. <?php echo $value["amount"]; ?></td>
-                                                <td><?php echo $value["work"]; ?></td>
                                                 <td><?php echo $value["createdAt"]; ?></td>
                                                 <td><span class="label label-info"><?php echo $value["status"]; ?></span></td>
                                             </tr>

@@ -50,6 +50,25 @@ class Payments_model extends CI_Model
 		$query = $this->db->get("payments");
 		return $query->result_array();
 	}
+
+	function addPaymentAssistan($payment)
+	{
+		$this->db->insert("paymentAssistans", $payment);
+	}
+
+	function getMyPaymentAssistant($assistant_id)
+	{
+		$this->db->where("assistant_id", $assistant_id);
+		$query = $this->db->get("paymentAssistans");
+		return $query->result_array();
+	}
+
+	function hasAPayment($assistant_id)
+	{
+		$query = $this->db->get_where("paymentAssistans", array("assistant_id" => $assistant_id));
+		return $query->num_rows() != 0;
+	}
+
 }  
 
 ?>

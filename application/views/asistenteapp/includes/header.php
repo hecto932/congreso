@@ -36,6 +36,9 @@
                             <li class="">
                                 <a aria-expanded="false" role="button" href="asistentes/mis-datos"> Mi perfil</a>
                             </li>
+                            <li class="">
+                                <a aria-expanded="false" role="button" href="asistentes/agregar-pago"> Pago</a>
+                            </li>
                         </ul>
                         <ul class="nav navbar-top-links navbar-right">
                             <li>

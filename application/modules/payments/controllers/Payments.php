@@ -184,4 +184,78 @@ class Payments extends MX_Controller {
         return $result; 
     }
 
+    public function hasAPayment()
+    {
+        $assistant_id = modules::run("assistant/getSessionId");
+        $this->session->set_flashdata('payments', '<div class="col-lg-12"><div class="alert alert-warning">Ya no se pueden cargar mas pagos.</div></div>');
+        return $this->payments_model->hasAPayment($assistant_id);
+    }
+
+    public function toAddPaymentAssitant()
+    {
+        if(modules::run("assistant/getSessionId") && !$this->hasAPayment())
+        {
+            $data["title"] = "Agregar nuevo pago";
+            $data["userData"] = modules::run("assistant/getUserSession");
+            $data["contenido_principal"] = $this->load->view("addPaymentAssistant", $data, true);
+            $this->load->view("asistenteapp/template", $data);
+        }
+        else
+        {
+            redirect("/asistentes/app");
+        }
+    }
+
+    public function addPaymentAssistant()
+    {
+        if(!empty($_POST))
+        {
+            $this->form_validation->set_rules("bank", "Banco", "required");
+            $this->form_validation->set_rules("numberReference", "Numero de referencia", "required");
+            $this->form_validation->set_rules("amount", "Monto", "required");
+
+            $this->form_validation->set_message("required", "%s es requerido.");
+            $this->form_validation->set_message("is_unique", "%s ya fue registrado.");
+
+            $this->form_validation->set_error_delimiters("<p class='text-danger'>", "</p>");
+
+            if($this->form_validation->run($this))
+            {
+                $payment = array(
+                    "assistant_id" => modules::run("assistant/getSessionId"),
+                    "bank" => $this->input->post("bank"),
+                    "numberReference" => $this->input->post("numberReference"),
+                    "amount" => $this->input->post("amount"),
+                    "status" => "Por verificar",
+                    'createdAt' => date("Y-m-d H:i:s")
+                );
+
+                $this->payments_model->addPaymentAssistan($payment);
+
+                $this->session->set_flashdata('message', '<div class="col-lg-12"><div class="alert alert-success">Pago realizado exitosamente. Por favor espere por su confirmación..</div></div>');
+
+                redirect("/asistentes/app");
+            }
+            else
+            {
+               $data["title"] = "Agregar nuevo pago";
+                $data["userData"] = modules::run("assistant/getUserSession");
+                $data["contenido_principal"] = $this->load->view("addPaymentAssistant", $data, true);
+                $this->load->view("asistenteapp/template", $data);
+            }
+        }
+        else
+        {
+            redirect("/");
+        }
+    }
+
+    public function getMyPaymentAssistant()
+    {
+        $assistant_id = modules::run("assistant/getSessionId");
+        $query = $this->payments_model->getMyPaymentAssistant($assistant_id);
+        return $query;
+    }
+
+
 }
