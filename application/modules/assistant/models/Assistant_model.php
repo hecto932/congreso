@@ -80,9 +80,9 @@ class Assistant_model extends CI_Model
 		return $query->row()->name." ".$query->row()->lastName;
 	}
 
-	function getUserData($user_id)
+	function getUserData($assistant_id)
 	{
-		$query = $this->db->get_where('assistants', array("id" => $user_id));
+		$query = $this->db->get_where('assistants', array("id" => $assistant_id));
 		return $query->row_array();
 	}
 

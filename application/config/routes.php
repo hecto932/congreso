@@ -107,6 +107,7 @@ $route["backend/simposios/rechazados"] = "works/simposios_rechazados";
 $route["backend/participantes"] = "users/participants";
 $route["backend/participantes/(:num)"] = "users/showParticipant/$1";
 $route["backend/asistentes"] = "assistant/assistants";
+$route['backend/asistentes/(:num)'] = 'assistant/showAssitant/$1';
 
 //185/60/14 95 potensa
 //195/75/14 affinity

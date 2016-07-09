@@ -328,4 +328,27 @@ class Assistant extends MX_Controller {
 			redirect("backend");
 		}
 	}
+
+	function getAllDataAssistant($assistant_id)
+	{
+		$query = $this->assistant_model->getUserData($assistant_id);
+		$query["payments"] = modules::run("payments/getAllPaymentsByAssistant", $query["id"]);
+		return $query;
+	}
+
+	public function showAssitant($assistant_id)
+	{
+		if(modules::run("backusers/getRoleId") == 1)
+		{
+			$data["title"] = "Backend - Asistente";
+			$data["userData"] = modules::run('backusers/getSessionUserData');
+			$data["assistant"] = $this->getAllDataAssistant($assistant_id);
+ 			$data["contenido_principal"] = $this->load->view("showAssitant", $data, true);
+			$this->load->view("back/template", $data);
+		}
+		else
+		{
+			redirect("backend");
+		}
+	}
 }

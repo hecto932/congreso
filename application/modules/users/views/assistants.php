@@ -60,7 +60,7 @@
                                     <?php else: ?>
                                         <td class="client-avatar"><img alt="image" src="assets/app/img/profile2.jpg"> </td>
                                     <?php endif; ?>
-                                    <td><a href="javascript:void(0);" class="client-link"><?php echo $value["lastName"].", ".$value["name"]; ?></a></td>
+                                    <td><a href="backend/asistentes/<?php echo $value['id']; ?>" class="client-link"><?php echo $value["lastName"].", ".$value["name"]; ?></a></td>
                                     <td class="contact-type"><i class="fa fa-envelope"> </i></td>
                                     <td><a href="mailto:<?php echo $value["email"]; ?>"><?php echo $value["email"]; ?></a></td>
                                     <td class="contact-type"><i class="fa fa-phone"> </i></td>
@@ -69,7 +69,7 @@
                                <?php endforeach ?>
                             <?php else: ?>
                                 <tr>
-                                    <p>No hay usuarios registrados.</p>
+                                    <p>No hay asistentes registrados.</p>
                                 </tr>
                             <?php endif; ?>
                             </tbody>

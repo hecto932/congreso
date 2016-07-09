@@ -257,5 +257,10 @@ class Payments extends MX_Controller {
         return $query;
     }
 
+    public function getAllPaymentsByAssistant($assistant_id)
+    {
+        $query = $this->payments_model->getMyPaymentAssistant($assistant_id);
+        return $query;
+    }
 
 }
