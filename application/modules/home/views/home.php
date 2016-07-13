@@ -554,6 +554,26 @@
                         </div>
                     </div>
 
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <img style="width:128px; border-radius: 5%;margin-top: 20%;text-align: justify;" src="assets/front/img/ponentes-internacionales/pedro-mariano-sanllorenti.jpg" alt="Pedro Mariano Sanllorenti - Argentina">
+                        </div>
+                        <div class="col-md-9">
+                            <h3>Pedro Mariano Sanllorenti - Argentina</h3>
+                            <p style="text-align: justify;">
+                                Dr. Pedro Mariano Sanllorenti, Docente e investigador de la Universidad Nacional de Mar
+
+                                del Plata, autor de varias publicaciones,   ha sido Director del Instituto de Estudios de la
+
+                                Federación de Docentes Universitarios CONADU y Capacitación, Secretario General de la
+
+                                Federación de Docentes Universitarios CONADU, generador y autor del el Convenio
+
+                                Colectivo de Trabajo de los Docentes Universitarios en la Argentina.
+                            </p>
+                        </div>
+                    </div>
+
 
                 </div>
                 <!-- /SEDE -->
